@@ -1727,3 +1727,9 @@ ul#dropprofile li {
 
 
 /* Agenda End*/
+
+.group-label {
+    font-weight: bold;
+    text-align: center;
+    color: black !important;
+}

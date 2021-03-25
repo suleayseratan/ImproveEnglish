@@ -14,7 +14,11 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -28,12 +32,25 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- =======================================================
   * Template Name: Mentor - v4.0.1
   * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+    <style>
+        .popup-button {
+            margin-top: 73px;
+            text-align: center !important;
+            padding: 30px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,7 +75,8 @@
                     <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                                        class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <li><a href="#">Deep Drop Down 1</a></li>
                                     <li><a href="#">Deep Drop Down 2</a></li>
@@ -85,7 +103,82 @@
     <!-- End Header -->
 
     <main id="main">
+        <div class="popup-button">
+            <div class="container">
+                <button type="button" class="btn btn-danger btn-block"" data-toggle="modal" data-target="#myModal">
+                    <i class="fas fa-plus"></i> Create a group
+                </button>
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
 
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Modal Heading</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 group-label">Group Page : </label>
+                                    <div class="custom-file col-sm-8">
+                                        <input type="fil" eclass="custom-file-input" id="validatedCustomFile" required>
+                                        <label class="custom-file-label" for="validatedCustomFile">Choose Group
+                                            Page...</label>
+                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="input-group input-group-sm mb-3">
+                                        <label class="group-label col-sm-3">Group Name : </label>
+                                        <input type="text" class="form-control col-sm-8" aria-label="Small"
+                                            aria-describedby="inputGroup-sizing-sm">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="input-group input-group-sm mb-3">
+                                        <label class="group-label col-sm-3">Subject : </label>
+                                        <input type="text" class="form-control col-sm-8" aria-label="Small"
+                                            aria-describedby="inputGroup-sizing-sm">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="exampleFormControlTextarea1" class="group-label col-sm-3">Explanation :
+                                    </label>
+                                    <textarea class="form-control col-sm-8" id="exampleFormControlTextarea1"
+                                        rows="3"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 group-label" for="inlineFormCustomSelect">Number of Members :
+                                    </label>
+                                    <select class="custom-select col-sm-8" id="inlineFormCustomSelect">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="group-label col-sm-3">Meeting Date : </label>
+                                    <input class="form-control col-sm-3"
+                                        style="width: 50% !important; display: inline !important;" type="date">
+                                    <label class="group-label col-sm-2">Meeting Time : </label>
+                                    <input class="form-control search-item col-sm-3" type="time">
+                                </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ======= Breadcrumbs ======= -->
         <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
@@ -95,7 +188,8 @@
                         <div class="col-lg-4">
                             <div class="form-group">
                                 <label>Date : </label>
-                                <input class="form-control" style="width: 50% !important; display: inline !important;" type="date">
+                                <input class="form-control" style="width: 50% !important; display: inline !important;"
+                                    type="date">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -132,7 +226,8 @@
                             <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
                             <div class="course-content">
                                 <h3><a href="events-details.html">Website Design</a></h3>
-                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.
+                                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
+                                    dolores dolorem tempore.
                                 </p>
                                 <div class="trainer d-flex justify-content-between align-items-center">
                                     <div class="trainer-profile d-flex align-items-center">
@@ -233,7 +328,8 @@
     <!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
