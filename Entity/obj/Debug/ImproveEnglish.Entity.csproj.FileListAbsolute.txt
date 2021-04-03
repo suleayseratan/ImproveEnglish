@@ -1,0 +1,6 @@
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\bin\Debug\Entity.dll
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\bin\Debug\Entity.pdb
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csprojAssemblyReference.cache
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csproj.CoreCompileInputs.cache
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\Entity.dll
+C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\Entity.pdb

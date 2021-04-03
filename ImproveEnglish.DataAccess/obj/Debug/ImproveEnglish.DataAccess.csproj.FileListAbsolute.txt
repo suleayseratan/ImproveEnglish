@@ -1,0 +1,14 @@
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.pdb
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csprojAssemblyReference.cache
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.dll
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.pdb
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll.config
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\Entity.dll
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\Entity.pdb
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CopyComplete
