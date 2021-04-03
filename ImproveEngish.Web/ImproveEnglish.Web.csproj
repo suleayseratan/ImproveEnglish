@@ -124,131 +124,131 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="ImproveEnglish\About.aspx" />
-    <Content Include="ImproveEnglish\assets\css\ajax.select2.min.css" />
-    <Content Include="ImproveEnglish\assets\css\all.css" />
-    <Content Include="ImproveEnglish\assets\css\all.min.css" />
-    <Content Include="ImproveEnglish\assets\css\brands.css" />
-    <Content Include="ImproveEnglish\assets\css\brands.min.css" />
-    <Content Include="ImproveEnglish\assets\css\chat.css" />
-    <Content Include="ImproveEnglish\assets\css\fontawesome.css" />
-    <Content Include="ImproveEnglish\assets\css\fontawesome.min.css" />
-    <Content Include="ImproveEnglish\assets\css\fullcalendar.css" />
-    <Content Include="ImproveEnglish\assets\css\fullcalendar.print.css" />
-    <Content Include="ImproveEnglish\assets\css\login.css" />
-    <Content Include="ImproveEnglish\assets\css\message.css" />
-    <Content Include="ImproveEnglish\assets\css\regular.css" />
-    <Content Include="ImproveEnglish\assets\css\regular.min.css" />
-    <Content Include="ImproveEnglish\assets\css\settings.css" />
-    <Content Include="ImproveEnglish\assets\css\solid.css" />
-    <Content Include="ImproveEnglish\assets\css\solid.min.css" />
-    <Content Include="ImproveEnglish\assets\css\style.css" />
-    <Content Include="ImproveEnglish\assets\css\svg-with-js.css" />
-    <Content Include="ImproveEnglish\assets\css\svg-with-js.min.css" />
-    <Content Include="ImproveEnglish\assets\css\v4-shims.css" />
-    <Content Include="ImproveEnglish\assets\css\v4-shims.min.css" />
-    <Content Include="ImproveEnglish\assets\img\about.jpg" />
-    <Content Include="ImproveEnglish\assets\img\apple-touch-icon.png" />
-    <Content Include="ImproveEnglish\assets\img\avataaars.png" />
-    <Content Include="ImproveEnglish\assets\img\course-1.jpg" />
-    <Content Include="ImproveEnglish\assets\img\course-2.jpg" />
-    <Content Include="ImproveEnglish\assets\img\course-3.jpg" />
-    <Content Include="ImproveEnglish\assets\img\course-details-tab-1.png" />
-    <Content Include="ImproveEnglish\assets\img\course-details-tab-2.png" />
-    <Content Include="ImproveEnglish\assets\img\course-details-tab-3.png" />
-    <Content Include="ImproveEnglish\assets\img\course-details-tab-4.png" />
-    <Content Include="ImproveEnglish\assets\img\course-details-tab-5.png" />
-    <Content Include="ImproveEnglish\assets\img\course-details.jpg" />
-    <Content Include="ImproveEnglish\assets\img\events-1.jpg" />
-    <Content Include="ImproveEnglish\assets\img\events-2.jpg" />
-    <Content Include="ImproveEnglish\assets\img\favicon.png" />
-    <Content Include="ImproveEnglish\assets\img\hero-bg.jpg" />
-    <Content Include="ImproveEnglish\assets\img\testimonials\testimonials-1.jpg" />
-    <Content Include="ImproveEnglish\assets\img\testimonials\testimonials-2.jpg" />
-    <Content Include="ImproveEnglish\assets\img\testimonials\testimonials-3.jpg" />
-    <Content Include="ImproveEnglish\assets\img\testimonials\testimonials-4.jpg" />
-    <Content Include="ImproveEnglish\assets\img\testimonials\testimonials-5.jpg" />
-    <Content Include="ImproveEnglish\assets\img\trainers\trainer-1.jpg" />
-    <Content Include="ImproveEnglish\assets\img\trainers\trainer-2.jpg" />
-    <Content Include="ImproveEnglish\assets\img\trainers\trainer-3.jpg" />
-    <Content Include="ImproveEnglish\assets\js\ajax.select2.min.js" />
-    <Content Include="ImproveEnglish\assets\js\all.js" />
-    <Content Include="ImproveEnglish\assets\js\all.min.js" />
-    <Content Include="ImproveEnglish\assets\js\brands.js" />
-    <Content Include="ImproveEnglish\assets\js\brands.min.js" />
-    <Content Include="ImproveEnglish\assets\js\conflict-detection.js" />
-    <Content Include="ImproveEnglish\assets\js\conflict-detection.min.js" />
-    <Content Include="ImproveEnglish\assets\js\fontawesome.js" />
-    <Content Include="ImproveEnglish\assets\js\fontawesome.min.js" />
-    <Content Include="ImproveEnglish\assets\js\fullcalendar.js" />
-    <Content Include="ImproveEnglish\assets\js\jquery-1.10.2.js" />
-    <Content Include="ImproveEnglish\assets\js\jquery-ui.custom.min.js" />
-    <Content Include="ImproveEnglish\assets\js\main.js" />
-    <Content Include="ImproveEnglish\assets\js\myscript.js" />
-    <Content Include="ImproveEnglish\assets\js\regular.js" />
-    <Content Include="ImproveEnglish\assets\js\regular.min.js" />
-    <Content Include="ImproveEnglish\assets\js\solid.js" />
-    <Content Include="ImproveEnglish\assets\js\solid.min.js" />
-    <Content Include="ImproveEnglish\assets\js\v4-shims.js" />
-    <Content Include="ImproveEnglish\assets\js\v4-shims.min.js" />
-    <Content Include="ImproveEnglish\assets\svg\comment-solid.svg" />
-    <Content Include="ImproveEnglish\assets\vendor\animate.css\animate.compat.css" />
-    <Content Include="ImproveEnglish\assets\vendor\animate.css\animate.css" />
-    <Content Include="ImproveEnglish\assets\vendor\animate.css\animate.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\aos\aos.css" />
-    <Content Include="ImproveEnglish\assets\vendor\aos\aos.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap-icons\index.html" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.esm.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\css\animations.css" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\css\boxicons.css" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\css\boxicons.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\css\transformations.css" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\fonts\boxicons.svg" />
-    <Content Include="ImproveEnglish\assets\vendor\php-email-form\validate.js" />
-    <Content Include="ImproveEnglish\assets\vendor\purecounter\purecounter.js" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.css" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.svg" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.symbol.svg" />
-    <Content Include="ImproveEnglish\assets\vendor\swiper\swiper-bundle.min.css" />
-    <Content Include="ImproveEnglish\assets\vendor\swiper\swiper-bundle.min.js" />
-    <Content Include="ImproveEnglish\Contact.aspx" />
-    <Content Include="ImproveEnglish\CreateAccount.aspx" />
-    <Content Include="ImproveEnglish\Default.aspx" />
-    <Content Include="ImproveEnglish\ForgotPassword.aspx" />
-    <Content Include="ImproveEnglish\forms\contact.php" />
-    <Content Include="ImproveEnglish\forms\Readme.txt" />
-    <Content Include="ImproveEnglish\GroupMeeting.aspx" />
-    <Content Include="ImproveEnglish\GroupMeetingDetail.aspx" />
-    <Content Include="ImproveEnglish\Login.aspx" />
-    <Content Include="ImproveEnglish\Message.aspx" />
-    <Content Include="ImproveEnglish\Setting.aspx" />
-    <Content Include="ImproveEnglish\SingleMeeting.aspx" />
-    <Content Include="ImproveEnglish\SingleMeetingDetail.aspx" />
+    <Content Include="ImproveEnglishProject\About.aspx" />
+    <Content Include="ImproveEnglishProject\assets\css\ajax.select2.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\all.css" />
+    <Content Include="ImproveEnglishProject\assets\css\all.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\brands.css" />
+    <Content Include="ImproveEnglishProject\assets\css\brands.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\chat.css" />
+    <Content Include="ImproveEnglishProject\assets\css\fontawesome.css" />
+    <Content Include="ImproveEnglishProject\assets\css\fontawesome.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\fullcalendar.css" />
+    <Content Include="ImproveEnglishProject\assets\css\fullcalendar.print.css" />
+    <Content Include="ImproveEnglishProject\assets\css\login.css" />
+    <Content Include="ImproveEnglishProject\assets\css\message.css" />
+    <Content Include="ImproveEnglishProject\assets\css\regular.css" />
+    <Content Include="ImproveEnglishProject\assets\css\regular.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\settings.css" />
+    <Content Include="ImproveEnglishProject\assets\css\solid.css" />
+    <Content Include="ImproveEnglishProject\assets\css\solid.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\style.css" />
+    <Content Include="ImproveEnglishProject\assets\css\svg-with-js.css" />
+    <Content Include="ImproveEnglishProject\assets\css\svg-with-js.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\v4-shims.css" />
+    <Content Include="ImproveEnglishProject\assets\css\v4-shims.min.css" />
+    <Content Include="ImproveEnglishProject\assets\img\about.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\apple-touch-icon.png" />
+    <Content Include="ImproveEnglishProject\assets\img\avataaars.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-1.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\course-2.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\course-3.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details-tab-1.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details-tab-2.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details-tab-3.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details-tab-4.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details-tab-5.png" />
+    <Content Include="ImproveEnglishProject\assets\img\course-details.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\events-1.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\events-2.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\favicon.png" />
+    <Content Include="ImproveEnglishProject\assets\img\hero-bg.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-1.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-2.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-3.jpg" />
+    <Content Include="ImproveEnglishProject\assets\js\ajax.select2.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\all.js" />
+    <Content Include="ImproveEnglishProject\assets\js\all.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\brands.js" />
+    <Content Include="ImproveEnglishProject\assets\js\brands.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\conflict-detection.js" />
+    <Content Include="ImproveEnglishProject\assets\js\conflict-detection.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\fontawesome.js" />
+    <Content Include="ImproveEnglishProject\assets\js\fontawesome.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\fullcalendar.js" />
+    <Content Include="ImproveEnglishProject\assets\js\jquery-1.10.2.js" />
+    <Content Include="ImproveEnglishProject\assets\js\jquery-ui.custom.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\main.js" />
+    <Content Include="ImproveEnglishProject\assets\js\myscript.js" />
+    <Content Include="ImproveEnglishProject\assets\js\regular.js" />
+    <Content Include="ImproveEnglishProject\assets\js\regular.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\solid.js" />
+    <Content Include="ImproveEnglishProject\assets\js\solid.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\v4-shims.js" />
+    <Content Include="ImproveEnglishProject\assets\js\v4-shims.min.js" />
+    <Content Include="ImproveEnglishProject\assets\svg\comment-solid.svg" />
+    <Content Include="ImproveEnglishProject\assets\vendor\animate.css\animate.compat.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\animate.css\animate.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\animate.css\animate.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\aos\aos.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\aos\aos.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap-icons\index.html" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\css\animations.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\css\boxicons.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\css\transformations.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="ImproveEnglishProject\assets\vendor\php-email-form\validate.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\purecounter\purecounter.js" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.svg" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.symbol.svg" />
+    <Content Include="ImproveEnglishProject\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="ImproveEnglishProject\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="ImproveEnglishProject\Contact.aspx" />
+    <Content Include="ImproveEnglishProject\CreateAccount.aspx" />
+    <Content Include="ImproveEnglishProject\Default.aspx" />
+    <Content Include="ImproveEnglishProject\ForgotPassword.aspx" />
+    <Content Include="ImproveEnglishProject\forms\contact.php" />
+    <Content Include="ImproveEnglishProject\forms\Readme.txt" />
+    <Content Include="ImproveEnglishProject\GroupMeeting.aspx" />
+    <Content Include="ImproveEnglishProject\GroupMeetingDetail.aspx" />
+    <Content Include="ImproveEnglishProject\Login.aspx" />
+    <Content Include="ImproveEnglishProject\Message.aspx" />
+    <Content Include="ImproveEnglishProject\Setting.aspx" />
+    <Content Include="ImproveEnglishProject\SingleMeeting.aspx" />
+    <Content Include="ImproveEnglishProject\SingleMeetingDetail.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ImproveEnglish\assets\js\ajax.jquery.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\ajax.jquery.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -285,95 +285,95 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\About.aspx.cs">
+    <Compile Include="ImproveEnglishProject\About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\About.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Contact.aspx.cs">
+    <Compile Include="ImproveEnglishProject\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Contact.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\CreateAccount.aspx.cs">
+    <Compile Include="ImproveEnglishProject\CreateAccount.aspx.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\CreateAccount.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Default.aspx.cs">
+    <Compile Include="ImproveEnglishProject\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Default.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\ForgotPassword.aspx.cs">
+    <Compile Include="ImproveEnglishProject\ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\ForgotPassword.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\GroupMeeting.aspx.cs">
+    <Compile Include="ImproveEnglishProject\GroupMeeting.aspx.cs">
       <DependentUpon>GroupMeeting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\GroupMeeting.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\GroupMeeting.aspx.designer.cs">
       <DependentUpon>GroupMeeting.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\GroupMeetingDetail.aspx.cs">
+    <Compile Include="ImproveEnglishProject\GroupMeetingDetail.aspx.cs">
       <DependentUpon>GroupMeetingDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\GroupMeetingDetail.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\GroupMeetingDetail.aspx.designer.cs">
       <DependentUpon>GroupMeetingDetail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Login.aspx.cs">
+    <Compile Include="ImproveEnglishProject\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Login.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Message.aspx.cs">
+    <Compile Include="ImproveEnglishProject\Message.aspx.cs">
       <DependentUpon>Message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Message.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Page.Master.cs">
+    <Compile Include="ImproveEnglishProject\Page.Master.cs">
       <DependentUpon>Page.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Page.Master.designer.cs">
+    <Compile Include="ImproveEnglishProject\Page.Master.designer.cs">
       <DependentUpon>Page.Master</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\Setting.aspx.cs">
+    <Compile Include="ImproveEnglishProject\Setting.aspx.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\Setting.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\Setting.aspx.designer.cs">
       <DependentUpon>Setting.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\SingleMeeting.aspx.cs">
+    <Compile Include="ImproveEnglishProject\SingleMeeting.aspx.cs">
       <DependentUpon>SingleMeeting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\SingleMeeting.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\SingleMeeting.aspx.designer.cs">
       <DependentUpon>SingleMeeting.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImproveEnglish\SingleMeetingDetail.aspx.cs">
+    <Compile Include="ImproveEnglishProject\SingleMeetingDetail.aspx.cs">
       <DependentUpon>SingleMeetingDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImproveEnglish\SingleMeetingDetail.aspx.designer.cs">
+    <Compile Include="ImproveEnglishProject\SingleMeetingDetail.aspx.designer.cs">
       <DependentUpon>SingleMeetingDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -393,280 +393,41 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ImproveEnglish\.git\COMMIT_EDITMSG" />
-    <Content Include="ImproveEnglish\.git\config" />
-    <Content Include="ImproveEnglish\.git\description" />
-    <Content Include="ImproveEnglish\.git\HEAD" />
-    <Content Include="ImproveEnglish\.git\hooks\applypatch-msg.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\commit-msg.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\fsmonitor-watchman.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\post-update.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-applypatch.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-commit.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-merge-commit.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-push.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-rebase.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\pre-receive.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\prepare-commit-msg.sample" />
-    <Content Include="ImproveEnglish\.git\hooks\update.sample" />
-    <Content Include="ImproveEnglish\.git\index" />
-    <Content Include="ImproveEnglish\.git\info\exclude" />
-    <Content Include="ImproveEnglish\.git\logs\HEAD" />
-    <Content Include="ImproveEnglish\.git\logs\refs\heads\main" />
-    <Content Include="ImproveEnglish\.git\logs\refs\remotes\origin\HEAD" />
-    <Content Include="ImproveEnglish\.git\logs\refs\remotes\origin\main" />
-    <Content Include="ImproveEnglish\.git\objects\01\2953cae39287479426e5a4135ee8e1ec537fb9" />
-    <Content Include="ImproveEnglish\.git\objects\01\4a4375127222fe0d763f2dfa045c9e8ef22e4c" />
-    <Content Include="ImproveEnglish\.git\objects\02\8aaeca34b187c3b2fc9df71cc82b769a40e8a5" />
-    <Content Include="ImproveEnglish\.git\objects\03\e5938cf2ce6f618f175bbc2f2e011b06a20772" />
-    <Content Include="ImproveEnglish\.git\objects\04\b9843fca0da457c7dedaa9a1d8bb1c3f2ac7fa" />
-    <Content Include="ImproveEnglish\.git\objects\08\90755cef4bcc5d30eed308b287bb25fbe61cb3" />
-    <Content Include="ImproveEnglish\.git\objects\09\b170b36c042d44fa75004ace940b2aa8f4c962" />
-    <Content Include="ImproveEnglish\.git\objects\09\b710efaf5c0e40b72cdc370738ecde577fbd6c" />
-    <Content Include="ImproveEnglish\.git\objects\0e\f1bf5ae9d63b90eb8150be1e1d86302d82b142" />
-    <Content Include="ImproveEnglish\.git\objects\0f\b1570bd06572a6d1ee69d85201ad96b0ba8f57" />
-    <Content Include="ImproveEnglish\.git\objects\12\d08b7007891f3b4b279333ad63d203da81954e" />
-    <Content Include="ImproveEnglish\.git\objects\14\94e527d6b2d185f379ca3f2be4c833384978de" />
-    <Content Include="ImproveEnglish\.git\objects\15\af3fa6d81040861289b85c89240ba63eabc7b7" />
-    <Content Include="ImproveEnglish\.git\objects\16\78cd21a70b748cce66da4c01f0838bda00b368" />
-    <Content Include="ImproveEnglish\.git\objects\18\5abbf677202806304bfa3b9b9f32d2850825c8" />
-    <Content Include="ImproveEnglish\.git\objects\1b\d39ec671c5cbb10de54629587e143458ebd686" />
-    <Content Include="ImproveEnglish\.git\objects\1c\1f2282c75e8157df6779ac6541d59f260bc7ef" />
-    <Content Include="ImproveEnglish\.git\objects\20\29315ccc2189f34744bf91c8a8499aa06c6d79" />
-    <Content Include="ImproveEnglish\.git\objects\20\fc0b29c526e89234ac090adb6e3d810366ea3e" />
-    <Content Include="ImproveEnglish\.git\objects\22\9c31be080371d3b3bdc8570f7ca9d1c1533c36" />
-    <Content Include="ImproveEnglish\.git\objects\23\aea133fa3e38f3fea84dde88c90003bf240a45" />
-    <Content Include="ImproveEnglish\.git\objects\23\d2449f0be50b47ee0815c7be323ece937d36c6" />
-    <Content Include="ImproveEnglish\.git\objects\23\e056076d67af375ad1d09a6dfa74be07a319ba" />
-    <Content Include="ImproveEnglish\.git\objects\23\f77a764308e5c8fcd454c81530ec52ed601211" />
-    <Content Include="ImproveEnglish\.git\objects\24\3ccac512f45b3ba7f2d7254c42949bc1f5661f" />
-    <Content Include="ImproveEnglish\.git\objects\24\e755a3b304de6cbaecb1f0cae27f5080890ee9" />
-    <Content Include="ImproveEnglish\.git\objects\25\22b6cf960fd6a69845340dddc91821df3f5540" />
-    <Content Include="ImproveEnglish\.git\objects\26\1fd77a577a0725d30ccded75dce802a02652b6" />
-    <Content Include="ImproveEnglish\.git\objects\29\010eecf1e77c25bebbfd60009a6fce384b11f6" />
-    <Content Include="ImproveEnglish\.git\objects\2a\10917cf2a3f38e0dfe9cb39c6bf6a84b2556e2" />
-    <Content Include="ImproveEnglish\.git\objects\2b\e7572bc455e9ab802320376c354723cbd48f1e" />
-    <Content Include="ImproveEnglish\.git\objects\30\1b70f77704f428499ce5ea9783a8c7f58e9f52" />
-    <Content Include="ImproveEnglish\.git\objects\30\a35d14f2e54587f6ac2df8b4bc9c9c2672f0d8" />
-    <Content Include="ImproveEnglish\.git\objects\32\8346108a4440a4e93b382142fe3fe375aecf8a" />
-    <Content Include="ImproveEnglish\.git\objects\33\edb059abe27a38ca7c6ecbf35aae1402f944d5" />
-    <Content Include="ImproveEnglish\.git\objects\36\011c80e78e6a0d4b823a624764e53ac993bc8f" />
-    <Content Include="ImproveEnglish\.git\objects\36\b35d601847c8cb6a55984041d177fd979b3d98" />
-    <Content Include="ImproveEnglish\.git\objects\36\bf683b112634c07dca5214996ad34772725459" />
-    <Content Include="ImproveEnglish\.git\objects\39\dd6dbd941e818643e2a80ca9c6a60eb527b493" />
-    <Content Include="ImproveEnglish\.git\objects\3b\3039ed3d84f10dff87dd29b544e238227bd2a5" />
-    <Content Include="ImproveEnglish\.git\objects\3b\ca36bc55b7161538c2d0257bde8abd8610f3da" />
-    <Content Include="ImproveEnglish\.git\objects\3e\1045496a4d918371675578c3f4894c9095a5d9" />
-    <Content Include="ImproveEnglish\.git\objects\3e\6fd19f7a920f46684687c9e409ba66334b6304" />
-    <Content Include="ImproveEnglish\.git\objects\3f\4ad6f26fab4e680fe9459a69eef809f882b413" />
-    <Content Include="ImproveEnglish\.git\objects\3f\95f7deebcd4c40a5509faf6ae9705838039ca7" />
-    <Content Include="ImproveEnglish\.git\objects\40\629af2b93f9f3e977246ae380ad89f35362313" />
-    <Content Include="ImproveEnglish\.git\objects\40\9363c2680c7e5f86071f70133c0cd983bc7e35" />
-    <Content Include="ImproveEnglish\.git\objects\44\7cec2c47da7a30359729a36d3c5096dbde5a15" />
-    <Content Include="ImproveEnglish\.git\objects\46\1fb25c7092917ef5e1af4a5d043d204fff6471" />
-    <Content Include="ImproveEnglish\.git\objects\4a\4e9312d8f30a59452b429547b0cf8ec6962685" />
-    <Content Include="ImproveEnglish\.git\objects\4a\dea4a29702f203bbb302c0b450a6da62deb76b" />
-    <Content Include="ImproveEnglish\.git\objects\4b\0bad1fd2d7118b9f4db2aeb9152e607f951f14" />
-    <Content Include="ImproveEnglish\.git\objects\4b\85e6e8de68244bc48fd5f5d524b92365c63f0a" />
-    <Content Include="ImproveEnglish\.git\objects\4b\d91bcd51c56c238a945723e1c25f4be4e24ba5" />
-    <Content Include="ImproveEnglish\.git\objects\4b\e32e2b32dd7c5b1b0058c08fe5d169764a5875" />
-    <Content Include="ImproveEnglish\.git\objects\4d\9c3dfebbc42598e5c8e4fd37e08860f0c1e1f2" />
-    <Content Include="ImproveEnglish\.git\objects\4e\ec7b49a9a60b6d7a07061cf34d1e799f81fdf9" />
-    <Content Include="ImproveEnglish\.git\objects\4f\7062430fd41bb7f074fbafca9bb40ae3d1f319" />
-    <Content Include="ImproveEnglish\.git\objects\50\3716c961f78af711e64c176c23b3c428aaba4c" />
-    <Content Include="ImproveEnglish\.git\objects\54\ce4d82820b81ee721b49d26966cb8a7ad70c06" />
-    <Content Include="ImproveEnglish\.git\objects\56\5effeb78fed3d4fc12aac2d9b8d26bb4e08ff7" />
-    <Content Include="ImproveEnglish\.git\objects\57\135983df96bea2880d56a37a34ca1f6d0a7e88" />
-    <Content Include="ImproveEnglish\.git\objects\57\8a38e9c3b9a7dfe4596215bb2b99b974c53e42" />
-    <Content Include="ImproveEnglish\.git\objects\57\de89af980d27f5fca62321f58133756ae85af6" />
-    <Content Include="ImproveEnglish\.git\objects\59\366acb17418f8a1da5bfc2564ebd4d1f1e2e8e" />
-    <Content Include="ImproveEnglish\.git\objects\5a\554dc8c129d65e2a2e25731a40211003f0e1e7" />
-    <Content Include="ImproveEnglish\.git\objects\61\192005a790be742582fef1a939123e0c9960e2" />
-    <Content Include="ImproveEnglish\.git\objects\61\32f76482161162092bbbff3ac2f8bddcb8a794" />
-    <Content Include="ImproveEnglish\.git\objects\62\25657c066b16c7244b3dac9612c91860c25d24" />
-    <Content Include="ImproveEnglish\.git\objects\62\a756bd30d9e0b3214fd459b18fa87d0e6046fe" />
-    <Content Include="ImproveEnglish\.git\objects\63\8fee1f83b1e0bcf0c74640acf167ddf02034f8" />
-    <Content Include="ImproveEnglish\.git\objects\63\ecc8f9c69c1841e93625dabe3051d81f1b4aca" />
-    <Content Include="ImproveEnglish\.git\objects\65\95cee4c281a61f18bbbe11983ca621f0f6da99" />
-    <Content Include="ImproveEnglish\.git\objects\66\923fe6a1ee9b53b7136997ac07748c1874b033" />
-    <Content Include="ImproveEnglish\.git\objects\66\c40d61d4197598809dd29934039f05a1d46819" />
-    <Content Include="ImproveEnglish\.git\objects\68\d9fec23d91c4cbae37138587920599aa204c52" />
-    <Content Include="ImproveEnglish\.git\objects\69\8118c28a85a08d77ac765cd4423ba96b0ef0ba" />
-    <Content Include="ImproveEnglish\.git\objects\69\b5bc907bc0fbeae467fab85dbd7b2114d605e8" />
-    <Content Include="ImproveEnglish\.git\objects\6b\3b5be7e65ebf72610821202507a6a95b1b9daf" />
-    <Content Include="ImproveEnglish\.git\objects\6b\b6a82a7317a490dc1b78414234d8bebac8585e" />
-    <Content Include="ImproveEnglish\.git\objects\6b\c51e6697a75a4863c010875171176d4b79b86f" />
-    <Content Include="ImproveEnglish\.git\objects\6d\e8fad8a3b96ed95fb37194579556b60fddab27" />
-    <Content Include="ImproveEnglish\.git\objects\73\215552fa67e478a478cbe008901ca4e500be12" />
-    <Content Include="ImproveEnglish\.git\objects\74\f70891135ff306681be8891ddad9999cbbf56d" />
-    <Content Include="ImproveEnglish\.git\objects\76\d2fe1a889fe3bcaff976b5d69ba38a74712c37" />
-    <Content Include="ImproveEnglish\.git\objects\7a\ee14752edf5511e8a163cac174bd6d2ddd56b9" />
-    <Content Include="ImproveEnglish\.git\objects\7c\231050c0fd5dfac8543118d387aa140a024386" />
-    <Content Include="ImproveEnglish\.git\objects\7c\705509d2e548f94bab32af73710391bb48c2e4" />
-    <Content Include="ImproveEnglish\.git\objects\7e\cf2dc3fda1133be9f41a9b772311a860ad90a6" />
-    <Content Include="ImproveEnglish\.git\objects\7f\382d27b8dbfca7522954eef28ceb43ce9827cd" />
-    <Content Include="ImproveEnglish\.git\objects\7f\3f5fdc8bc5be0f2475a6d69978d6361490abeb" />
-    <Content Include="ImproveEnglish\.git\objects\83\05eb4f61ba770f855f7711b8b0c24629630391" />
-    <Content Include="ImproveEnglish\.git\objects\83\70ed2f7b667d406eba6f89d3497ffe0c84d03e" />
-    <Content Include="ImproveEnglish\.git\objects\83\edf90eb4d12cbe23707317851ffba469ad99c8" />
-    <Content Include="ImproveEnglish\.git\objects\84\02d43006ea747f4e7ab9c3b4d8e649b5167cf5" />
-    <Content Include="ImproveEnglish\.git\objects\84\76ba4250ea2f67c44c70ca56cfaff7a7bb8bfa" />
-    <Content Include="ImproveEnglish\.git\objects\86\dc4bface73c4c3fc07d3ea2741e2ce05ad82a3" />
-    <Content Include="ImproveEnglish\.git\objects\88\2378161d564bff95d85698d23d5ef2ab6d8da0" />
-    <Content Include="ImproveEnglish\.git\objects\88\ca088aa9bd53cb8627773ad04b6c7783295a68" />
-    <Content Include="ImproveEnglish\.git\objects\89\277ed85c3af96788d33c3f270d87b405eb9c7e" />
-    <Content Include="ImproveEnglish\.git\objects\89\a0b99ec69859ae7275c1eb548bd206a19ad9a0" />
-    <Content Include="ImproveEnglish\.git\objects\8a\bd0b9265edd8d7ff1e1b74a1301d31f7f727fa" />
-    <Content Include="ImproveEnglish\.git\objects\8a\dbd7b0094a081fae0f2ee6ece5751dff278021" />
-    <Content Include="ImproveEnglish\.git\objects\8b\138bb5f040a6b9f199ac1ff67aef1dfe7f0d9c" />
-    <Content Include="ImproveEnglish\.git\objects\8b\2e150e560867ecbcfb4ea140d0c78e36703d05" />
-    <Content Include="ImproveEnglish\.git\objects\8b\39c011166aa8c9ae17273458374829ef0e97d7" />
-    <Content Include="ImproveEnglish\.git\objects\8b\748d5ce7b21820daa4581ae2845b0d03079368" />
-    <Content Include="ImproveEnglish\.git\objects\8b\8792a93cf9cce0b7d6823fec9b39101b3afe48" />
-    <Content Include="ImproveEnglish\.git\objects\8c\aa00f2112b91ac3ba21f1ea093880bf9217bad" />
-    <Content Include="ImproveEnglish\.git\objects\8c\c9cb733d1106737e7729582d6ad2d4f163b24e" />
-    <Content Include="ImproveEnglish\.git\objects\8e\75609dc81cb555c75d8f81d507d2bef14a1b0b" />
-    <Content Include="ImproveEnglish\.git\objects\8e\a8be475aa2ebf3eb387224fd5952e63630ebf5" />
-    <Content Include="ImproveEnglish\.git\objects\8e\ea9648dc7b81b38d8368758fa8cb09a8ef8700" />
-    <Content Include="ImproveEnglish\.git\objects\90\2dff2c760d68ba78eb5d1ae434f67ed851482f" />
-    <Content Include="ImproveEnglish\.git\objects\92\a224639e637684344f687dc8ab1641de8b16c8" />
-    <Content Include="ImproveEnglish\.git\objects\93\9c78541ae77ab7da4ee823052c475c7a24195f" />
-    <Content Include="ImproveEnglish\.git\objects\94\d0ae344b951a83b93dcf2f97a7faa1874a0f8e" />
-    <Content Include="ImproveEnglish\.git\objects\96\49a372287045a2da35420687839833ffa637b1" />
-    <Content Include="ImproveEnglish\.git\objects\96\f9370aed1f1926b29e849804c4afa9687b9064" />
-    <Content Include="ImproveEnglish\.git\objects\9a\6b282f0a5c4b617073708b87cee97a8d674234" />
-    <Content Include="ImproveEnglish\.git\objects\9b\f5d617be85ded8418addf542b517404cb725fa" />
-    <Content Include="ImproveEnglish\.git\objects\9c\3275b1aa150cf2466e05625356694b739c113a" />
-    <Content Include="ImproveEnglish\.git\objects\9f\3d5006f8ebb2ab726eb81af53245310859229c" />
-    <Content Include="ImproveEnglish\.git\objects\9f\78a3a36b903a7493dd1f093c2568b1e58c11e9" />
-    <Content Include="ImproveEnglish\.git\objects\a0\b09a6d4dfd191c42874a2609251ed86195ab49" />
-    <Content Include="ImproveEnglish\.git\objects\a0\d47b8ffbf93e491cd6e1286c3111e71559ec17" />
-    <Content Include="ImproveEnglish\.git\objects\a2\be69c83319fbc893ed265eb3010ed1ee7505c0" />
-    <Content Include="ImproveEnglish\.git\objects\a3\483349bb02bb75343d02fa9c7be478fa64e18e" />
-    <Content Include="ImproveEnglish\.git\objects\a3\6073a74e1fc02b92656e0cc44441eecb57920d" />
-    <Content Include="ImproveEnglish\.git\objects\a3\8e60cf27b4cc7377643a9bf3b2dd4156b2cca4" />
-    <Content Include="ImproveEnglish\.git\objects\a3\93e409219a04e1ac59b4ae5fbdc72038cd68c2" />
-    <Content Include="ImproveEnglish\.git\objects\a4\118150a37bd3ff2f9b3431f94afe2d5798c3a7" />
-    <Content Include="ImproveEnglish\.git\objects\a4\8544218d1ff6ae7d2f8d3e213c8afadfe003d9" />
-    <Content Include="ImproveEnglish\.git\objects\a5\535304285e5af1441201602dec44d9a8866872" />
-    <Content Include="ImproveEnglish\.git\objects\a5\d5089a121a5b08132ededa72b5363e3a3293b0" />
-    <Content Include="ImproveEnglish\.git\objects\a8\01215a8c3b4b000c90a24305c93806e6142e01" />
-    <Content Include="ImproveEnglish\.git\objects\a9\d0b75c825a00635cc3f9723b685fc315a46b53" />
-    <Content Include="ImproveEnglish\.git\objects\ac\7130d627cae9c4bdb8b28cc0ea2261d87d47c9" />
-    <Content Include="ImproveEnglish\.git\objects\ac\791ecf3b26c19467e5d35349f81943a72c0a4f" />
-    <Content Include="ImproveEnglish\.git\objects\af\58768cf11ee8d19855effe68d6dd850ab12966" />
-    <Content Include="ImproveEnglish\.git\objects\af\627872bdd3bd487b1312e2f80471542a0020c0" />
-    <Content Include="ImproveEnglish\.git\objects\af\b0c58f3d09f8c7519cebf2b6c9de78c76eb78f" />
-    <Content Include="ImproveEnglish\.git\objects\af\b4c2a8b41b520a68e9c4922d09fe46a6516af9" />
-    <Content Include="ImproveEnglish\.git\objects\b0\fba3b204d16eed5839871ce63b0be75d0442e8" />
-    <Content Include="ImproveEnglish\.git\objects\b1\c980feae818e6f13d1d25acdbb980faedbe5ac" />
-    <Content Include="ImproveEnglish\.git\objects\b3\0f3a11545baf3489a4b39e1e26a9ce019ab642" />
-    <Content Include="ImproveEnglish\.git\objects\b3\3b27dd9a4fb3ebd057da9259ef3140e91629d8" />
-    <Content Include="ImproveEnglish\.git\objects\b5\611cf29a442671cde7fb168f589ccd5c273a28" />
-    <Content Include="ImproveEnglish\.git\objects\b5\b2085d667f7b9d9413551db86eb02a3a6ae752" />
-    <Content Include="ImproveEnglish\.git\objects\b7\4a7c5b20c8630aaadee27b5178d869eada5e27" />
-    <Content Include="ImproveEnglish\.git\objects\b8\1ea6fd3cd232845d14f1a00314a07e7c584961" />
-    <Content Include="ImproveEnglish\.git\objects\b8\b25cbd894ebe6c29af84774cca4bd635807643" />
-    <Content Include="ImproveEnglish\.git\objects\b8\b5ee86084d15cba656be246bd71a54810b3266" />
-    <Content Include="ImproveEnglish\.git\objects\b9\bb8db97008bb27872f700febaa18f9dc7168b3" />
-    <Content Include="ImproveEnglish\.git\objects\b9\d528f8b8780b855e6b267ba7b16d84ae8a6e58" />
-    <Content Include="ImproveEnglish\.git\objects\bb\c5815fef7535f9b888b26d5fe588f6f64d0718" />
-    <Content Include="ImproveEnglish\.git\objects\bc\fc6941cde15b35697fc728505d3478aee6ea2e" />
-    <Content Include="ImproveEnglish\.git\objects\bd\99f365e246a71964199150188e973a2d32d8b9" />
-    <Content Include="ImproveEnglish\.git\objects\bd\bf86c6d65606e7a551cf1c4b20fd2fef612c4e" />
-    <Content Include="ImproveEnglish\.git\objects\bf\856fc92758eb350dfae78c45edcbf440412d37" />
-    <Content Include="ImproveEnglish\.git\objects\c0\4bea8e1836accf16a90333de7409d0cfb82590" />
-    <Content Include="ImproveEnglish\.git\objects\c0\a705e1cc8fcf4659c41828c67ff12e67f0d09b" />
-    <Content Include="ImproveEnglish\.git\objects\c3\c1389f921d2b1b1214fe260a4efeda73fd971b" />
-    <Content Include="ImproveEnglish\.git\objects\c4\61f40e1fd354885d0291e58cc38522cc476082" />
-    <Content Include="ImproveEnglish\.git\objects\c5\d97757b7f98c37b6dd88428e0db32a80aca589" />
-    <Content Include="ImproveEnglish\.git\objects\c6\637b1df514bcad7b9811e10a67fd916ccbfe11" />
-    <Content Include="ImproveEnglish\.git\objects\c6\82e1b67ffd3be31c2e3bc9bb8ee11ce607f8c7" />
-    <Content Include="ImproveEnglish\.git\objects\c6\89d94a8fd74bb7abfe95d3409e2adaf40f6a2b" />
-    <Content Include="ImproveEnglish\.git\objects\c7\2ce43e6367afeeb4c8de225174408fd08fc1bb" />
-    <Content Include="ImproveEnglish\.git\objects\c8\460efbd4ba4d89c78a303f54393caed1da99b0" />
-    <Content Include="ImproveEnglish\.git\objects\c8\a211545b85799b1cc3a05d50fce4f77fd7aca8" />
-    <Content Include="ImproveEnglish\.git\objects\cb\0a6411d9c46067a63cdc58b03c846fe5f9f600" />
-    <Content Include="ImproveEnglish\.git\objects\cb\c17d63dd5eaf7f55cd8c0e3e3d2861c130d25e" />
-    <Content Include="ImproveEnglish\.git\objects\cc\ffd191046fcf6382f32c244f846ba30305c093" />
-    <Content Include="ImproveEnglish\.git\objects\ce\4205cdd8cf78cece92d47215d4b2aa865f3ae1" />
-    <Content Include="ImproveEnglish\.git\objects\cf\84417f58e3f2e8864c5cb4f29da84d518283b9" />
-    <Content Include="ImproveEnglish\.git\objects\cf\d2a00357208ee1b4cccedbfbd332a46a3c7299" />
-    <Content Include="ImproveEnglish\.git\objects\d2\60d29cbfc6535e1ca2918b1656cbaed05e3016" />
-    <Content Include="ImproveEnglish\.git\objects\d2\6952b55e1d20e4d2f64ff111d3060226a00212" />
-    <Content Include="ImproveEnglish\.git\objects\d4\079f6f02fa9784bfdc794dec8b9d55b01fa579" />
-    <Content Include="ImproveEnglish\.git\objects\d5\c12d3f4538fde2e66ad9607c1d5e1ad2839a29" />
-    <Content Include="ImproveEnglish\.git\objects\d6\1a2d37e40e8dd78ad45ac001b23a6c8046d58c" />
-    <Content Include="ImproveEnglish\.git\objects\d6\67e1399d686ffb13dd5dbce7e71cee90b46f63" />
-    <Content Include="ImproveEnglish\.git\objects\d7\40302d24a245b2d88f02e2c74ab243b269c2d9" />
-    <Content Include="ImproveEnglish\.git\objects\d7\52fd5d71545548fb0baf3f3a1b500e13e520b9" />
-    <Content Include="ImproveEnglish\.git\objects\d8\7fb60d4908998f737e6ac852e515b67ce09718" />
-    <Content Include="ImproveEnglish\.git\objects\d9\7f425ce457e99c6a415d1af8863cb662120d09" />
-    <Content Include="ImproveEnglish\.git\objects\db\54ebe0ace12d80ee44b078da2960347c33ef14" />
-    <Content Include="ImproveEnglish\.git\objects\dc\69847fb73bc49d45d1422d243fd84c7837d9bf" />
-    <Content Include="ImproveEnglish\.git\objects\dc\784e6a8a9464dd7a9f83fd2c7e3e25158ba8c5" />
-    <Content Include="ImproveEnglish\.git\objects\de\4169fb30f72c5bd6c91b50debc0870d90bfc33" />
-    <Content Include="ImproveEnglish\.git\objects\e1\396bb97d04c0e2d7953aaba47871aac614e7c3" />
-    <Content Include="ImproveEnglish\.git\objects\e3\6b10efb7791111a8ff6c1a3382fb00e28b3db1" />
-    <Content Include="ImproveEnglish\.git\objects\e5\798daca9ba00953047bbe4211be997bc04d0a4" />
-    <Content Include="ImproveEnglish\.git\objects\e6\9aa1ee4a0c727b7dc89d36d6a555bf7c25eba4" />
-    <Content Include="ImproveEnglish\.git\objects\e7\55a3e51b388d0187d1197783f7774ecdb2d7fc" />
-    <Content Include="ImproveEnglish\.git\objects\e8\2153a2febdf26b189cefe34f208842b3f68dd9" />
-    <Content Include="ImproveEnglish\.git\objects\e9\aefb966c2b1c4853a36fcea6812c3f83b576ff" />
-    <Content Include="ImproveEnglish\.git\objects\ea\02f57e7d8821ee2adade4f531ae2b0ef1b783e" />
-    <Content Include="ImproveEnglish\.git\objects\ee\86f157a03465887072583a11a9eac209c4e6f8" />
-    <Content Include="ImproveEnglish\.git\objects\ef\deb81e3a8c469fe61bf395565e2bb5c3ac66eb" />
-    <Content Include="ImproveEnglish\.git\objects\f1\f9c8fac448d5bb8824c526ad28bed4cccbfe55" />
-    <Content Include="ImproveEnglish\.git\objects\f2\3a1170c04f964b3b21d5cc8d7a78411e46bf07" />
-    <Content Include="ImproveEnglish\.git\objects\f3\0e3351f0defc03f72dcb1104ad8eafc30d5f9c" />
-    <Content Include="ImproveEnglish\.git\objects\f3\6e4ee459ae1db26ef084aca1aaaa8f4e17225e" />
-    <Content Include="ImproveEnglish\.git\objects\f5\2890e79faf74f1af2faa3db2a0558153124e33" />
-    <Content Include="ImproveEnglish\.git\objects\f6\c3e40a4c64842534eb81d1bfc0483dd1fced8a" />
-    <Content Include="ImproveEnglish\.git\objects\f6\f00315d046d30e47f44227797b0a2daca1eba5" />
-    <Content Include="ImproveEnglish\.git\objects\f7\6c455e883eb88ad65ae0ca3094ead27ecf985f" />
-    <Content Include="ImproveEnglish\.git\objects\f7\8399d29a7e931239b71522bbbba1467743c3b1" />
-    <Content Include="ImproveEnglish\.git\objects\f9\072fd5991dbd24c3a2f77d49402235d0d10872" />
-    <Content Include="ImproveEnglish\.git\objects\fa\72692c3161aeeb66d2789b1e691769551fc078" />
-    <Content Include="ImproveEnglish\.git\objects\fd\b8fa2d2a6c065099e494f3af6cb37a952b817f" />
-    <Content Include="ImproveEnglish\.git\packed-refs" />
-    <Content Include="ImproveEnglish\.git\refs\heads\main" />
-    <Content Include="ImproveEnglish\.git\refs\remotes\origin\HEAD" />
-    <Content Include="ImproveEnglish\.git\refs\remotes\origin\main" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\fonts\boxicons.eot" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\fonts\boxicons.ttf" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\fonts\boxicons.woff" />
-    <Content Include="ImproveEnglish\assets\vendor\boxicons\fonts\boxicons.woff2" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.eot" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.less" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.ttf" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.woff" />
-    <Content Include="ImproveEnglish\assets\vendor\remixicon\remixicon.woff2" />
-    <Content Include="ImproveEnglish\Page.Master" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="ImproveEnglishProject\assets\vendor\boxicons\fonts\boxicons.woff2" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.eot" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.less" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.ttf" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.woff" />
+    <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.woff2" />
+    <Content Include="ImproveEnglishProject\Page.Master" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
@@ -702,9 +463,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ImproveEnglish\.git\objects\info\" />
-    <Folder Include="ImproveEnglish\.git\objects\pack\" />
-    <Folder Include="ImproveEnglish\.git\refs\tags\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
