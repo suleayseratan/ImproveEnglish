@@ -41,9 +41,9 @@
 
     <!-- My Scrips -->
     <style>
-         /* The message box is shown when the user clicks on the password field */
+        /* The message box is shown when the user clicks on the password field */
         #myMessage {
-            display: none;;
+            display: none;
             color: #000;
             position: relative;
             padding: 20px;
@@ -51,33 +51,48 @@
             border: 4px inset #2a9d8f;
         }
 
-        #myMessage p {
-            padding: 0 35px;
-            font-size: 1rem;
-            margin-bottom: 0;
+            #myMessage p {
+                padding: 0 35px;
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+
+        #myMessage2 {
+            display: none;
+            color: #000;
+            position: relative;
+            padding: 20px;
+            margin-top: 10px;
+            border: 4px inset #2a9d8f;
         }
+
+            #myMessage2 p {
+                padding: 0 35px;
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
 
         /* Add a green text color and a checkmark when the requirements are right */
         .valid {
-            color: white;
+            color: #006400;
         }
 
-        .valid:before {
-            position: relative;
-            left: -35px;
-            content: "✔";
-        }
+            .valid:before {
+                position: relative;
+                left: -35px;
+                content: "✔";
+            }
 
         /* Add a red text color and an "x" when the requirements are wrong */
         .invalid {
             color: red;
         }
 
-        .invalid:before {
-            position: relative;
-            left: -35px;
-            content: "✖";
-        }
+            .invalid:before {
+                position: relative;
+                left: -35px;
+                content: "✖";
+            }
     </style>
 
 </head>
@@ -130,32 +145,23 @@
 
                         <div class="col-md-6 login-sec">
                             <h2 class="text-center">Create Account</h2>
-                            
-                                <div class="form-group mt-2">
-                                    <label for="txtName" class="text-uppercase"><strong>Name</strong></label>
-                                    <input type="text" runat="server" id="txtName" class="form-control" placeholder="" />
 
-                                </div>
+                            <div class="form-group mt-2">
+                                <label for="txtName" class="text-uppercase"><strong>Name</strong></label>
+                                <input type="text" runat="server" id="txtName" class="form-control" placeholder="" />
+
+                            </div>
                             <div class="form-group mt-2">
                                 <label for="txtSurname" class="text-uppercase"><strong>Surname</strong></label>
                                 <input type="text" runat="server" id="txtSurname" class="form-control" placeholder="" />
                             </div>
                             <div class="form-group mt-2">
-                                <label for="" class="text-uppercase" style="display: block;"><strong>Gender</strong></label>
-                                <div class="form-check form-check-inline ml-3">
-                                    <input runat="server" id="flexRadioFmale" class="form-check-input" type="radio" name="flexRadioDefault" />
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Fmale
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline ml-5">
-                                    <input runat="server" id="flexRadioMale" class="form-check-input" type="radio" name="flexRadioDefault" />
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Male
-                                    </label>
-                                </div>
+                                <label for="radioGender" class="text-uppercase" style="display: block;"><strong>Gender</strong></label>
+                                <asp:RadioButtonList ID="radioGender" runat="server">
+                                    <asp:ListItem Text="Male" Value="Male" Selected="True"></asp:ListItem>
+                                    <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
+                                </asp:RadioButtonList>
                             </div>
-
                             <div class="form-group mt-2">
                                 <label for="selectUniversity"
                                     class="text-uppercase">
@@ -181,8 +187,7 @@
                                         <label for="exampleInputPassword1"
                                             class="text-uppercase">
                                             <strong>Department</strong></label>
-                                        <select runat="server" id="selectDeprtment" class="form-control select2">
-                                        </select>
+                                        <asp:DropDownList runat="server" ID="selectDeprtment" CssClass="form-control select2"></asp:DropDownList>
                                     </div>
                                     <div class="form-group mt-2">
                                         <label for="txtEmail" class="text-uppercase"><strong>E-mail</strong></label>
@@ -201,7 +206,9 @@
                             </asp:UpdatePanel>
                             <div class="form-group mt-2">
                                 <label for="txtPassword" class="text-uppercase"><strong>Password</strong></label>
-                                <input type="password" runat="server" id="txtPassword" class="form-control" placeholder="" />
+                                <input type="password" runat="server" id="txtPassword" class="form-control" name="txtPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, at least 8 or more characters, and less 15 characters"
+                                    required />
 
                                 <div class="mt-3">
                                     <input type="checkbox" class="form-check-input ms-1" style="height: .3;" onclick="myFunction()" id="showPassword">
@@ -209,18 +216,29 @@
                                         Show Password
                                     </label>
                                 </div>
+                                <div id="myMessage">
+                                    <h5>Password must contain the following:</h5>
+                                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                    <p id="number" class="invalid">A <b>number</b></p>
+                                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                                    <p id="maxlength" class="invalid">Maximum <b>15 characters</b></p>
+                                </div>
                             </div>
-
                             <div class="form-group mt-2">
-                                <label for="txtPasswordAgain" class="text-uppercase">Password Again</label>
-                                <input type="password" runat="server" id="txtPasswordAgain" class="form-control" placeholder="" />
+                                <label for="txtPasswordAgain" class="text-uppercase"><strong>Password Again</strong></label>
+                                <input type="password" runat="server" id="txtPasswordAgain" name="txtPasswordAgain" class="form-control" />
                             </div>
-
+                            <div id="myMessage2">
+                                <p id="confirmPwd" class="invalid">Matched <b>passwords</b> </p>
+                            </div>
                             <div class="d-grid gap-2 col-6 mx-auto mt-2">
                                 <button type="button" runat="server" id="btnCreateAccount" class="btn btn-primary" onserverclick="btnCreateAccount_OnServerClick">Create Account</button>
                             </div>
+                            <div runat="server" ID="divMessage" class="alert alert-danger mt-4" Visible="False" role="alert">
+                            </div>
                         </div>
-                    </div>
+                </div>
 
                 </div>
 
@@ -232,11 +250,16 @@
 <script>
     $('.select2').select2();
 
-    var myInput = document.getElementById("psw");
+    var myInput = document.getElementById("txtPassword");
+    var myAgainInput = document.getElementById("txtPasswordAgain");
+    var confirm = document.getElementById("confirmPwd");
     var letter = document.getElementById("letter");
     var capital = document.getElementById("capital");
     var number = document.getElementById("number");
     var length = document.getElementById("length");
+    var maxlength = document.getElementById("maxlength");
+
+    var btnCreateAccount = document.getElementById("btnCreateAccount");
 
     // When the user clicks on the password field, show the message box
     myInput.onfocus = function () {
@@ -246,6 +269,15 @@
     // When the user clicks outside of the password field, hide the message box
     myInput.onblur = function () {
         document.getElementById("myMessage").style.display = "none";
+    }
+
+    myAgainInput.onfocus = function () {
+        document.getElementById("myMessage2").style.display = "block";
+    }
+
+    // When the user clicks outside of the confirm password field, hide the message box
+    myAgainInput.onblur = function () {
+        document.getElementById("myMessage2").style.display = "none";
     }
 
     // When the user starts to type something inside the password field
@@ -280,7 +312,7 @@
             number.classList.add("invalid");
         }
 
-        // Validate length
+        // Validate minimum length
         if (myInput.value.length >= 8) {
             length.classList.remove("invalid");
             length.classList.add("valid");
@@ -288,6 +320,26 @@
             length.classList.remove("valid");
             length.classList.add("invalid");
         }
+
+        // Validate maximum length
+        if (myInput.value.length <= 15 && myInput.value.length >= 8) {
+            maxlength.classList.remove("invalid");
+            maxlength.classList.add("valid");
+        } else {
+            maxlength.classList.remove("valid");
+            maxlength.classList.add("invalid");
+        }
     }
+
+    myAgainInput.onkeyup = function () {
+        if (myAgainInput.value.match(myInput.value)) {
+            confirm.classList.remove("invalid");
+            confirm.classList.add("valid");
+        } else {
+            confirm.classList.remove("valid");
+            confirm.classList.add("invalid");
+        }
+    }
+
 </script>
 </html>

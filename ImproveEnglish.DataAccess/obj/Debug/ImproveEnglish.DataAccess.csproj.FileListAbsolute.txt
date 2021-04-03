@@ -12,3 +12,17 @@ C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\E
 C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\sulea\source\repos\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CopyComplete
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll.config
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.pdb
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\Entity.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\Entity.pdb
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csprojAssemblyReference.cache
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CoreCompileInputs.cache
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CopyComplete
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.pdb

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglish/Page.Master" AutoEventWireup="true" CodeBehind="Message.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.Message" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="Message.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.Message" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

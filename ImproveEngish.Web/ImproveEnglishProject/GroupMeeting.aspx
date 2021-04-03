@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglish/Page.Master" AutoEventWireup="true" CodeBehind="GroupMeeting.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.GroupMeeting" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="GroupMeeting.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.GroupMeeting" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>

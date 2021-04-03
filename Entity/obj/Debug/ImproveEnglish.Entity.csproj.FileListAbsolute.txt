@@ -4,3 +4,9 @@ C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entit
 C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csproj.CoreCompileInputs.cache
 C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\Entity.dll
 C:\Users\sulea\source\repos\ImproveEnglish\Entity\obj\Debug\Entity.pdb
+H:\My-Github-Projects\ImproveEnglish\Entity\bin\Debug\Entity.dll
+H:\My-Github-Projects\ImproveEnglish\Entity\bin\Debug\Entity.pdb
+H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csprojAssemblyReference.cache
+H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csproj.CoreCompileInputs.cache
+H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\Entity.dll
+H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\Entity.pdb

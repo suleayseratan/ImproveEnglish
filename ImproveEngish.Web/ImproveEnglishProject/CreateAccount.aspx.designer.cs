@@ -42,22 +42,13 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtSurname;
 
         /// <summary>
-        /// flexRadioFmale control.
+        /// radioGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton flexRadioFmale;
-
-        /// <summary>
-        /// flexRadioMale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton flexRadioMale;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioGender;
 
         /// <summary>
         /// selectNationality control.
@@ -102,7 +93,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect selectDeprtment;
+        protected global::System.Web.UI.WebControls.DropDownList selectDeprtment;
 
         /// <summary>
         /// txtEmail control.
@@ -148,5 +139,14 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnCreateAccount;
+
+        /// <summary>
+        /// divMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMessage;
     }
 }

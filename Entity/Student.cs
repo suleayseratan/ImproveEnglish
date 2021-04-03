@@ -22,7 +22,7 @@ namespace Entity
         [ForeignKey("FkDepartmentId")]
         public virtual Department Department { get; set; }
         public string NameSurname { get; set; }
-        public byte Gender { get; set; }
+        public string Gender { get; set; }
         public string Password { get; set; }
         public string Eposta { get; set; }
         public string ProfileImagePath { get; set; }
