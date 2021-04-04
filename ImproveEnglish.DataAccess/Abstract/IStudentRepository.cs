@@ -9,5 +9,6 @@ namespace ImproveEnglish.DataAccess.Abstract
 {
     public interface IStudentRepository:IRepository<Student>
     {
+        List<Student> GetByEmail(string email);
     }
 }

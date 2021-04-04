@@ -71,14 +71,14 @@
                     </div>
                     <div class="col-md-6 login-sec">
                         <h2 class=" text-center ">Login</h2>
-                        <form class="login-form ">
+                        <form runat="server" ID="formLogin" class="login-form ">
                             <div class="form-group mt-3">
-                                <label for="exampleInputPassword1 " class="text-uppercase "><strong>E-Mail</strong></label>
-                                <input type="password " class="form-control " placeholder=" ">
+                                <label for="txtEmail " class="text-uppercase "><strong>E-Mail</strong></label>
+                                <input runat="server" ID="txtEmail" type="email" class="form-control " placeholder=" "/>
                             </div>
                             <div class="form-group mt-3">
-                                <label for="exampleInputPassword1 " class="text-uppercase "><strong>Password</strong></label>
-                                <input type="password " id="password " class="form-control " placeholder=" ">
+                                <label for="txtPassword " class="text-uppercase "><strong>Password</strong></label>
+                                <input runat="server" ID="txtPassword" type="password " class="form-control " placeholder=" "/>
                             </div>
                             <div class="form-group mt-3">
                                 <div class="form-check form-check-inline">
@@ -87,11 +87,14 @@
                                         Check Me Out
                                 </label>
                                 </div>
-                                <a href="forgotpassword.html" style="margin-left: 35%;"><strong><i>Forgot password?</i></strong></a>
+                                <a href="ForgotPassword.aspx" style="margin-left: 35%;"><strong><i>Forgot password?</i></strong></a>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto mt-3 ">
-                                <button class="btn btn-primary " type="button ">Sign in</button>
+                                <button runat="server" ID="btnSignIn" class="btn btn-primary" type="button" OnServerClick="btnSignIn_OnServerClick">Sign in</button>
                             </div>
+                            <div runat="server" ID="divMessage" class="alert alert-danger mt-4" Visible="False" role="alert">
+                            </div>
+                            <a href="#" runat="server" ID="aLink" OnServerClick="aLink_OnServerClick" style="margin-left: 35%;" Visible="False"><strong><i>Send activation link again.</i></strong></a>
                         </form>
                     </div>
                 </div>

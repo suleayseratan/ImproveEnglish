@@ -186,3 +186,5 @@ H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\obj\Debug\ImproveEnglish.
 H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\obj\Debug\ImproveEnglish.Web.csproj.CopyComplete
 H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\obj\Debug\ImproveEngish.Web.dll
 H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\obj\Debug\ImproveEngish.Web.pdb
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\StarkbankEcdsa.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\ImproveEnglish.Business.dll.config
