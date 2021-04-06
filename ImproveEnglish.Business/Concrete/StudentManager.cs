@@ -139,6 +139,27 @@ namespace ImproveEnglish.Business.Concrete
             return list;
         }
 
+        public void ChagePassword(int id,string password)
+        {
+            var student = _studentRepository.GetById(id);
+            string md5Password = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "MD5");
+            _studentRepository.Update(new Student
+            {
+                StudentId = id,
+                FkNationalityId = student.FkNationalityId,
+                FkUniversityId = student.FkUniversityId,
+                FkDepartmentId = student.FkDepartmentId,
+                NameSurname = student.NameSurname,
+                Gender = student.Gender,
+                Password = md5Password,
+                Eposta = student.Eposta,
+                ProfileImagePath = student.ProfileImagePath,
+                EmailVeryFied = student.EmailVeryFied,
+                ActivationCode = student.ActivationCode
+            });
+        }
+
+
         public List<Student> GetAll()
         {
             var list = _studentRepository.GetAll();

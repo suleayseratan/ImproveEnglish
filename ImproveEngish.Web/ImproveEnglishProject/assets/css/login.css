@@ -113,3 +113,24 @@
 .banner-text p {
     color: #fff;
 }
+
+/* Start Show Password  */
+
+.showpwd {
+    position: absolute;
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+    width: 100%;
+}
+
+.relative i {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+}
+/* End Show Password */
+
+

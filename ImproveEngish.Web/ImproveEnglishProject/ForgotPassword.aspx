@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.ForgotPassword" %>
+﻿<%@ Page Language="C#" ClientIDMode="Static" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.ForgotPassword" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,7 @@
 
                     <div class="col-md-6 login-sec">
                         <h2 class="text-center">Forgot your password?</h2>
-                        <form class="login-form">
+                        <form runat="server" ID="forgotPasswordForm" class="login-form">
                             <div class="form-group">
                                 <p style="font-size: 1.5rem; font-weight: 500;">Change your password in three steps.</p>
                                 <ol>
@@ -80,13 +80,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">E-Mail</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" runat="server" ID="txtEmail" class="form-control" />
                             </div>
 
                             <div class="btn-login-div">
-                                <button type="submit" class="btn btn-login btn-primary">Get New Password</button>
+                                <button type="submit" runat="server" ID="btnSendMail"  class="btn btn-login btn-primary" OnServerClick="btnSendMail_OnServerClick">Get New Password</button>
                             </div>
-
+                            <div runat="server" id="divMessage" class="alert alert-danger mt-4" visible="False" role="alert">
+                            </div>
                         </form>
 
                     </div>

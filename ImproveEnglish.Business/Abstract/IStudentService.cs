@@ -15,6 +15,7 @@ namespace ImproveEnglish.Business.Abstract
         bool CheckLogin(string email,string password);
         bool CheckEmailVeryFied(string email);
         List<Student> GetByEmail(string email);
+        void ChagePassword(int id, string password);
 
     }
 }

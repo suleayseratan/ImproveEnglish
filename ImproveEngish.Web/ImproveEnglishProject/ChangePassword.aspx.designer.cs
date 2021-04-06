@@ -11,26 +11,17 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 {
 
 
-    public partial class Login
+    public partial class ChangePassword
     {
 
         /// <summary>
-        /// formLogin control.
+        /// chabgePasswordForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formLogin;
-
-        /// <summary>
-        /// txtEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlForm chabgePasswordForm;
 
         /// <summary>
         /// txtPassword control.
@@ -42,22 +33,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
 
         /// <summary>
-        /// rememberMe control.
+        /// txtPasswordAgain control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox rememberMe;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPasswordAgain;
 
         /// <summary>
-        /// btnSignIn control.
+        /// btnChangePassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnSignIn;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnChangePassword;
 
         /// <summary>
         /// divMessage control.
@@ -67,14 +58,5 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMessage;
-
-        /// <summary>
-        /// aLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor aLink;
     }
 }

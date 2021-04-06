@@ -206,15 +206,11 @@
                             </asp:UpdatePanel>
                             <div class="form-group mt-2">
                                 <label for="txtPassword" class="text-uppercase"><strong>Password</strong></label>
-                                <input type="password" runat="server" id="txtPassword" class="form-control" name="txtPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                <div class="relative">
+                                    <input type="password" runat="server" id="txtPassword" class="form-control" name="txtPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                     title="Must contain at least one number and one uppercase and lowercase letter, at least 8 or more characters, and less 15 characters"
                                     required />
-
-                                <div class="mt-3">
-                                    <input type="checkbox" class="form-check-input ms-1" style="height: .3;" onclick="myFunction()" id="showPassword">
-                                    <label class="form-check-label ms-4" for="showPassword">
-                                        Show Password
-                                    </label>
+                                    <i class="fa fa-eye showpwd" onclick="showPwd('txtPassword', this)"></i>
                                 </div>
                                 <div id="myMessage">
                                     <h5>Password must contain the following:</h5>
@@ -227,7 +223,10 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="txtPasswordAgain" class="text-uppercase"><strong>Password Again</strong></label>
-                                <input type="password" runat="server" id="txtPasswordAgain" name="txtPasswordAgain" class="form-control" />
+                                <div class="relative">
+                                    <input type="password" runat="server" id="txtPasswordAgain" name="txtPasswordAgain" class="form-control" />
+                                    <i class="fa fa-eye showpwd" onclick="showPwd('txtPasswordAgain', this)"></i>
+                                </div>
                             </div>
                             <div id="myMessage2">
                                 <p id="confirmPwd" class="invalid">Matched <b>passwords</b> </p>

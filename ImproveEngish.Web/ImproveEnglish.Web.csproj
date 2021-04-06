@@ -239,6 +239,7 @@
     <Content Include="ImproveEnglishProject\assets\vendor\remixicon\remixicon.symbol.svg" />
     <Content Include="ImproveEnglishProject\assets\vendor\swiper\swiper-bundle.min.css" />
     <Content Include="ImproveEnglishProject\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="ImproveEnglishProject\ChangePassword.aspx" />
     <Content Include="ImproveEnglishProject\Contact.aspx" />
     <Content Include="ImproveEnglishProject\CreateAccount.aspx" />
     <Content Include="ImproveEnglishProject\Default.aspx" />
@@ -304,6 +305,13 @@
     </Compile>
     <Compile Include="ImproveEnglishProject\ActivationPage.aspx.designer.cs">
       <DependentUpon>ActivationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImproveEnglishProject\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

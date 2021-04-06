@@ -14,18 +14,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         StudentManager _studentManager = new StudentManager(new EfStudentRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
-            Guid activationCode = Guid.Parse(Request.QueryString["ActivationCode"]);
-            int studentId = Convert.ToInt32(Request.QueryString["StudentId"]);
-            var check = _studentManager.CheckUpdateEmailVeryFied(studentId, activationCode);
-            if (check.Equals(true))
+            if (!IsPostBack)
             {
-                lblMessage.Text = "Your account has been activated.";
-                Response.Redirect("Login.aspx");
+                Guid activationCode = Guid.Parse(Request.QueryString["ActivationCode"]);
+                int studentId = Convert.ToInt32(Request.QueryString["StudentId"]);
+                var check = _studentManager.CheckUpdateEmailVeryFied(studentId, activationCode);
+                if (check.Equals(true))
+                {
+                    lblMessage.Text = "Your account has been activated.";
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    lblMessage.Text = "Your account has not been activated.";
+                }
             }
-            else
-            {
-                lblMessage.Text = "Your account has not been activated.";
-            }
+
         }
     }
 }

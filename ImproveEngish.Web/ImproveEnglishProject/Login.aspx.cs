@@ -15,6 +15,13 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             {
                 aLink.Visible = false;
                 divMessage.Visible = false;
+
+                if (Request.Cookies["Email"] != null && Request.Cookies["Password"] != null)
+                {
+                    txtEmail.Value = Request.Cookies["Email"].Value;
+                    txtPassword.Value = Request.Cookies["Password"].Value;
+                    rememberMe.Checked = true;
+                }
             }
         }
 
@@ -26,6 +33,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 bool checkEmailVeryFied = _studentManager.CheckEmailVeryFied(txtEmail.Value);
                 if (checkEmailVeryFied == true)
                 {
+                    RememberMe();
                     var student = _studentManager.GetByEmail(txtEmail.Value);
                     foreach (var i in student)
                     {
@@ -41,6 +49,30 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                     Message("Your email has not activated.", false);
                     aLink.Visible = true;
                 }
+            }
+            else
+            {
+                Message("Please check your mail or password.",false);
+            }
+        }
+
+        private void RememberMe()
+        {
+            if (rememberMe.Checked)
+            {
+                Response.Cookies["Email"].Expires = DateTime.Now.AddDays(30);
+                Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+
+                Response.Cookies["Email"].Value = txtEmail.Value.Trim();
+                Response.Cookies["Password"].Value = txtPassword.Value.Trim();
+            }
+            else
+            {
+                Response.Cookies["Email"].Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+
+                Response.Cookies["Email"].Value = "";
+                Response.Cookies["Password"].Value = "";
             }
         }
 
