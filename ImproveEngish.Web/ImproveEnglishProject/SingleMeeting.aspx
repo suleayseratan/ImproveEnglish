@@ -5,7 +5,7 @@
     <main id="main" data-aos="fade-in">
 
         <!-- ======= Breadcrumbs ======= -->
-        <div class="breadcrumbs">
+        <div class="breadcrumbs" style="margin-top: 10%">
             <div class="container  text-center">
                 <div class="fieldset">
                     <h1>Search</h1>

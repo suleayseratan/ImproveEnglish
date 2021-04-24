@@ -9,8 +9,6 @@
     <title>Create Account</title>
     <link rel="stylesheet" href="assets/css/login.css">
 
-
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -93,6 +91,13 @@
                 left: -35px;
                 content: "✖";
             }
+
+
+        /* Radio Button Spaice */
+        .spaced input[type="radio"]
+        {
+            margin-right: 10px;
+        }
     </style>
 
 </head>
@@ -157,8 +162,8 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="radioGender" class="text-uppercase" style="display: block;"><strong>Gender</strong></label>
-                                <asp:RadioButtonList ID="radioGender" runat="server">
-                                    <asp:ListItem Text="Male" Value="Male" Selected="True"></asp:ListItem>
+                                <asp:RadioButtonList ID="radioGender" runat="server" RepeatDirection="Horizontal" CssClass="spaced">
+                                    <asp:ListItem Text="Male" Value="Male" Selected="True" style="margin-right: 20px;"></asp:ListItem>
                                     <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
                                 </asp:RadioButtonList>
                             </div>

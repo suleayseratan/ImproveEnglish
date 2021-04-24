@@ -61,20 +61,21 @@
 
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="courses.html">Singe Meeting</a></li>
-                        <li><a href="events.html">Group Meeting</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="messages.html">Messages<span class="badge badge-danger ml-2">4</span></a></li>
+                        <li><a class="active" href="Default.aspx">Home</a></li>
+                        <li><a href="SingleMeeting.aspx">Single Meeting</a></li>
+                        <li><a href="GroupMeeting.aspx">Group Meeting</a></li>
+                        <li><a href="About.aspx">About</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                        <li><a href="Message.aspx">Messages<span class="badge badge-danger ml-2">4</span></a></li>
                         <li class="dropdown"><a href="#"><span>
-                            <img src="assets/img/avataaars.png" class=".avatar"
+                                <img src="<%=Session["ImagePath"]%>" class=".avatar"
                                 style="vertical-align: middle; width: 50px !important; height: 50px !important; border-radius: 50%;" />
-                            Name Surname</span> <i class="bi bi-chevron-down"></i></a>
+                            <%=Session["NameSurname"] %>
+                            </span> <i class="bi bi-chevron-down"></i></a>
                             <ul id="dropprofile">
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="schedule.html"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Free Times</a></li>
-                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="settings.html"
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="Setting.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Settings</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-sign-out fa-lg"></i><a href="#"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Log Out</a></li>
