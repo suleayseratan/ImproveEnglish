@@ -13,7 +13,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
     public partial class CreateAccount : System.Web.UI.Page
     {
         private StudentManager _studentManager = new StudentManager(new EfStudentRepository());
-        private IStudentService _studentService;
         private UniversityManager _universityManager = new UniversityManager(new EfUniversityRepository());
         //private IUniversityService _universityService;
         private DepartmentOfUniversityManager _departmentOfUniversityManager = new DepartmentOfUniversityManager(new EfDepartmentOfUniversityRepository());

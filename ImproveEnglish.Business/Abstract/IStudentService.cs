@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entity;
+using Entity.Model;
 
 namespace ImproveEnglish.Business.Abstract
 {
@@ -16,6 +17,7 @@ namespace ImproveEnglish.Business.Abstract
         bool CheckEmailVeryFied(string email);
         List<Student> GetByEmail(string email);
         void ChagePassword(int id, string password);
+        List<StudentDetailModel> GetStudentById(int studentId);
 
     }
 }

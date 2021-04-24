@@ -38,6 +38,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                     foreach (var i in student)
                     {
                         Session["StudentId"] = i.StudentId;
+                        Session["UniversityId"] = i.FkUniversityId;
+                        Session["DepartmentId"] = i.FkDepartmentId;
                         Session["NameSurname"] = i.NameSurname;
                         Session["ImagePath"] = i.ProfileImagePath;
                     }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Entity;
+using Entity.Model;
 using ImproveEnglish.DataAccess.Abstract;
 
 namespace ImproveEnglish.DataAccess.Concrete.Ef
@@ -20,5 +21,15 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
                 return list;
             }
         }
+
+        public List<StudentDetailModel> GetStudents(int studentId)
+        {
+            using (ImproveEnglishContext context =new ImproveEnglishContext())
+            {
+                var list = context.Database.SqlQuery<StudentDetailModel>("Select * From StudentDetails").Where(p=>p.StudentId == studentId).ToList();
+                return list;
+            }
+        }
+
     }
 }

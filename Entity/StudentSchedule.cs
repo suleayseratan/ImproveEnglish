@@ -18,6 +18,6 @@ namespace Entity
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public DateTime MeetingDate { get; set; }
-        public byte IsFull { get; set; }
+        public bool IsFull { get; set; }
     }
 }

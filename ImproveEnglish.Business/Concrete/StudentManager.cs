@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
 using Entity;
+using Entity.Model;
 using ImproveEnglish.Business.Abstract;
 using ImproveEnglish.DataAccess.Abstract;
 using ImproveEnglish.DataAccess.Concrete.Ef;
@@ -159,6 +160,11 @@ namespace ImproveEnglish.Business.Concrete
             });
         }
 
+        public List<StudentDetailModel> GetStudentById(int studentId)
+        {
+            var list = _studentRepository.GetStudents(studentId).ToList();
+            return list;
+        }
 
         public List<Student> GetAll()
         {
