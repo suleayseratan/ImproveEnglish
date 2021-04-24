@@ -24,5 +24,11 @@ namespace ImproveEnglish.Business.Concrete
             var list = _studentScheduleRepository.SearchStudent(universityId, meetingTime, startTime, endTime).Where(p=>p.StudentId != studentId).ToList();
             return (List<StudentScheduleModel>)list;
         }
+
+        public List<StudentScheduleModel> GetStudentAgenda(int studentId)
+        {
+            var list = _studentScheduleRepository.GetStudentSchedule(studentId);
+            return list;
+        }
     }
 }

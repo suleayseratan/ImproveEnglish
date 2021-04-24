@@ -21,7 +21,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         private void GetStudentAgenda(int studentId)
         {
-            var student = _studentManager.GetStudentById(studentId);
+            var student = _studentScheduleManager.GetStudentAgenda(studentId);
             rptStudentAgenda.DataSource = student;
             rptStudentAgenda.DataBind();
         }
@@ -31,7 +31,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             var student = _studentManager.GetStudentById(studentId);
             rptStudentDetail.DataSource = student;
             rptStudentDetail.DataBind();
-
         }
     }
 }

@@ -12,6 +12,6 @@ namespace ImproveEnglish.DataAccess
     public interface IStudentScheduleRepository:IRepository<StudentSchedule>
     {
         List<StudentScheduleModel> SearchStudent(int universityId, string meetingTime, string startTime, string endTime);
-        //List<StudentScheduleModel> GetStudentSchedule(int studentId);
+        List<StudentScheduleModel> GetStudentSchedule(int studentId);
     }
 }

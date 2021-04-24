@@ -31,23 +31,23 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
 
         }
 
-        //public List<StudentScheduleModel> GetStudentSchedule(int studentId)
-        //{
-        //    using (ImproveEnglishContext context = new ImproveEnglishContext())
-        //    {
-        //        var list = (from ss in context.StudentSchedules
-        //            join s in context.Students on ss.FkStudentId equals  s.StudentId
-        //            where ss.FkStudentId == studentId 
-        //            select new
-        //            {
-        //                SheduleId = ss.ScheduleId,
-        //                MeetingDate = ss.MeetingDate,
-        //                StartTime = ss.StartTime,
-        //                EndTime = ss.EndTime,
-        //                IsFull = ss.IsFull
-        //            }).ToList();
-        //        return list;
-        //    }
-        //}
+        public List<StudentScheduleModel> GetStudentSchedule(int studentId)
+        {
+            using (ImproveEnglishContext context = new ImproveEnglishContext())
+            {
+                var list = (from ss in context.StudentSchedules
+                            join s in context.Students on ss.FkStudentId equals s.StudentId
+                            where ss.FkStudentId == studentId
+                            select new StudentScheduleModel()
+                            {
+                                ScheduleId = ss.ScheduleId,
+                                MeetingDate = ss.MeetingDate,
+                                StartTime = ss.StartTime,
+                                EndTime = ss.EndTime,
+                                IsFull = ss.IsFull
+                            }).ToList();
+                return list;
+            }
+        }
     }
 }

@@ -11,5 +11,7 @@ namespace ImproveEnglish.Business.Abstract
     {
         List<StudentScheduleModel> SearchStudentSheduleByDetaptmetId(int departmentId,int studentId, int universityId,
             string meetingTime, string startTime, string endTime);
+
+        List<StudentScheduleModel> GetStudentAgenda(int studentId);
     }
 }
