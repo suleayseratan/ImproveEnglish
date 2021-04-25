@@ -24,6 +24,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mDate;
 
         /// <summary>
+        /// rfvDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDate;
+
+        /// <summary>
         /// mStartTime control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mStartTime;
 
         /// <summary>
+        /// rfvStartTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStartTime;
+
+        /// <summary>
         /// mEndTime control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,24 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl mEndTime;
+
+        /// <summary>
+        /// rfvEndTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEndTime;
+
+        /// <summary>
+        /// ddlDepartment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDepartment;
 
         /// <summary>
         /// btnSearch control.

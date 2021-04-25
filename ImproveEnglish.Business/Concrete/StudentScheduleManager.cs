@@ -18,16 +18,16 @@ namespace ImproveEnglish.Business.Concrete
         {
             _studentScheduleRepository = studentScheduleRepository;
         }
-        public List<StudentScheduleModel> SearchStudentSheduleByDetaptmetId(int departmentId, int studentId, int universityId, string meetingTime,
+        public List<StudentScheduleModel> SearchStudentSheduleByDetaptmetId(int departmentId,int nationalityId, int studentId, int universityId, string meetingTime,
             string startTime, string endTime)
         {
-            var list = _studentScheduleRepository.SearchStudent(universityId, meetingTime, startTime, endTime).Where(p=>p.StudentId != studentId).ToList();
+            var list = _studentScheduleRepository.SearchStudent(universityId, meetingTime, startTime, endTime).Where(p=>p.StudentId != studentId && p.NationalityId != nationalityId && p.DepartmentId == departmentId).ToList();
             return (List<StudentScheduleModel>)list;
         }
 
-        public List<StudentScheduleModel> GetStudentAgenda(int studentId)
+        public List<StudentScheduleModel> GetStudentAgenda(int studentId,string systemDate)
         {
-            var list = _studentScheduleRepository.GetStudentSchedule(studentId);
+            var list = _studentScheduleRepository.GetStudentSchedule(studentId).Where(p=>p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
             return list;
         }
     }

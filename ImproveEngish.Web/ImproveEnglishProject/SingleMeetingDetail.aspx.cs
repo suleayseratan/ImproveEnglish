@@ -21,7 +21,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         private void GetStudentAgenda(int studentId)
         {
-            var student = _studentScheduleManager.GetStudentAgenda(studentId);
+            string systemDate = DateTime.Now.ToShortDateString();
+            var student = _studentScheduleManager.GetStudentAgenda(studentId,systemDate);
             rptStudentAgenda.DataSource = student;
             rptStudentAgenda.DataBind();
         }

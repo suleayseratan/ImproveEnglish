@@ -33,7 +33,7 @@
                             <div class="col-lg-8">
 
                                 <div class="course-info d-flex justify-content-between align-items-center">
-                                    <h5>Trainer</h5>
+                                    <h5>Name Surname</h5>
                                     <p><a href="#"><%#Eval("NameSurname") %></a></p>
                                 </div>
 
@@ -55,7 +55,7 @@
                         </ItemTemplate>
                     </asp:Repeater>
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mt-2">
                         <div class="container">
                             <h2>Agenda</h2>
                             <p class="lead">
@@ -87,7 +87,7 @@
                                                         </td>
                                                         <td class="agenda-time"><%#Eval("StartTime") %>
                                                         </td>
-                                                        <td class="agenda-time"><%#Eval("StartTime") %>
+                                                        <td class="agenda-time"><%#Eval("EndTime") %>
                                                         </td>
                                                         <td class="agenda-events">
                                                             <div class="agenda-event">

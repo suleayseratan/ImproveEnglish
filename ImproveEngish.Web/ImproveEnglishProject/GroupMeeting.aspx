@@ -133,7 +133,7 @@
                         <div class="course-item">
                             <img src="assets/img/course-1.jpg" class="img-fluid" alt="...">
                             <div class="course-content">
-                                <h3><a href="events-details.html">Website Design</a></h3>
+                                <h3><a href="GroupMeetingDetail.aspx">Website Design</a></h3>
                                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae
                                     dolores dolorem tempore.
                                 </p>
