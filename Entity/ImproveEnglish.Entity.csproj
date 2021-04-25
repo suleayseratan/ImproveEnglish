@@ -49,6 +49,7 @@
     <Compile Include="Menu.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="Model\DepartmentsOfUniversityModel.cs" />
+    <Compile Include="Model\GroupListModel.cs" />
     <Compile Include="Model\StudentDetailModel.cs" />
     <Compile Include="Model\StudentScheduleModel.cs" />
     <Compile Include="Nationality.cs" />

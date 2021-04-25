@@ -12,8 +12,7 @@ namespace ImproveEnglish.Business.Concrete
 {
     public class StudentScheduleManager:IStudentSheduleService
     {
-        IStudentScheduleRepository _studentScheduleRepository = new EfStudentScheduleRepository();
-
+        private IStudentScheduleRepository _studentScheduleRepository;
         public StudentScheduleManager(IStudentScheduleRepository studentScheduleRepository)
         {
             _studentScheduleRepository = studentScheduleRepository;
