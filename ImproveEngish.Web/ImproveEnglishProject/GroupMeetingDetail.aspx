@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="GroupMeetingDetail.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.GroupMeetingDetail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
@@ -16,45 +17,45 @@
         <!-- ======= Cource Details Section ======= -->
         <section id="course-details" class="course-details">
             <div class="container" data-aos="fade-up">
+                <asp:Repeater runat="server" ID="rptGroupDetail">
+                    <ItemTemplate>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <img src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="">
+                                <h3><%#Eval("GroupName") %></h3>
+                                <p>
+                                  <%#Eval("GroupExplanation") %>
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
 
-                <div class="row">
-                    <div class="col-lg-8">
-                        <img src="assets/img/course-details.jpg" class="img-fluid" alt="">
-                        <h3>Meeting Information</h3>
-                        <p>
-                            Qui et explicabo voluptatem et ab qui vero et voluptas. Sint voluptates temporibus quam autem. Atque nostrum voluptatum laudantium a doloremque enim et ut dicta. Nostrum ducimus est iure minima totam doloribus nisi ullam deserunt. Corporis aut officiis
-                            sit nihil est. Labore aut sapiente aperiam. Qui voluptas qui vero ipsum ea voluptatem. Omnis et est. Voluptatem officia voluptatem adipisci et iusto provident doloremque consequatur. Quia et porro est. Et qui corrupti laudantium
-                            ipsa. Eum quasi saepe aperiam qui delectus quaerat in. Vitae mollitia ipsa quam. Ipsa aut qui numquam eum iste est dolorum. Rem voluptas ut sit ut.
-                        </p>
-                    </div>
-                    <div class="col-lg-4">
+                                <div class="course-info d-flex justify-content-between align-items-center">
+                                    <h5>Subject</h5>
+                                    <p><a href="#"><%#Eval("GroupSubject") %></a></p>
+                                </div>
 
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Subject</h5>
-                            <p><a href="#">Book Review</a></p>
+                                <div class="course-info d-flex justify-content-between align-items-center">
+                                    <h5>Created By</h5>
+                                    <p><%#Eval("CreatorNameSurname") %></p>
+                                </div>
+
+                                <div class="course-info d-flex justify-content-between align-items-center">
+                                    <h5>Number of members</h5>
+                                    <p><%#Eval("NumberOfGroupMembers") %></p>
+                                </div>
+
+                                <div class="course-info d-flex justify-content-between align-items-center">
+                                    <h5>Schedule</h5>
+                                    <p><%#Eval("GroupMeetingDate","{0:MM/dd/yyyy}") %> <%#DateTime.Parse(Eval("GroupMeetingTime").ToString()).ToString("hh:mm tt") %></p>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button class="btn btn-primary w-100">Join</button>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Created By</h5>
-                            <p>Şule Ayser Atan</p>
-                        </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Number of members</h5>
-                            <p>2/5</p>
-                        </div>
-
-                        <div class="course-info d-flex justify-content-between align-items-center">
-                            <h5>Schedule</h5>
-                            <p>3/17/2021 5.00 pm - 7.00 pm</p>
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn btn-primary w-100">Join</button>
-                        </div>
-                    </div>
-                </div>
-
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </section>
         <!-- End Cource Details Section -->

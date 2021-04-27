@@ -96,6 +96,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
 
         /// <summary>
+        /// btnModal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnModal;
+
+        /// <summary>
         /// txtGroupName control.
         /// </summary>
         /// <remarks>
@@ -130,6 +139,24 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSubject;
+
+        /// <summary>
+        /// txtMeetingLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtMeetingLocation;
+
+        /// <summary>
+        /// rfvLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLocation;
 
         /// <summary>
         /// txtExplanation control.

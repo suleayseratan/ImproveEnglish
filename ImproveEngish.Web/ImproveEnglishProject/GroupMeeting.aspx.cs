@@ -16,16 +16,31 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             }
         }
 
+
         private void GetGroups(int universityId)
         {
             string systemDate = DateTime.Now.ToShortDateString();
-            var list = _groupManager.GetGroups(universityId,systemDate);
+            int creatorId = Convert.ToInt32(Session["StudentId"]);
+            var list = _groupManager.GetGroups(universityId, systemDate,creatorId);
             rptGroupMeeting.DataSource = list;
             rptGroupMeeting.DataBind();
         }
 
         protected void btnSaveGroup_OnServerClick(object sender, EventArgs e)
         {
+            //int creatorId = Convert.ToInt32(Session["StudentId"]);
+            //string groupName = txtGroupName.Value;
+            //string subject = txtSubject.Value;
+            //string explanation = txtExplanation.Value;
+            //string groupImagePath = "assets/img/events-2.jpg";
+            //int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
+            //string meetingDate = mDate.Value;
+            //string meetingTime = mTime.Value;
+            //string meetingLocation = txtMeetingLocation.Value;
+            //_groupManager.Add(creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
+            
+            //int universityId = Convert.ToInt32(Session["UniversityId"]);
+            //GetGroups(universityId);
         }
 
         protected void btnSearch_OnServerClick(object sender, EventArgs e)

@@ -11,5 +11,7 @@ namespace ImproveEnglish.DataAccess.Abstract
     public interface IGroupRepository:IRepository<Group>
     {
         List<GroupListModel> GetGroups(int universityId);
+
+        
     }
 }

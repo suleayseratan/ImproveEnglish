@@ -66,7 +66,7 @@
         
                 <div class="popup-button">
                     <div class="container">
-                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">
+                        <button runat="server" type="button" id="btnModal" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-plus"></i>Create a group
                         </button>
                         <!-- The Modal -->
@@ -85,7 +85,7 @@
                                         <div class="form-group row">
                                             <label class="col-sm-3 group-label">Group Page : </label>
                                             <div class="custom-file col-sm-8">
-                                                <input type="fil" eclass="custom-file-input" id="validatedCustomFile">
+                                                <input type="file" eclass="custom-file-input" id="validatedCustomFile">
                                                 <label class="custom-file-label" for="validatedCustomFile">Choose Group Page...</label>
                                                 <div class="invalid-feedback">Example invalid custom file feedback</div>
                                             </div>
@@ -105,6 +105,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <div class="input-group input-group-sm mb-3">
+                                                <label class="group-label col-sm-3">Meeting Location : </label>
+                                                <input runat="server" id="txtMeetingLocation" type="text" class="form-control col-sm-8" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+                                                <asp:RequiredFieldValidator runat="server" ID="rfvLocation" CssClass="text-danger font-weight-bold" ControlToValidate="txtMeetingLocation" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label for="txtExplanation" class="group-label col-sm-3">
                                                 Explanation :
                                             </label>
@@ -117,6 +124,15 @@
                                                 Number of Members :
                                             </label>
                                             <select runat="server" id="ddlNumberOfMembers" class="custom-select col-sm-8">
+                                                <option selected>Choose...</option>
+                                                <option value="3">Three</option>
+                                                <option value="4">Four</option>
+                                                <option value="5">Five</option>
+                                                <option value="6">Six</option>
+                                                <option value="7">Seven</option>
+                                                <option value="8">Eight</option>
+                                                <option value="9">Nine</option>
+                                                <option value="10">Ten</option>
                                             </select>
                                             <asp:RequiredFieldValidator runat="server" ID="rfvNumberOfGroup" CssClass="text-danger font-weight-bold" ControlToValidate="ddlNumberOfMembers" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                         </div>
@@ -132,7 +148,7 @@
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
-                                        <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" data-dismiss="modal" onserverclick="btnSaveGroup_OnServerClick">Save</button>
+                                        <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" onserverclick="btnSaveGroup_OnServerClick">Save</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     </div>
 
@@ -141,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Breadcrumbs -->
+        <!-- End Breadcrumbs -->
         <!-- ======= Events Section ======= -->
         <section id="courses" class="courses">
             <div class="container" data-aos="fade-up">
@@ -153,7 +169,7 @@
                                 <div class="course-item">
                                     <img src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="...">
                                     <div class="course-content">
-                                        <h3><a href="GroupMeetingDetail.aspx"><%#Eval("GroupName") %></a></h3>
+                                        <h3><a href="GroupMeetingDetail.aspx?groupId=<%#Eval("GroupId") %>"><%#Eval("GroupName") %></a></h3>
                                         <p>
                                             <%#Eval("GroupExplanation") %>
                                         </p>
@@ -186,12 +202,5 @@
     <script type="text/javascript">
         $('.clockpicker').clockpicker();
 
-        $(document).ready(function () {
-
-            $("#btnSaveGroup").on('click', function () {
-                $("#myModal").attr("class", "modal fade show");
-                var class = $("#myModal").attr("href");
-            });
-        });
     </script>
 </asp:Content>
