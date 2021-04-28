@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Security.Policy;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 
 namespace ImproveEngish.Web.ImproveEnglishProject
 {
-    public partial class GroupMeeting : System.Web.UI.Page
+    public partial class MyGroups : System.Web.UI.Page
     {
         GroupManager _groupManager = new GroupManager(new EfGroupRepository());
         protected void Page_Load(object sender, EventArgs e)
@@ -14,16 +18,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             if (!IsPostBack)
             {
                 int universityId = Convert.ToInt32(Session["UniversityId"]);
-                GetGroups(universityId);
+                GetMyGroups(universityId);
             }
         }
 
-
-        private void GetGroups(int universityId)
+        private void GetMyGroups(int universityId)
         {
             string systemDate = DateTime.Now.ToShortDateString();
             int creatorId = Convert.ToInt32(Session["StudentId"]);
-            var list = _groupManager.GetGroups(universityId, systemDate, creatorId);
+            var list = _groupManager.GetMyGroups(universityId, creatorId);
             rptGroupMeeting.DataSource = list;
             rptGroupMeeting.DataBind();
         }
@@ -66,20 +69,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             _groupManager.Add(creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
 
             int universityId = Convert.ToInt32(Session["UniversityId"]);
-            GetGroups(universityId);
-        }
-
-        protected void btnSearch_OnServerClick(object sender, EventArgs e)
-        {
-            int universityId = Convert.ToInt32(Session["UniversityId"]);
-            string subject = txtSearchSubject.Value;
-            string mDate = sMeetingDate.Value;
-            string mStartTime = sMeetingStartTime.Value;
-            string mEndTime = sMeetingEndTime.Value;
-
-            var list = _groupManager.SearchGroup(universityId, subject, mDate, mStartTime, mEndTime);
-            rptGroupMeeting.DataSource = list;
-            rptGroupMeeting.DataBind();
+            GetMyGroups(universityId);
         }
     }
 }

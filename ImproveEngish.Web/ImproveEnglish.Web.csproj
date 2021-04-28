@@ -169,6 +169,7 @@
     <Content Include="ImproveEnglishProject\assets\img\events-2.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\favicon.png" />
     <Content Include="ImproveEnglishProject\assets\img\hero-bg.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\jcvm3eji.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\profile1.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\testimonials\testimonials-2.jpg" />
@@ -251,6 +252,8 @@
     <Content Include="ImproveEnglishProject\GroupMeetingDetail.aspx" />
     <Content Include="ImproveEnglishProject\Login.aspx" />
     <Content Include="ImproveEnglishProject\Message.aspx" />
+    <Content Include="ImproveEnglishProject\MyGroupDetail.aspx" />
+    <Content Include="ImproveEnglishProject\MyGroups.aspx" />
     <Content Include="ImproveEnglishProject\Setting.aspx" />
     <Content Include="ImproveEnglishProject\SingleMeeting.aspx" />
     <Content Include="ImproveEnglishProject\SingleMeetingDetail.aspx" />
@@ -369,6 +372,20 @@
     </Compile>
     <Compile Include="ImproveEnglishProject\Message.aspx.designer.cs">
       <DependentUpon>Message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\MyGroupDetail.aspx.cs">
+      <DependentUpon>MyGroupDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\MyGroupDetail.aspx.designer.cs">
+      <DependentUpon>MyGroupDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\MyGroups.aspx.cs">
+      <DependentUpon>MyGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\MyGroups.aspx.designer.cs">
+      <DependentUpon>MyGroups.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImproveEnglishProject\Page.Master.cs">
       <DependentUpon>Page.Master</DependentUpon>

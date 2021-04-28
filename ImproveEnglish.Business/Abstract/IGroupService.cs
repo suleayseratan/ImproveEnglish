@@ -17,5 +17,6 @@ namespace ImproveEnglish.Business.Abstract
             int numberOfMembers, string meetingDate, string meetingTime, string meetingLocation);
 
         List<GroupListModel> GetGroupDetails(int universityId, int groupId);
+        List<GroupListModel> GetMyGroups(int universityId, int creatorId);
     }
 }

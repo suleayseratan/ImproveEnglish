@@ -82,6 +82,8 @@
                             <ul id="dropprofile">
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="schedule.html"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Free Times</a></li>
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i>
+                                    <a href="MyGroups.aspx" class="btn btn-default" style="display: inline; padding-left: .5rem;">My Groups</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="Setting.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Settings</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-sign-out fa-lg"></i><a href="#"

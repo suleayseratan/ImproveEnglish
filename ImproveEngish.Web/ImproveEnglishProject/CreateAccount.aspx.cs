@@ -14,19 +14,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
     {
         private StudentManager _studentManager = new StudentManager(new EfStudentRepository());
         private UniversityManager _universityManager = new UniversityManager(new EfUniversityRepository());
-        //private IUniversityService _universityService;
         private DepartmentOfUniversityManager _departmentOfUniversityManager = new DepartmentOfUniversityManager(new EfDepartmentOfUniversityRepository());
         private NationalityManager _nationalityManager = new NationalityManager(new EfNationalityRepository());
-
-
-        //public CreateAccount(IUniversityService universityService)
-        //{
-        //    this._universityService = universityService;
-        //}
-
-        //protected CreateAccount(){}
-
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

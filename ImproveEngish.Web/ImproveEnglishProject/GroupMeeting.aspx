@@ -1,7 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="GroupMeeting.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.GroupMeeting" %>
+﻿<%@ Page Title="" Language="C#" ClientIDMode="Static" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="GroupMeeting.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.GroupMeeting" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -85,8 +84,11 @@
                                         <div class="form-group row">
                                             <label class="col-sm-3 group-label">Group Page : </label>
                                             <div class="custom-file col-sm-8">
-                                                <input type="file" eclass="custom-file-input" id="validatedCustomFile">
-                                                <label class="custom-file-label" for="validatedCustomFile">Choose Group Page...</label>
+                                                <input type="file" runat="server" accept="image/*"
+                                                       class="form-control max-width"
+                                                       name="fileGroupImage"
+                                                       id="fileGroupImage" />
+                                                <label class="custom-file-label" for="fileGroupImage">Choose Group Page...</label>
                                                 <div class="invalid-feedback">Example invalid custom file feedback</div>
                                             </div>
                                         </div>

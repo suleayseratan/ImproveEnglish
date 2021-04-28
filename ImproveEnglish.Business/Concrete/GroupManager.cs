@@ -69,5 +69,11 @@ namespace ImproveEnglish.Business.Concrete
             var list = _groupRepository.GetGroups(universityId).Where(p => p.GroupId == groupId).ToList();
             return list;
         }
+
+        public List<GroupListModel> GetMyGroups(int universityId, int creatorId)
+        {
+            var list = _groupRepository.GetGroups(universityId).Where(p => p.CreatorId == creatorId).ToList();
+            return list;
+        }
     }
 }
