@@ -13,5 +13,14 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         {
 
         }
+
+        protected void btnAddFreeTime_OnServerClick(object sender, EventArgs e)
+        {
+            int studentId = Convert.ToInt32(Session["StudentId"]);
+            string date = inputDate.Value;
+            string startTime = inputStartTime.Value;
+            string endTime = inputEndTime.Value;
+            
+        }
     }
 }
