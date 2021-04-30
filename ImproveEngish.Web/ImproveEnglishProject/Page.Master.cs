@@ -8,5 +8,11 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         {
 
         }
+
+        protected void btnLogout_OnServerClick(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
     }
 }

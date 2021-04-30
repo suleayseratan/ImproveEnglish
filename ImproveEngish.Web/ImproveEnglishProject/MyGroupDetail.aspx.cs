@@ -49,6 +49,26 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string groupName = txtGroupName.Value;
             string subject = txtGroupSubject.Value;
             string explanation = txtExplanation.Value;
+            string groupImagePath = GetImagePath(fileGroupImage.Value);
+            int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
+            string meetingDate = mDate.Value;
+            string meetingTime = mTime.Value;
+            string meetingLocation = txtMeetingLocation.Value;
+            _groupManager.Update(groupId,creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
+            GetGroupDetails(universityId,groupId);
+        }
+
+        protected void btnDeleteGroup_OnServerClick(object sender, EventArgs e)
+        {
+            int groupId = Convert.ToInt32(Request.QueryString["groupId"]);
+            _groupManager.Delete(groupId);
+            Response.Redirect("MyGroups.aspx");
+        }
+        private string GetImagePath(string value)
+        {
+            var fileName = "";
+            var path = "";
+            var rootPath = "assets/img/";
             string[] elements;
             string[] paths = new string[4];
             if (fileGroupImage.PostedFile != null)
@@ -64,27 +84,29 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                     {
                         var folder = Server.MapPath("assets/img/");
                         var randomFileName = Path.GetRandomFileName();
-                        var fileName = Path.ChangeExtension(randomFileName, ".jpg");
-                        var path = Path.Combine(folder, fileName);
+                        fileName = Path.ChangeExtension(randomFileName, ".jpg");
+                        path = Path.Combine(folder, fileName);
+                    }
+                    if (i + 1 == 1)
+                    {
+
+                        if (!String.IsNullOrEmpty(path))
+                        {
+                            paths[i] = rootPath + fileName;
+                            fileGroupImage.PostedFile.SaveAs(path);
+                        }
+
+                        else
+                        {
+                            paths[i] = rootPath + "images.png";
+                        }
+
                     }
 
                 }
 
             }
-            string groupImagePath = paths[0];
-            int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
-            string meetingDate = mDate.Value;
-            string meetingTime = mTime.Value;
-            string meetingLocation = txtMeetingLocation.Value;
-            _groupManager.Update(groupId,creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
-            GetGroupDetails(universityId,groupId);
-        }
-
-        protected void btnDeleteGroup_OnServerClick(object sender, EventArgs e)
-        {
-            int groupId = Convert.ToInt32(Request.QueryString["groupId"]);
-            _groupManager.Delete(groupId);
-            Response.Redirect("MyGroups.aspx");
+            return paths[0];
         }
     }
 }

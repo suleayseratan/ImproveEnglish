@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="MyGroups.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.MyGroups" %>
+﻿<%@ Page Title="" ClientIDMode="Static" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="MyGroups.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.MyGroups" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
-        <div class="breadcrumbs" style="margin-top: 10%;" data-aos="fade-in">
+        <div class="breadcrumbs" data-aos="fade-in">
             <div class="container">
                 
             </div>
@@ -103,15 +103,15 @@
                                     <label class="group-label col-sm-3">Meeting Date : </label>
                                     <input runat="server" id="mDate" class="form-control col-sm-3"
                                         style="width: 50% !important; display: inline !important;" type="date" />
-                                    <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                     <label class="group-label col-sm-2">Meeting Time : </label>
                                     <input runat="server" id="mTime" class="form-control search-item col-sm-3" type="time" />
+                                    <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                     <asp:RequiredFieldValidator runat="server" ID="rfvMeetingTime" CssClass="text-danger font-weight-bold" ControlToValidate="mTime" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" onserverclick="btnSaveGroup_OnServerClick">Save</button>
+                                <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" onserverclick="btnSaveGroup_OnServerClick" ValidationGroup="CreateGroup" >Save</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
 
@@ -129,8 +129,8 @@
                     <asp:Repeater runat="server" ID="rptGroupMeeting">
                         <ItemTemplate>
                             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                                <div class="course-item">
-                                    <img src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="...">
+                                <div class="course-item mt-4">
+                                    <img style="width: 350px; height: 250px;" src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="...">
                                     <div class="course-content">
                                         <h3><a href="MyGroupDetail.aspx?groupId=<%#Eval("GroupId") %>"><%#Eval("GroupName") %></a></h3>
                                         <p>
@@ -164,6 +164,5 @@
     <script src="assets/js/main.js"></script>
     <script type="text/javascript">
         $('.clockpicker').clockpicker();
-
     </script>
 </asp:Content>

@@ -34,31 +34,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string groupName = txtGroupName.Value;
             string subject = txtSubject.Value;
             string explanation = txtExplanation.Value;
-
-            string[] elements;
-            string[] paths = new string[4];
-            if (fileGroupImage.PostedFile != null)
-            {
-                elements = new string[]
-                    {fileGroupImage.Value};
-
-                for (int i = 0; i < elements.Length; i++)
-                {
-
-                    var extension = Path.GetExtension(elements[i]);
-                    if (extension == ".jpg" || extension == ".png")
-                    {
-                        var folder = Server.MapPath("assets/img/");
-                        var randomFileName = Path.GetRandomFileName();
-                        var fileName = Path.ChangeExtension(randomFileName, ".jpg");
-                        var path = Path.Combine(folder, fileName);
-                    }
-
-                }
-
-            }
-            string groupImagePath = paths[0];
-
+            string groupImagePath = GetImagePath(fileGroupImage.Value);
             int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
             string meetingDate = mDate.Value;
             string meetingTime = mTime.Value;
@@ -80,6 +56,50 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             var list = _groupManager.SearchGroup(universityId, subject, mDate, mStartTime, mEndTime);
             rptGroupMeeting.DataSource = list;
             rptGroupMeeting.DataBind();
+        }
+        private string GetImagePath(string value)
+        {
+            var fileName = "";
+            var path = "";
+            var rootPath = "assets/img/";
+            string[] elements;
+            string[] paths = new string[4];
+            if (fileGroupImage.PostedFile != null)
+            {
+                elements = new string[]
+                    {fileGroupImage.Value};
+
+                for (int i = 0; i < elements.Length; i++)
+                {
+
+                    var extension = Path.GetExtension(elements[i]);
+                    if (extension == ".jpg" || extension == ".png")
+                    {
+                        var folder = Server.MapPath("assets/img/");
+                        var randomFileName = Path.GetRandomFileName();
+                        fileName = Path.ChangeExtension(randomFileName, ".jpg");
+                        path = Path.Combine(folder, fileName);
+                    }
+                    if (i + 1 == 1)
+                    {
+
+                        if (!String.IsNullOrEmpty(path))
+                        {
+                            paths[i] = rootPath + fileName;
+                            fileGroupImage.PostedFile.SaveAs(path);
+                        }
+
+                        else
+                        {
+                            paths[i] = rootPath + "images.png";
+                        }
+
+                    }
+
+                }
+
+            }
+            return paths[0];
         }
     }
 }

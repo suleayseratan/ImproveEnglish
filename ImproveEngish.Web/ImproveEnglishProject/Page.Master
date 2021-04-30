@@ -80,14 +80,14 @@
                             <%=Session["NameSurname"] %>
                             </span> <i class="bi bi-chevron-down"></i></a>
                             <ul id="dropprofile">
-                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="schedule.html"
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="FreeTimes.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Free Times</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i>
                                     <a href="MyGroups.aspx" class="btn btn-default" style="display: inline; padding-left: .5rem;">My Groups</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="Setting.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Settings</a></li>
-                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-sign-out fa-lg"></i><a href="#"
-                                    class="btn btn-default" style="display: inline; padding-left: .5rem;">Log Out</a></li>
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-sign-out fa-lg"></i><a runat="server" ID="btnLogout" href="#"
+                                    class="btn btn-default" style="display: inline; padding-left: .5rem;" OnServerClick="btnLogout_OnServerClick">Log Out</a></li>
 
                             </ul>
                         </li>
@@ -99,8 +99,6 @@
 
         </header>
         <!-- End Header -->
-
-
         <asp:ContentPlaceHolder ID="main" runat="server">
         </asp:ContentPlaceHolder>
         <!-- ======= Footer ======= -->
@@ -183,7 +181,7 @@
         </footer>
         <!-- End Footer -->
         <div id="preloader"></div>
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><iclass="bi bi-arrow-up-short"></i></a>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     </form>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>

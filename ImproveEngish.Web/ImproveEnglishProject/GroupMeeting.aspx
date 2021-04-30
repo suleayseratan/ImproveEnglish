@@ -61,9 +61,10 @@
 
 
         </div>
-
+        <!-- End Breadcrumbs -->
         
-                <div class="popup-button">
+        <!-- ======= Create A Group Popup ======= -->
+        <div class="popup-button">
                     <div class="container">
                         <button runat="server" type="button" id="btnModal" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModal">
                             <i class="fas fa-plus"></i>Create a group
@@ -72,7 +73,6 @@
                         <div class="modal fade" id="myModal">
                             <div class="modal-dialog modal-xl">
                                 <div class="modal-content">
-
                                     <!-- Modal Header -->
                                     <div class="modal-header">
                                         <h4 class="modal-title">Create A Group</h4>
@@ -85,10 +85,9 @@
                                             <label class="col-sm-3 group-label">Group Page : </label>
                                             <div class="custom-file col-sm-8">
                                                 <input type="file" runat="server" accept="image/*"
-                                                       class="form-control max-width"
-                                                       name="fileGroupImage"
-                                                       id="fileGroupImage" />
-                                                <label class="custom-file-label" for="fileGroupImage">Choose Group Page...</label>
+                                                    class="form-control max-width"
+                                                    name="fileGroupImage"
+                                                    id="fileGroupImage" />
                                                 <div class="invalid-feedback">Example invalid custom file feedback</div>
                                             </div>
                                         </div>
@@ -142,15 +141,15 @@
                                             <label class="group-label col-sm-3">Meeting Date : </label>
                                             <input runat="server" id="mDate" class="form-control col-sm-3"
                                                 style="width: 50% !important; display: inline !important;" type="date" />
-                                            <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                             <label class="group-label col-sm-2">Meeting Time : </label>
                                             <input runat="server" id="mTime" class="form-control search-item col-sm-3" type="time" />
+                                            <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                             <asp:RequiredFieldValidator runat="server" ID="rfvMeetingTime" CssClass="text-danger font-weight-bold" ControlToValidate="mTime" ErrorMessage="Please Select End Time" ValidationGroup="CreateGroup"></asp:RequiredFieldValidator>
                                         </div>
                                     </div>
                                     <!-- Modal footer -->
                                     <div class="modal-footer">
-                                        <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" onserverclick="btnSaveGroup_OnServerClick">Save</button>
+                                        <button runat="server" id="btnSaveGroup" type="button" class="btn btn-success" onserverclick="btnSaveGroup_OnServerClick" validationgroup="CreateGroup">Save</button>
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                     </div>
 
@@ -159,11 +158,11 @@
                         </div>
                     </div>
                 </div>
-        <!-- End Breadcrumbs -->
+        <!-- End Create A Group Popup -->
+
         <!-- ======= Events Section ======= -->
         <section id="courses" class="courses">
             <div class="container" data-aos="fade-up">
-
                 <div class="row" data-aos="zoom-in" data-aos-delay="100">
                     <asp:Repeater runat="server" ID="rptGroupMeeting">
                         <ItemTemplate>
@@ -191,11 +190,9 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
-
             </div>
         </section>
         <!-- End Events Section -->
-
     </main>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="js" runat="server">
@@ -203,6 +200,5 @@
     <script src="assets/js/main.js"></script>
     <script type="text/javascript">
         $('.clockpicker').clockpicker();
-
     </script>
 </asp:Content>

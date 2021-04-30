@@ -24,7 +24,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         private void GetMyGroups(int universityId)
         {
-            string systemDate = DateTime.Now.ToShortDateString();
             int creatorId = Convert.ToInt32(Session["StudentId"]);
             var list = _groupManager.GetMyGroups(universityId, creatorId);
             rptGroupMeeting.DataSource = list;
@@ -37,7 +36,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string groupName = txtGroupName.Value;
             string subject = txtSubject.Value;
             string explanation = txtExplanation.Value;
+            string groupImagePath = GetImagePath(fileGroupImage.Value);
+            int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
+            string meetingDate = mDate.Value;
+            string meetingTime = mTime.Value;
+            string meetingLocation = txtMeetingLocation.Value;
+            _groupManager.Add(creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
 
+            int universityId = Convert.ToInt32(Session["UniversityId"]);
+            GetMyGroups(universityId);
+        }
+
+        private string GetImagePath(string value)
+        {
+            var fileName = "";
+            var path = "";
+            var rootPath = "assets/img/";
             string[] elements;
             string[] paths = new string[4];
             if (fileGroupImage.PostedFile != null)
@@ -53,23 +67,29 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                     {
                         var folder = Server.MapPath("assets/img/");
                         var randomFileName = Path.GetRandomFileName();
-                        var fileName = Path.ChangeExtension(randomFileName, ".jpg");
-                        var path = Path.Combine(folder, fileName);
+                        fileName = Path.ChangeExtension(randomFileName, ".jpg");
+                        path = Path.Combine(folder, fileName);
+                    }
+                    if (i + 1 == 1)
+                    {
+
+                        if (!String.IsNullOrEmpty(path))
+                        {
+                            paths[i] = rootPath + fileName;
+                            fileGroupImage.PostedFile.SaveAs(path);
+                        }
+
+                        else
+                        {
+                            paths[i] = rootPath + "images.png";
+                        }
+
                     }
 
                 }
 
             }
-            string groupImagePath = paths[0];
-
-            int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
-            string meetingDate = mDate.Value;
-            string meetingTime = mTime.Value;
-            string meetingLocation = txtMeetingLocation.Value;
-            _groupManager.Add(creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
-
-            int universityId = Convert.ToInt32(Session["UniversityId"]);
-            GetMyGroups(universityId);
+            return paths[0];
         }
     }
 }
