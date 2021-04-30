@@ -42,6 +42,7 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
             using (var context = new TContext())
             {
                 var entity = GetById(id);
+                context.Set<TEntity>().Attach(entity);
                 context.Set<TEntity>().Remove(entity);
                 context.SaveChanges();
             }

@@ -75,5 +75,28 @@ namespace ImproveEnglish.Business.Concrete
             var list = _groupRepository.GetGroups(universityId).Where(p => p.CreatorId == creatorId).ToList();
             return list;
         }
+
+        public void Update(int groupId,int creatorId, string name, string subject, string explanation, string groupImagePath, int numberOfMembers,
+            string meetingDate, string meetingTime, string meetingLocation)
+        {
+            _groupRepository.Update(new Group()
+            {
+                GroupId = groupId,
+                FkCreatorId = creatorId,
+                Name = name,
+                Subject = subject,
+                Explanation = explanation,
+                GroupImagePath = groupImagePath,
+                NumberOfMembers = numberOfMembers,
+                MeetingDate = Convert.ToDateTime(meetingDate),
+                MeetingTime = TimeSpan.Parse(meetingTime),
+                MeetingLocation = meetingLocation
+            });
+        }
+
+        public void Delete(int groupId)
+        {
+            _groupRepository.Delete(groupId);
+        }
     }
 }

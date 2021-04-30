@@ -14,8 +14,6 @@ namespace Entity
         public int GroupId { get; set; }
 
         public int FkCreatorId { get; set; }
-        [ForeignKey("FkCreatorId")]
-        public virtual Student Student { get; set; }
         public string Name { get; set; }
         public string Subject { get; set; }
         public string Explanation { get; set; }

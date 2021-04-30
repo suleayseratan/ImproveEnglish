@@ -18,5 +18,10 @@ namespace ImproveEnglish.Business.Abstract
 
         List<GroupListModel> GetGroupDetails(int universityId, int groupId);
         List<GroupListModel> GetMyGroups(int universityId, int creatorId);
+
+        void Update(int groupId, int creatorId, string name, string subject, string explanation, string groupImagePath,
+            int numberOfMembers, string meetingDate, string meetingTime, string meetingLocation);
+
+        void Delete(int groupId);
     }
 }
