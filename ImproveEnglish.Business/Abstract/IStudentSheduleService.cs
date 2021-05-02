@@ -14,5 +14,7 @@ namespace ImproveEnglish.Business.Abstract
             string meetingTime, string startTime, string endTime);
 
         List<StudentScheduleModel> GetStudentAgenda(int studentId,string systemDate);
+        bool Add(int studentId,string meetingDate, string meetingStartTime, string meetingEndTime);
+        List<StudentSchedule> List(int studentId, string systemDate);
     }
 }

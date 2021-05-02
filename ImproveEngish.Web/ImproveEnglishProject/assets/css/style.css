@@ -1733,3 +1733,8 @@ ul#dropprofile li {
     text-align: center;
     color: black !important;
 }
+
+#row-delete .selected, #row-select .selected, #dom-jqry .selected, #colum-rendr .selected {
+    background-color: #4099ff;
+    color: #fff
+}

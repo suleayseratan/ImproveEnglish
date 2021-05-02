@@ -97,7 +97,7 @@
                             <div class="d-grid gap-2 col-6 mx-auto mt-3 ">
                                 <button runat="server" id="btnSignIn" class="btn btn-primary" type="button" onserverclick="btnSignIn_OnServerClick">Sign in</button>
                             </div>
-                            <div runat="server" id="divMessage" class="alert alert-danger mt-4" visible="False" role="alert">
+                            <div runat="server" id="divMessage" class="alert alert-danger mt-4" style="margin-left: 35%;" visible="False" role="alert">
                             </div>
                             <a href="#" runat="server" id="aLink" onserverclick="aLink_OnServerClick" style="margin-left: 35%;" visible="False"><strong><i>Send activation link again.</i></strong></a>
                         </form>

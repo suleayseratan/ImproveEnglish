@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entity;
 using Entity.Model;
 using ImproveEnglish.Business.Abstract;
 using ImproveEnglish.DataAccess;
@@ -27,6 +28,34 @@ namespace ImproveEnglish.Business.Concrete
         public List<StudentScheduleModel> GetStudentAgenda(int studentId,string systemDate)
         {
             var list = _studentScheduleRepository.GetStudentSchedule(studentId).Where(p=>p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
+            return list;
+        }
+
+        public bool Add(int studentId,string meetingDate, string meetingStartTime, string meetingEndTime)
+        {
+            var list = _studentScheduleRepository.GetAll().Where(p =>
+                p.FkStudentId == studentId && p.MeetingDate == DateTime.Parse(meetingDate) &&
+                p.StartTime <= TimeSpan.Parse(meetingStartTime) && p.EndTime >= TimeSpan.Parse(meetingEndTime));
+            if (list.Count() == 0)
+            {
+                _studentScheduleRepository.Add(new StudentSchedule()
+                {
+                    FkStudentId = studentId,
+                    MeetingDate = DateTime.Parse(meetingDate),
+                    StartTime = TimeSpan.Parse(meetingStartTime),
+                    EndTime = TimeSpan.Parse(meetingEndTime),
+                    IsFull = false
+                });
+                return true;
+            }
+
+            return false;
+        }
+
+        public List<StudentSchedule> List(int studentId, string systemDate)
+        {
+            var list =_studentScheduleRepository.GetAll()
+                .Where(p => p.FkStudentId == studentId && p.MeetingDate >= DateTime.Parse(systemDate)).ToList();
             return list;
         }
     }
