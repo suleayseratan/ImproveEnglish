@@ -174,11 +174,6 @@
                                 <asp:DropDownList runat="server" ID="selectNationality" CssClass="form-control select2 w-100"></asp:DropDownList>
                             </div>
                             <asp:ScriptManager runat="server" ID="scriptManager1">
-                                <%--<Scripts>
-                                    <asp:ScriptReference Path="assets/js/ajax.jquery.min.js"/>
-                                    <asp:ScriptReference Path="assets/js/ajax.select2.min.js"/>
-                                    <asp:ScriptReference Path="assets/js/myscript.js"/>
-                                </Scripts>--%>
                             </asp:ScriptManager>
                             <asp:UpdatePanel runat="server" ID="UpdatePanel" UpdateMode="Conditional">
                                 <ContentTemplate>

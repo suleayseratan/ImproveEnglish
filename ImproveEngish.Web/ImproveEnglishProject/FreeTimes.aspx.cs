@@ -62,5 +62,10 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 divMessage.InnerHtml = message;
             }
         }
+
+        protected void btnUpdate_OnServerClick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
