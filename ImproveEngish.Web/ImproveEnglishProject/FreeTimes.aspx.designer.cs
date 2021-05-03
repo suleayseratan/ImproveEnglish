@@ -60,13 +60,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         protected global::System.Web.UI.HtmlControls.HtmlButton btnAddFreeTime;
 
         /// <summary>
-        /// txtMeetingId control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtMeetingId;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnDelete;
+
+        /// <summary>
+        /// txtScheduleId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtScheduleId;
 
         /// <summary>
         /// mDate control.

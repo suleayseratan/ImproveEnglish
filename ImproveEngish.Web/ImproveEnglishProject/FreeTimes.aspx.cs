@@ -31,6 +31,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         protected void btnAddFreeTime_OnServerClick(object sender, EventArgs e)
         {
+            string systemDate = DateTime.Now.ToShortDateString();
+
             int studentId = Convert.ToInt32(Session["StudentId"]);
             string date = inputDate.Value;
             string startTime = inputStartTime.Value;
@@ -39,6 +41,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             if (add.Equals(true))
             {
                 Message("Free Time Added",true);
+                GetSchedule(studentId,systemDate);
             }
             else
             {
@@ -65,7 +68,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         protected void btnUpdate_OnServerClick(object sender, EventArgs e)
         {
-            
+            string systemDate = DateTime.Now.ToShortDateString();
+
+            int scheduleId = Convert.ToInt32(txtScheduleId.Value);
+            int studentId = Convert.ToInt32(Session["StudentId"]);
+            string startTime = mStartTime.Value;
+            string endTime = mEndTime.Value;
+            string meetingDate = mDate.Value;
+            string isFull = radioIsFull.SelectedValue.ToString();
+
+            _studentScheduleManager.Update(scheduleId,studentId,startTime,endTime,meetingDate,isFull);
+            GetSchedule(studentId,systemDate);
+        }
+
+        protected void btnDelete_OnServerClick(object sender, EventArgs e)
+        {
+            _studentScheduleManager.Delete(Convert.ToInt32(txtScheduleId));
         }
     }
 }

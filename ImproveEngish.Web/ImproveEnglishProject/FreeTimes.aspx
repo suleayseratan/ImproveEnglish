@@ -47,7 +47,7 @@
         <div class="popup-button">
             <div class="container">
                 <button type="button" id="btnEdit" disabled="disabled" class="btn btn-info" data-toggle="modal" data-target="#myModal">Edit</button>
-                <button type="button" id="btnDelete" disabled="disabled" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>
+                <button runat="server" type="button" id="btnDelete" name="btnDelete" disabled="disabled" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onserverclick="btnDelete_OnServerClick">Delete</button>
                 <!-- The Modal -->
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
@@ -59,7 +59,7 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group row">
-                                    <input runat="server" type="text" hidden="true" id="txtMeetingId" name="txtMeetingId" />
+                                    <input runat="server" type="text" hidden="true" id="txtScheduleId" name="txtScheduleId" />
                                 </div>
                                 <div class="form-group row">
                                     <label class="group-label col-sm-4">Meeting Date : </label>
@@ -92,7 +92,7 @@
                             </div>
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <button runat="server" id="btnUpdate" type="button" class="btn btn-success" OnServerClick="btnUpdate_OnServerClick" validationgroup="CreateGroup">Update</button>
+                                <button runat="server" id="btnUpdate" type="button" class="btn btn-success" onserverclick="btnUpdate_OnServerClick" validationgroup="CreateGroup">Update</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                             </div>
 
@@ -187,26 +187,26 @@
                     var day = ("0" + date.getDate()).slice(-2);
                     var month = ("0" + (date.getMonth() + 1)).slice(-2);
 
-                    var dateFormat = date.getFullYear() + "-" + (month) + "-" + (day);
-                    
-                    var startTime = new Date(rowData[2]+ " " + rowData[3]);
-                    
+                    var dateFormat = date.getFullYear() + "-" + (day) + "-" + (month);
+
+                    var startTime = new Date(rowData[2].trim() + " " + rowData[3].trim());
                     var formatStartTime = startTime.getHours() + ":" + startTime.getMinutes();
-                    var endTime = new Date(rowData[2] + " " + rowData[4]);
+                    var endTime = new Date(rowData[2].trim() + " " + rowData[4].trim());
                     var formatEndTime = endTime.getHours() + ":" + endTime.getMinutes();
 
                     $("#btnEdit").prop('disabled', false);
                     $("#btnDeleteGroup").prop('disabled', false);
-                    $("#txtMeetingId").val(rowData[0]);
+                    $("#txtScheduleId").val(rowData[0].trim());
                     $("#mDate").val(dateFormat);
                     $("#mStartTime").val(formatStartTime);
                     $("#mEndTime").val(formatEndTime);
+
                     if (rowData[6] == "False") {
                         $('#<%=radioIsFull.ClientID %>').find("input[value='false']").prop("checked", true);
                     } else {
                         $('#<%=radioIsFull.ClientID %>').find("input[value='true']").prop("checked", true);
                     }
-                    });
+                });
         });
     </script>
 </asp:Content>

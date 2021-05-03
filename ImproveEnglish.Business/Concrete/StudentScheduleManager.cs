@@ -55,8 +55,26 @@ namespace ImproveEnglish.Business.Concrete
         public List<StudentSchedule> List(int studentId, string systemDate)
         {
             var list =_studentScheduleRepository.GetAll()
-                .Where(p => p.FkStudentId == studentId && p.MeetingDate >= DateTime.Parse(systemDate)).ToList();
+                .Where(p => p.FkStudentId == studentId && p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
             return list;
+        }
+
+        public void Update(int scheduleId, int studentId, string startTime, string endTime, string meetingDate, string isFull)
+        {
+            _studentScheduleRepository.Update(new StudentSchedule()
+            {
+                ScheduleId = scheduleId,
+                FkStudentId = studentId,
+                StartTime = TimeSpan.Parse(startTime),
+                EndTime = TimeSpan.Parse(endTime),
+                MeetingDate = DateTime.Parse(meetingDate),
+                IsFull = Convert.ToBoolean(isFull)
+            });
+        }
+
+        public void Delete(int scheduleId)
+        {
+            _studentScheduleRepository.Delete(scheduleId);
         }
     }
 }
