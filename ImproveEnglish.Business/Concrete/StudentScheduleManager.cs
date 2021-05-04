@@ -11,41 +11,34 @@ using ImproveEnglish.DataAccess.Concrete.Ef;
 
 namespace ImproveEnglish.Business.Concrete
 {
-    public class StudentScheduleManager:IStudentSheduleService
+    public class StudentScheduleManager : IStudentSheduleService
     {
         private IStudentScheduleRepository _studentScheduleRepository;
         public StudentScheduleManager(IStudentScheduleRepository studentScheduleRepository)
         {
             _studentScheduleRepository = studentScheduleRepository;
         }
-        public List<StudentScheduleModel> SearchStudentSheduleByDetaptmetId(int departmentId,int nationalityId, int studentId, int universityId, string meetingTime,
+        public List<StudentScheduleModel> SearchStudentSheduleByDetaptmetId(int departmentId, int nationalityId, int studentId, int universityId, string meetingTime,
             string startTime, string endTime)
         {
-            var list = _studentScheduleRepository.SearchStudent(universityId, meetingTime, startTime, endTime).Where(p=>p.StudentId != studentId && p.NationalityId != nationalityId && p.DepartmentId == departmentId).ToList();
-            return (List<StudentScheduleModel>)list;
-        }
-
-        public List<StudentScheduleModel> GetStudentAgenda(int studentId,string systemDate)
-        {
-            var list = _studentScheduleRepository.GetStudentSchedule(studentId).Where(p=>p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
+            var list = _studentScheduleRepository.SearchStudent(universityId, meetingTime, startTime, endTime).Where(p => p.StudentId != studentId && p.NationalityId != nationalityId && p.DepartmentId == departmentId).ToList();
             return list;
         }
 
-        public bool Add(int studentId,string meetingDate, string meetingStartTime, string meetingEndTime)
+        public List<StudentScheduleModel> GetStudentAgenda(int studentId, string systemDate)
+        {
+            var list = _studentScheduleRepository.GetStudentSchedule(studentId).Where(p => p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
+            return list;
+        }
+
+        public bool Add(StudentSchedule studentSchedule)
         {
             var list = _studentScheduleRepository.GetAll().Where(p =>
-                p.FkStudentId == studentId && p.MeetingDate == DateTime.Parse(meetingDate) &&
-                p.StartTime <= TimeSpan.Parse(meetingStartTime) && p.EndTime >= TimeSpan.Parse(meetingEndTime));
+                p.FkStudentId == studentSchedule.FkStudentId && p.MeetingDate == studentSchedule.MeetingDate &&
+                p.StartTime <= studentSchedule.StartTime && p.EndTime >= studentSchedule.EndTime);
             if (list.Count() == 0)
             {
-                _studentScheduleRepository.Add(new StudentSchedule()
-                {
-                    FkStudentId = studentId,
-                    MeetingDate = DateTime.Parse(meetingDate),
-                    StartTime = TimeSpan.Parse(meetingStartTime),
-                    EndTime = TimeSpan.Parse(meetingEndTime),
-                    IsFull = false
-                });
+                _studentScheduleRepository.Add(studentSchedule);
                 return true;
             }
 
@@ -54,22 +47,19 @@ namespace ImproveEnglish.Business.Concrete
 
         public List<StudentSchedule> List(int studentId, string systemDate)
         {
-            var list =_studentScheduleRepository.GetAll()
+
+            var list = _studentScheduleRepository.GetAll()
                 .Where(p => p.FkStudentId == studentId && p.MeetingDate >= Convert.ToDateTime(systemDate)).ToList();
             return list;
         }
 
-        public void Update(int scheduleId, int studentId, string startTime, string endTime, string meetingDate, string isFull)
+        public void Update(StudentSchedule studentSchedule)
         {
-            _studentScheduleRepository.Update(new StudentSchedule()
+            if (_studentScheduleRepository.GetById(studentSchedule.ScheduleId) != null)
             {
-                ScheduleId = scheduleId,
-                FkStudentId = studentId,
-                StartTime = TimeSpan.Parse(startTime),
-                EndTime = TimeSpan.Parse(endTime),
-                MeetingDate = DateTime.Parse(meetingDate),
-                IsFull = Convert.ToBoolean(isFull)
-            });
+                _studentScheduleRepository.Update(studentSchedule);
+            }
+
         }
 
         public void Delete(int scheduleId)

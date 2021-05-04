@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 
@@ -38,10 +39,21 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string explanation = txtExplanation.Value;
             string groupImagePath = GetImagePath(fileGroupImage.Value);
             int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
-            string meetingDate = mDate.Value;
-            string meetingTime = mTime.Value;
+            DateTime meetingDate = Convert.ToDateTime(mDate.Value);
+            TimeSpan meetingTime = TimeSpan.Parse(mTime.Value);
             string meetingLocation = txtMeetingLocation.Value;
-            _groupManager.Add(creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
+            _groupManager.Add(new Group()
+            {
+                FkCreatorId = creatorId,
+                Name = groupName,
+                Subject = subject,
+                Explanation = explanation,
+                GroupImagePath = groupImagePath,
+                NumberOfMembers = numberOfMeeting,
+                MeetingDate = meetingDate,
+                MeetingTime = meetingTime,
+                MeetingLocation = meetingLocation
+            });
 
             int universityId = Convert.ToInt32(Session["UniversityId"]);
             GetMyGroups(universityId);

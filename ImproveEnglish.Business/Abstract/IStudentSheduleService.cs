@@ -14,9 +14,9 @@ namespace ImproveEnglish.Business.Abstract
             string meetingTime, string startTime, string endTime);
 
         List<StudentScheduleModel> GetStudentAgenda(int studentId,string systemDate);
-        bool Add(int studentId,string meetingDate, string meetingStartTime, string meetingEndTime);
+        bool Add(StudentSchedule studentSchedule);
         List<StudentSchedule> List(int studentId, string systemDate);
-        void Update(int scheduleId, int studentId, string startTime, string endTime, string meetingDate, string isFull);
+        void Update(StudentSchedule studentSchedule);
         void Delete(int scheduleId);
     }
 }

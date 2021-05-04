@@ -21,26 +21,13 @@ namespace ImproveEnglish.Business.Concrete
             _studentRepository = studentRepository;
         }
 
-        public bool Add(int nationalityId, int universityId, int departmentOfUniversityId, string namesurname, string gender,
-            string password, string email, string profilImagePath, Guid activationCode)
+        public bool Add(Student student)
         {
-            var list = _studentRepository.GetByEmail(email);
+            var list = _studentRepository.GetByEmail(student.Eposta);
 
             if (list.Count() == 0)
             {
-                _studentRepository.Add(new Student()
-                {
-                    FkNationalityId = nationalityId,
-                    FkUniversityId = universityId,
-                    FkDepartmentId = departmentOfUniversityId,
-                    NameSurname = namesurname,
-                    Gender = gender,
-                    Password = password,
-                    Eposta = email,
-                    ProfileImagePath = profilImagePath,
-                    EmailVeryFied = false,
-                    ActivationCode = activationCode
-                });
+                _studentRepository.Add(student);
                 return true;
             }
             else

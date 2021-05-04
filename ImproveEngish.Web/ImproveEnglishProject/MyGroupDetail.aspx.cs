@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 
@@ -12,6 +13,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 {
     public partial class MyGroupDetail : System.Web.UI.Page
     {
+        public string dateValue = String.Empty;
         GroupManager _groupManager = new GroupManager(new EfGroupRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,7 +38,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 txtExplanation.Value = i.GroupExplanation;
                 ddlNumberOfMembers.Value = i.NumberOfGroupMembers.ToString();
                 txtMeetingLocation.Value = i.GroupMeetingLocation;
-                mDate.Value = i.GroupMeetingDate.ToString("MM/dd/yyyy");
+                mDate.Value = i.GroupMeetingDate.ToShortDateString();
                 mTime.Value = i.GroupMeetingTime.ToString();
             }
         }
@@ -50,11 +52,23 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string subject = txtGroupSubject.Value;
             string explanation = txtExplanation.Value;
             string groupImagePath = GetImagePath(fileGroupImage.Value);
-            int numberOfMeeting = Convert.ToInt32(ddlNumberOfMembers.Value);
+            int numberOfMembers = Convert.ToInt32(ddlNumberOfMembers.Value);
             string meetingDate = mDate.Value;
             string meetingTime = mTime.Value;
             string meetingLocation = txtMeetingLocation.Value;
-            _groupManager.Update(groupId,creatorId, groupName, subject, explanation, groupImagePath, numberOfMeeting, meetingDate, meetingTime, meetingLocation);
+            _groupManager.Update(new Group()
+            {
+                GroupId = groupId,
+                FkCreatorId = creatorId,
+                Name = groupName,
+                Subject = subject,
+                Explanation = explanation,
+                GroupImagePath = groupImagePath,
+                NumberOfMembers = numberOfMembers,
+                MeetingDate = Convert.ToDateTime(meetingDate),
+                MeetingTime = TimeSpan.Parse(meetingTime),
+                MeetingLocation = meetingLocation
+            });
             GetGroupDetails(universityId,groupId);
         }
 

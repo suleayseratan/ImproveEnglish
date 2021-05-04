@@ -129,7 +129,7 @@
                                 <div class="course-info d-flex justify-content-between align-items-center">
                                     <h5 class="w-50">Meeting Date</h5>
                                     <p class="w-75">
-                                        <input runat="server" id="mDate" class="form-control w-100" type="date" />
+                                        <input runat="server" id="mDate" class="form-control w-100" type="date" value="<%=dateValue%>" />
                                         <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="UpdateGroup"></asp:RequiredFieldValidator>
                                     </p>
                                 </div>

@@ -12,6 +12,5 @@ namespace ImproveEnglish.DataAccess.Abstract
     {
         List<GroupListModel> GetGroups(int universityId);
 
-        
     }
 }

@@ -10,7 +10,7 @@ namespace ImproveEnglish.Business.Abstract
 {
     public interface IStudentService
     {
-        bool Add(int nationalityId,int universityId,int departmentOfUniversityId,string namesurname,string gender,string password,string email,string profilImagePath, Guid activationCode);
+        bool Add(Student student);
         int GetId(string email);
         bool CheckUpdateEmailVeryFied(int id, Guid activationCode);
         bool CheckLogin(string email,string password);

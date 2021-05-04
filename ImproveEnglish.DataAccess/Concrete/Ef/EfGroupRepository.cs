@@ -10,7 +10,7 @@ using ImproveEnglish.DataAccess.Abstract;
 
 namespace ImproveEnglish.DataAccess.Concrete.Ef
 {
-    public class EfGroupRepository:EfGenericRepository<Group,ImproveEnglishContext>, IGroupRepository
+    public class EfGroupRepository : EfGenericRepository<Group, ImproveEnglishContext>, IGroupRepository
     {
         public List<GroupListModel> GetGroups(int universityId)
         {

@@ -24,7 +24,7 @@ namespace ImproveEnglish.Business.Concrete
 
         public List<GroupListModel> GetGroups(int universityId,string systemDate, int creatorId)
         {
-            var list = _groupRepository.GetGroups(universityId).Where(p=>p.GroupMeetingDate >= Convert.ToDateTime(systemDate) && p.CreatorId != creatorId).ToList();
+            var list = _groupRepository.GetGroups(universityId).Where(p => p.GroupMeetingDate >= Convert.ToDateTime(systemDate) && p.CreatorId != creatorId).ToList();
             return list;
         }
 
@@ -38,23 +38,11 @@ namespace ImproveEnglish.Business.Concrete
             return list;
         }
 
-        public void Add(int creatorId, string name, string subject, string explanation, string groupImagePath, int numberOfMembers,
-            string meetingDate, string meetingTime, string meetingLocation)
+        public void Add(Group group)
         {
             try
             {
-                _groupRepository.Add(new Group()
-                {
-                    FkCreatorId = creatorId,
-                    Name = name,
-                    Subject = subject,
-                    Explanation = explanation,
-                    GroupImagePath = groupImagePath,
-                    NumberOfMembers = numberOfMembers,
-                    MeetingDate = DateTime.Parse(meetingDate),
-                    MeetingTime = TimeSpan.Parse(meetingTime),
-                    MeetingLocation = meetingLocation
-                });
+                _groupRepository.Add(group);
             }
             catch (Exception e)
             {
@@ -76,22 +64,12 @@ namespace ImproveEnglish.Business.Concrete
             return list;
         }
 
-        public void Update(int groupId,int creatorId, string name, string subject, string explanation, string groupImagePath, int numberOfMembers,
-            string meetingDate, string meetingTime, string meetingLocation)
+        public void Update(Group group)
         {
-            _groupRepository.Update(new Group()
+            if (_groupRepository.GetById(group.GroupId) != null)
             {
-                GroupId = groupId,
-                FkCreatorId = creatorId,
-                Name = name,
-                Subject = subject,
-                Explanation = explanation,
-                GroupImagePath = groupImagePath,
-                NumberOfMembers = numberOfMembers,
-                MeetingDate = Convert.ToDateTime(meetingDate),
-                MeetingTime = TimeSpan.Parse(meetingTime),
-                MeetingLocation = meetingLocation
-            });
+                _groupRepository.Update(group);
+            }
         }
 
         public void Delete(int groupId)

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 
@@ -34,10 +35,18 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string systemDate = DateTime.Now.ToShortDateString();
 
             int studentId = Convert.ToInt32(Session["StudentId"]);
-            string date = inputDate.Value;
+            string meetingDate = inputDate.Value;
             string startTime = inputStartTime.Value;
             string endTime = inputEndTime.Value;
-            bool add = _studentScheduleManager.Add(studentId, date, startTime, endTime);
+            bool add = _studentScheduleManager.Add(new StudentSchedule()
+            {
+                FkStudentId = studentId,
+                StartTime = TimeSpan.Parse(startTime),
+                EndTime = TimeSpan.Parse(endTime),
+                MeetingDate = DateTime.Parse(meetingDate),
+                IsFull = false
+            });
+
             if (add.Equals(true))
             {
                 Message("Free Time Added",true);
@@ -77,7 +86,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string meetingDate = mDate.Value;
             string isFull = radioIsFull.SelectedValue.ToString();
 
-            _studentScheduleManager.Update(scheduleId,studentId,startTime,endTime,meetingDate,isFull);
+            _studentScheduleManager.Update(new StudentSchedule()
+            {
+                ScheduleId = scheduleId,
+                FkStudentId = studentId,
+                StartTime = TimeSpan.Parse(startTime),
+                EndTime = TimeSpan.Parse(endTime),
+                MeetingDate = DateTime.Parse(meetingDate),
+                IsFull = Convert.ToBoolean(isFull)
+            });
             GetSchedule(studentId,systemDate);
         }
 

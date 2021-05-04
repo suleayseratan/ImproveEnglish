@@ -23,7 +23,6 @@ namespace ImproveEnglish.Business.Concrete
         {
             var list = _departmentOfUniversityRepository.GetAllDepartmentOfUniversity()
                 .Where(p => p.UniversityId == universityId).ToList();
-
             return list;
         }
     }

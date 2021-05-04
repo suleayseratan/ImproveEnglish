@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Web.Security;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Abstract;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
@@ -69,7 +70,19 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             if (CheckPassword(password, confirmPassword) == true)
             {
                 string md5Password = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "MD5");
-                var checkAdd = _studentManager.Add(nationalityId, universityId, departmentId, nameSurname, gender, md5Password, email, defaultImagePath, activationCode);
+                var checkAdd = _studentManager.Add(new Student()
+                {
+                    FkNationalityId = nationalityId,
+                    FkUniversityId = universityId,
+                    FkDepartmentId = departmentId,
+                    NameSurname = nameSurname,
+                    Gender = gender,
+                    Password = password,
+                    Eposta = email,
+                    ProfileImagePath = defaultImagePath,
+                    EmailVeryFied = false,
+                    ActivationCode = activationCode
+                });
                 if (checkAdd.Equals(true))
                 {
                     Message("Account created successfully. Please check your email address.", true);

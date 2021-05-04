@@ -3,7 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="assets/css/datatables.bootstrap4.min.css" rel="stylesheet" />
     <link href="assets/css/buttons.datatables.min.css" rel="stylesheet" />
+    <style>
+        .btn-pill {
+            border-radius: 3rem;
+            width: 10%;
 
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <main id="main">
@@ -46,8 +52,7 @@
         <!-- End Breadcrumbs -->
         <div class="popup-button">
             <div class="container">
-                <button type="button" id="btnEdit" disabled="disabled" class="btn btn-info" data-toggle="modal" data-target="#myModal">Edit</button>
-                <button runat="server" type="button" id="btnDelete" name="btnDelete" disabled="disabled" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onserverclick="btnDelete_OnServerClick">Delete</button>
+                
                 <!-- The Modal -->
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
@@ -111,9 +116,11 @@
                         <p class="lead">
                         </p>
                         <hr />
+                        <button type="button" id="btnEdit" disabled="disabled" class="btn btn-primary btn-pill" data-toggle="modal" data-target="#myModal">Edit</button>
+                        <button runat="server" type="button" id="btnDelete" name="btnDelete" disabled="disabled" class="btn btn-danger btn-pill" onserverclick="btnDelete_OnServerClick">Delete</button>
                         <div class="agenda">
                             <div class="table-responsive">
-                                <table class="table table-condensed table-bordered nowrap" id="row-delete">
+                                <table class="table table-condensed table-bordered nowrap w-100" id="row-delete">
                                     <thead>
                                         <tr>
                                             <th hidden="true">Schedule Id</th>
@@ -136,7 +143,7 @@
                                                         <div class="dayofweek"><%#Convert.ToDateTime(Eval("MeetingDate")).ToString("D").Split(',').GetValue(0)%></div>
                                                         <div class="shortdate text-muted"><%#Convert.ToDateTime(Eval("MeetingDate")).ToString("Y")%></div>
                                                     </td>
-                                                    <td hidden="true"><%#Eval("MeetingDate","{0:dd/MM/yyyy}") %></td>
+                                                    <td hidden="true"><%#Eval("MeetingDate","{0:MM/dd/yyyy}") %></td>
                                                     <td class="agenda-time"><%#Eval("StartTime") %>
                                                     </td>
                                                     <td class="agenda-time"><%#Eval("EndTime") %>
@@ -187,15 +194,15 @@
                     var day = ("0" + date.getDate()).slice(-2);
                     var month = ("0" + (date.getMonth() + 1)).slice(-2);
 
-                    var dateFormat = date.getFullYear() + "-" + (day) + "-" + (month);
-
+                    var dateFormat = date.getFullYear() + "-" + (month) + "-" + (day) ;
                     var startTime = new Date(rowData[2].trim() + " " + rowData[3].trim());
                     var formatStartTime = startTime.getHours() + ":" + startTime.getMinutes();
                     var endTime = new Date(rowData[2].trim() + " " + rowData[4].trim());
                     var formatEndTime = endTime.getHours() + ":" + endTime.getMinutes();
 
+                  
                     $("#btnEdit").prop('disabled', false);
-                    $("#btnDeleteGroup").prop('disabled', false);
+                    $("#btnDelete").prop('disabled', false);
                     $("#txtScheduleId").val(rowData[0].trim());
                     $("#mDate").val(dateFormat);
                     $("#mStartTime").val(formatStartTime);
