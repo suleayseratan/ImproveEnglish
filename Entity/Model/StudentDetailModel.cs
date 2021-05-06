@@ -16,7 +16,10 @@ namespace Entity.Model
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
         public string NameSurname { get; set; }
+        public string Gender { get; set; }
+        public string Password { get; set; }
         public string Eposta { get; set; }
+        public Guid ActivationCode { get; set; }
         public string ProfileImagePath { get; set; }
 
     }

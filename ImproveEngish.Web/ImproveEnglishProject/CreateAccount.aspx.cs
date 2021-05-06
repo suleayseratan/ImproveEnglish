@@ -64,7 +64,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             string password = txtPassword.Value;
             string confirmPassword = txtPasswordAgain.Value;
             string email = txtEmail.Value + divEposta.InnerHtml;
-            string defaultImagePath = "H:\\My-Github-Projects\\ImproveEnglish\\ImproveEngish.Web\\ImproveEnglishProject\\assets\\img\\avataaars.png";
+            string defaultImagePath = "assets/img/avataaars.png";
             Guid activationCode = Guid.NewGuid();
 
             if (CheckPassword(password, confirmPassword) == true)
@@ -77,7 +77,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                     FkDepartmentId = departmentId,
                     NameSurname = nameSurname,
                     Gender = gender,
-                    Password = password,
+                    Password = md5Password,
                     Eposta = email,
                     ProfileImagePath = defaultImagePath,
                     EmailVeryFied = false,

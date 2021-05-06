@@ -155,7 +155,11 @@ namespace ImproveEnglish.Business.Concrete
 
         public void Update(Student student)
         {
-            throw new NotImplementedException();
+            var list = _studentRepository.GetById(student.StudentId);
+            if (list != null)
+            {
+                _studentRepository.Update(student);
+            }
         }
 
         public List<Student> GetAll()

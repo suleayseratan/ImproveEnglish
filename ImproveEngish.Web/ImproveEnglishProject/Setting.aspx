@@ -68,13 +68,14 @@
                                 <asp:RequiredFieldValidator runat="server" ID="rfvSurname" CssClass="text-danger font-weight-bold" ControlToValidate="txtSurname" ErrorMessage="Please Select End Time" ValidationGroup="UpdateAccount"></asp:RequiredFieldValidator>
 
                             </div>
-                            <asp:ScriptManager runat="server"></asp:ScriptManager>
-                            <asp:UpdatePanel runat="server"><ContentTemplate>
+                            <asp:ScriptManager runat="server" ID="scriptManager1"></asp:ScriptManager>
+                            <asp:UpdatePanel runat="server" ID="UpdatePanel" UpdateMode="Conditional">
+                                <ContentTemplate>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>University</label>
-                                                <asp:DropDownList runat="server" ID="ddlUniversity" CssClass="form-control select2 w-100" OnSelectedIndexChanged="ddlUniversity_OnSelectedIndexChanged" AutoPostBack="True" />
+                                                <asp:DropDownList runat="server" ID="ddlUniversity" CssClass="form-control select2 w-100" OnSelectedIndexChanged="ddlUniversity_OnSelectedIndexChanged" AutoPostBack="True"/>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
