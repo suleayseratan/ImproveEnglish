@@ -141,12 +141,11 @@
     <Content Include="ImproveEnglishProject\assets\css\datatables.bootstrap4.min.css" />
     <Content Include="ImproveEnglishProject\assets\css\fontawesome.css" />
     <Content Include="ImproveEnglishProject\assets\css\fontawesome.min.css" />
-    <Content Include="ImproveEnglishProject\assets\css\fullcalendar.css" />
-    <Content Include="ImproveEnglishProject\assets\css\fullcalendar.print.css" />
     <Content Include="ImproveEnglishProject\assets\css\login.css" />
     <Content Include="ImproveEnglishProject\assets\css\message.css" />
     <Content Include="ImproveEnglishProject\assets\css\regular.css" />
     <Content Include="ImproveEnglishProject\assets\css\regular.min.css" />
+    <Content Include="ImproveEnglishProject\assets\css\responsive.bootstrap4.min.css" />
     <Content Include="ImproveEnglishProject\assets\css\settings.css" />
     <Content Include="ImproveEnglishProject\assets\css\solid.css" />
     <Content Include="ImproveEnglishProject\assets\css\solid.min.css" />
@@ -181,6 +180,7 @@
     <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-1.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-2.jpg" />
     <Content Include="ImproveEnglishProject\assets\img\trainers\trainer-3.jpg" />
+    <Content Include="ImproveEnglishProject\assets\img\user2.jpg" />
     <Content Include="ImproveEnglishProject\assets\js\ajax.select2.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\all.js" />
     <Content Include="ImproveEnglishProject\assets\js\all.min.js" />
@@ -190,10 +190,10 @@
     <Content Include="ImproveEnglishProject\assets\js\conflict-detection.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\data-table-custom.js" />
     <Content Include="ImproveEnglishProject\assets\js\datatables.bootstrap4.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\datatables.buttons.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\datatables.responsive.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\fontawesome.js" />
     <Content Include="ImproveEnglishProject\assets\js\fontawesome.min.js" />
-    <Content Include="ImproveEnglishProject\assets\js\fullcalendar.js" />
     <Content Include="ImproveEnglishProject\assets\js\jquery-1.10.2.js" />
     <Content Include="ImproveEnglishProject\assets\js\jquery-ui.custom.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\jquery.datatables.min.js" />
@@ -201,6 +201,7 @@
     <Content Include="ImproveEnglishProject\assets\js\myscript.js" />
     <Content Include="ImproveEnglishProject\assets\js\regular.js" />
     <Content Include="ImproveEnglishProject\assets\js\regular.min.js" />
+    <Content Include="ImproveEnglishProject\assets\js\responsive.bootstrap4.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\solid.js" />
     <Content Include="ImproveEnglishProject\assets\js\solid.min.js" />
     <Content Include="ImproveEnglishProject\assets\js\v4-shims.js" />

@@ -168,7 +168,7 @@
                                 </asp:RadioButtonList>
                             </div>
                             <div class="form-group mt-2">
-                                <label for="selectUniversity"
+                                <label for="selectNationality"
                                     class="text-uppercase">
                                     <strong>Nationality</strong></label>
                                 <asp:DropDownList runat="server" ID="selectNationality" CssClass="form-control select2 w-100"></asp:DropDownList>

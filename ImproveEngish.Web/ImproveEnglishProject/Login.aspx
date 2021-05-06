@@ -94,9 +94,10 @@
                                 </div>
                                 <a href="ForgotPassword.aspx" style="margin-left: 35%;"><strong><i>Forgot password?</i></strong></a>
                             </div>
-                            <div class="d-grid gap-2 col-6 mx-auto mt-3 ">
+                            <div class="d-grid gap-2 col-6 mx-auto mt-3 mb-4">
                                 <button runat="server" id="btnSignIn" class="btn btn-primary" type="button" onserverclick="btnSignIn_OnServerClick">Sign in</button>
                             </div>
+                            <a href="CreateAccount.aspx" style="margin-left: 35%; margin-top: 10%;"><strong><i>Create An Account</i></strong></a>
                             <div runat="server" id="divMessage" class="alert alert-danger mt-4" style="margin-left: 35%;" visible="False" role="alert">
                             </div>
                             <a href="#" runat="server" id="aLink" onserverclick="aLink_OnServerClick" style="margin-left: 35%;" visible="False"><strong><i>Send activation link again.</i></strong></a>

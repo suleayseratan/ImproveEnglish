@@ -153,6 +153,11 @@ namespace ImproveEnglish.Business.Concrete
             return list;
         }
 
+        public void Update(Student student)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Student> GetAll()
         {
             var list = _studentRepository.GetAll();

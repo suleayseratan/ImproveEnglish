@@ -18,6 +18,7 @@ namespace ImproveEnglish.Business.Abstract
         List<Student> GetByEmail(string email);
         void ChagePassword(int id, string password);
         List<StudentDetailModel> GetStudentById(int studentId);
+        void Update(Student student);
 
     }
 }

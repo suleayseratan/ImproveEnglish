@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="assets/css/datatables.bootstrap4.min.css" rel="stylesheet" />
     <link href="assets/css/buttons.datatables.min.css" rel="stylesheet" />
+    <link href="assets/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+
+
     <style>
         .btn-pill {
             border-radius: 3rem;
@@ -52,7 +55,6 @@
         <!-- End Breadcrumbs -->
         <div class="popup-button">
             <div class="container">
-                
                 <!-- The Modal -->
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog modal-lg">
@@ -86,7 +88,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-4 group-label" for="inlineFormCustomSelect">
-                                        IS it full?
+                                        Is it full?
                                     </label>
                                     <asp:RadioButtonList ID="radioIsFull" runat="server" RepeatDirection="Horizontal" CssClass="col-sm-8">
                                         <asp:ListItem Text="Yes" Value="true" Selected="True" style="margin-right: 2px !important;"></asp:ListItem>
@@ -116,10 +118,11 @@
                         <p class="lead">
                         </p>
                         <hr />
-                        <button type="button" id="btnEdit" disabled="disabled" class="btn btn-primary btn-pill" data-toggle="modal" data-target="#myModal">Edit</button>
-                        <button runat="server" type="button" id="btnDelete" name="btnDelete" disabled="disabled" class="btn btn-danger btn-pill" onserverclick="btnDelete_OnServerClick">Delete</button>
+                        
                         <div class="agenda">
                             <div class="table-responsive">
+                                <button type="button" id="btnEdit" disabled="disabled" class="btn btn-primary btn-pill" data-toggle="modal" data-target="#myModal">Edit</button>
+                                <button runat="server" type="button" id="btnDelete" name="btnDelete" disabled="disabled" class="btn btn-danger btn-pill" OnServerClick="btnDelete_OnServerClick">Delete</button>
                                 <table class="table table-condensed table-bordered nowrap w-100" id="row-delete">
                                     <thead>
                                         <tr>
@@ -178,7 +181,7 @@
     <script src="assets/js/datatables.bootstrap4.min.js"></script>
     <script src="assets/js/datatables.responsive.min.js"></script>
     <script src="assets/js/jquery.datatables.min.js"></script>
-
+    <script src="assets/js/responsive.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function () {
 

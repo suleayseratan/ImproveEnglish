@@ -100,7 +100,11 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         protected void btnDelete_OnServerClick(object sender, EventArgs e)
         {
-            _studentScheduleManager.Delete(Convert.ToInt32(txtScheduleId));
+            string systemDate = DateTime.Now.ToShortDateString();
+
+            int scheduleId = Convert.ToInt32(txtScheduleId.Value);
+            _studentScheduleManager.Delete(Convert.ToInt32(txtScheduleId.Value));
+            GetSchedule(scheduleId,systemDate);
         }
     }
 }
