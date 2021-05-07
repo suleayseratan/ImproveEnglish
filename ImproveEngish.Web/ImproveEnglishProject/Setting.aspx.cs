@@ -94,10 +94,22 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
                 if(txtEmail.Value + divEposta.InnerHtml != s.Eposta)
                 {
-                    eposta = txtEmail.Value + divEposta.InnerHtml;
-                    activationCode = new Guid();
-                    emailVeryFied = false;
-                    SendActivationEmail(studentId,eposta,nameSurname,activationCode);
+                    var strundet = _studentManager.GetByEmail(txtEmail.Value + divEposta.InnerHtml);
+                    if (strundet.Count == 0)
+                    {
+                        eposta = txtEmail.Value + divEposta.InnerHtml;
+                        activationCode = new Guid();
+                        emailVeryFied = false;
+                        SendActivationEmail(studentId, eposta, nameSurname, activationCode);
+                    }
+                    else
+                    {
+                        eposta = s.Eposta;
+                        activationCode = s.ActivationCode;
+                        emailVeryFied = true;
+                        Message(divUpdateAccountMessage, "This email already exist", false);
+                    }
+                    
                 }
                 else 
                 {
