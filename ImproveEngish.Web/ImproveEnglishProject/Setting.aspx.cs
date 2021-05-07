@@ -4,6 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web;
+using System.Web.Security;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
@@ -198,6 +201,103 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             SmtpServer.EnableSsl = true;
 
             SmtpServer.Send(mail);
+        }
+
+        protected void btnUpdatePassword_OnServerClick(object sender, EventArgs e)
+        {
+            string oldPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtOldPassword.Value, "MD5");
+            string newPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtNewPassword.Value, "MD5");
+            string confirmPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtConfirmPassword.Value, "MD5");
+            string password;
+            int studentId = Convert.ToInt32(Session["StudentId"]);
+            var student = _studentManager.GetStudentById(studentId);
+            foreach (var s in student)
+            {
+                password = s.Password;
+                if (oldPassword != password || oldPassword == null)
+                {
+                    Message(divUpdatePasswordMessage, "Please Enter Old Password", false);
+                }
+                else if (CheckPassword(newPassword,confirmPassword).Equals(false))
+                {
+                    Message(divUpdatePasswordMessage, "Passwords did not match", false);
+                }
+                else
+                {
+                    _studentManager.Update(new Student()
+                    {
+                        StudentId = studentId,
+                        FkNationalityId = s.NationalityId,
+                        FkUniversityId = s.UniversityId,
+                        FkDepartmentId = s.DepartmentId,
+                        NameSurname = s.NameSurname,
+                        Gender = s.Gender,
+                        Password = newPassword,
+                        Eposta = s.Eposta,
+                        ProfileImagePath = s.ProfileImagePath,
+                        EmailVeryFied = s.EmailVeryFied,
+                        ActivationCode = s.ActivationCode
+                    });
+                    Message(divUpdatePasswordMessage, "Password Changed", true);
+
+                }
+            }
+        }
+
+        private void Message(HtmlGenericControl divMessage, string message, bool check)
+        {
+            divMessage.Visible = true;
+            divMessage.Attributes.Remove("class");
+            if (check.Equals(true))
+            {
+                divMessage.Attributes.Add("class", "alert alert-success mt-4");
+                divMessage.InnerHtml = message;
+            }
+            else
+            {
+                divMessage.Attributes.Add("class", "alert alert-danger mt-4");
+                divMessage.InnerHtml = message;
+            }
+        }
+        private bool CheckPassword(string newPassword, string confirmPassword)
+        {
+            bool checkIsUpper = false;
+            bool checkIsLower = false;
+            bool checkIsNumber = false;
+
+            if (newPassword.Equals(confirmPassword))
+            {
+                foreach (var i in newPassword)
+                {
+                    if (char.IsUpper(i))
+                    {
+                        checkIsUpper = true;
+                    }
+                    else if (char.IsLower(i))
+                    {
+                        checkIsLower = true;
+                    }
+                    else if (char.IsNumber(i))
+                    {
+                        checkIsNumber = true;
+                    }
+                }
+
+                if (checkIsUpper == true && checkIsLower == true && checkIsNumber == true && newPassword.Length >= 8 &&
+                    newPassword.Length <= 15)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }

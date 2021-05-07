@@ -21,6 +21,7 @@ namespace Entity.Model
         public string Eposta { get; set; }
         public Guid ActivationCode { get; set; }
         public string ProfileImagePath { get; set; }
+        public bool EmailVeryFied { get; set; }
 
     }
 }
