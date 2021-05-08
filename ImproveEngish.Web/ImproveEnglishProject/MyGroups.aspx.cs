@@ -16,6 +16,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         GroupManager _groupManager = new GroupManager(new EfGroupRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 int universityId = Convert.ToInt32(Session["UniversityId"]);

@@ -129,7 +129,7 @@
                                 <div class="course-info d-flex justify-content-between align-items-center">
                                     <h5 class="w-50">Meeting Date</h5>
                                     <p class="w-75">
-                                        <input runat="server" id="mDate" class="form-control w-100" type="date" value="<%=dateValue%>" />
+                                        <input runat="server" id="mDate" class="form-control w-100" type="date" />
                                         <asp:RequiredFieldValidator runat="server" ID="rfvMeetingDate" CssClass="text-danger font-weight-bold" ControlToValidate="mDate" ErrorMessage="Please Select End Time" ValidationGroup="UpdateGroup"></asp:RequiredFieldValidator>
                                     </p>
                                 </div>
@@ -157,7 +157,7 @@
     </main>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="js" runat="server">
-    <script src="assets/js/main.js"></script>
+    <script src="/ImproveEnglishProject/assets/js/main.js"></script>
     <script>
         $(document).ready(function () {
 

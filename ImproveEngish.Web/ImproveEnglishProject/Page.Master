@@ -30,23 +30,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/css/style.css" rel="stylesheet">
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
-    <link href="assets/css/ajax.select2.min.css" rel="stylesheet" />
-    <script src="assets/js/ajax.jquery.min.js"></script>
-    <script src="assets/js/ajax.select2.min.js"></script>
+    <link href="/ImproveEnglishProject/assets/css/ajax.select2.min.css" rel="stylesheet" />
+    <script src="/ImproveEnglishProject/assets/js/ajax.jquery.min.js"></script>
+    <script src="/ImproveEnglishProject/assets/js/ajax.select2.min.js"></script>
 
     <!-- =======================================================
   * Template Name: Mentor - v4.0.1
@@ -69,23 +69,23 @@
 
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                        <li><a class="active" href="Default.aspx">Home</a></li>
-                        <li><a href="SingleMeeting.aspx">Single Meeting</a></li>
-                        <li><a href="GroupMeeting.aspx">Group Meeting</a></li>
-                        <li><a href="About.aspx">About</a></li>
-                        <li><a href="Contact.aspx">Contact</a></li>
-                        <li><a href="Message.aspx">Messages<span class="badge badge-danger ml-2">4</span></a></li>
+                        <li><a class="active" href="/ImproveEnglishProject/Default.aspx">Home</a></li>
+                        <li><a href="/ImproveEnglishProject/SingleMeeting.aspx">Single Meeting</a></li>
+                        <li><a href="/ImproveEnglishProject/GroupMeeting.aspx">Group Meeting</a></li>
+                        <li><a href="/ImproveEnglishProject/About.aspx">About</a></li>
+                        <li><a href="/ImproveEnglishProject/Contact.aspx">Contact</a></li>
+                        <li><a href="/ImproveEnglishProject/Message.aspx">Messages<span class="badge badge-danger ml-2">4</span></a></li>
                         <li class="dropdown"><a href="#"><span>
                                 <img src="<%=Session["ImagePath"]%>" class=".avatar"
                                 style="vertical-align: middle; width: 50px !important; height: 50px !important; border-radius: 50%;" />
                             <%=Session["NameSurname"] %>
                             </span> <i class="bi bi-chevron-down"></i></a>
                             <ul id="dropprofile">
-                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="FreeTimes.aspx"
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i><a href="/ImproveEnglishProject/FreeTimes.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Free Times</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="bi bi-calendar"></i>
                                     <a href="MyGroups.aspx" class="btn btn-default" style="display: inline; padding-left: .5rem;">My Groups</a></li>
-                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="Setting.aspx"
+                                <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-cog fa-lg"></i><a href="/ImproveEnglishProject/Setting.aspx"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;">Settings</a></li>
                                 <li style="padding-left: 10%; margin-bottom: 5%;"><i class="fa fa-sign-out fa-lg"></i><a runat="server" ID="btnLogout" href="#"
                                     class="btn btn-default" style="display: inline; padding-left: .5rem;" OnServerClick="btnLogout_OnServerClick">Log Out</a></li>
@@ -181,17 +181,17 @@
             </div>
         </footer>
         <!-- End Footer -->
-        <div id="preloader"></div>
+        <%--<div id="preloader"></div>--%>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     </form>
 <!-- Vendor JS Files -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/ImproveEnglishProject/assets/vendor/aos/aos.js"></script>
+<script src="/ImproveEnglishProject/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/ImproveEnglishProject/assets/vendor/purecounter/purecounter.js"></script>
+<script src="/ImproveEnglishProject/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="/ImproveEnglishProject/assets/js/main.js"></script>
 <asp:ContentPlaceHolder ID="js" runat="server">
 </asp:ContentPlaceHolder>
 </body>

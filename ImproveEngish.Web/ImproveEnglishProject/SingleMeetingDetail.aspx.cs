@@ -11,11 +11,15 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         private  StudentScheduleManager _studentScheduleManager = new StudentScheduleManager(new EfStudentScheduleRepository()); 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (RouteData.Values["StudentId"] != null || Convert.ToInt32(RouteData.Values["StudentId"]) != 0)
             {
-                int studentId = Convert.ToInt32(Request.QueryString["studentId"]);
-                GetStudentDetail(studentId);
-                GetStudentAgenda(studentId);
+                Response.Write(RouteData.Values["StudentId"]);
+                if (!IsPostBack)
+                {
+                    int studentId = Convert.ToInt32(RouteData.Values["StudentId"]);
+                    GetStudentDetail(studentId);
+                    GetStudentAgenda(studentId);
+                }
             }
         }
 

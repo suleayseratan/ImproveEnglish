@@ -6,13 +6,16 @@ namespace ImproveEngish.Web.ImproveEnglishProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty((string)Session["NameSurname"]))
+            {
+                Response.Redirect("/ImproveEnglishProject/Login.aspx");
+            }
         }
 
         protected void btnLogout_OnServerClick(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("/ImproveEnglishProject/Login.aspx");
         }
     }
 }

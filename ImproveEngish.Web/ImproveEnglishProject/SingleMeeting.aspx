@@ -4,9 +4,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
-    <link href="assets/css/ajax.select2.min.css" rel="stylesheet" />
-    <script src="assets/js/ajax.jquery.min.js"></script>
-    <script src="assets/js/ajax.select2.min.js"></script>
+    <link href="/ImproveEnglishProject/assets/css/ajax.select2.min.css" rel="stylesheet" />
+    <script src="/ImproveEnglishProject/assets/js/ajax.jquery.min.js"></script>
+    <script src="/ImproveEnglishProject/assets/js/ajax.select2.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <main id="main" data-aos="fade-in">
@@ -68,7 +68,7 @@
                                         <img style="width: 350px; height: 250px;" src="<%#Eval("ProfileImagePath")%>" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="SingleMeetingDetail.aspx?studentId=<%#Eval("StudentId") %>"><%#Eval("NameSurname")%></a></h5>
+                                        <h5 class="card-title"><a href="/SingleMeetingDetail/<%#Eval("StudentId") %>"><%#Eval("NameSurname")%></a></h5>
                                         <p class="text-center">
                                             <strong>Free Date :</strong> <%#Eval("MeetingDate","{0:MM/dd/yyyy}")%>
                                             <br />

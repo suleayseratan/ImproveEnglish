@@ -170,7 +170,7 @@
                                 <div class="course-item">
                                     <img src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="...">
                                     <div class="course-content">
-                                        <h3><a href="GroupMeetingDetail.aspx?groupId=<%#Eval("GroupId") %>"><%#Eval("GroupName") %></a></h3>
+                                        <h3><a href="/GroupMeetingDetail/<%#Eval("GroupId") %>"><%#Eval("GroupName") %></a></h3>
                                         <p>
                                             <%#Eval("GroupExplanation") %>
                                         </p>
@@ -197,7 +197,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="js" runat="server">
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="/ImproveEnglishProject/assets/js/main.js"></script>
     <script type="text/javascript">
         $('.clockpicker').clockpicker();
     </script>

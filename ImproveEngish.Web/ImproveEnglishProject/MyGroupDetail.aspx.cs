@@ -13,15 +13,20 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 {
     public partial class MyGroupDetail : System.Web.UI.Page
     {
-        public string dateValue = String.Empty;
         GroupManager _groupManager = new GroupManager(new EfGroupRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (RouteData.Values["GroupId"] != null || Convert.ToInt32(RouteData.Values["GroupId"]) != 0)
             {
-                int groupId = Convert.ToInt32(Request.QueryString["groupId"]);
-                int universityId = Convert.ToInt32(Session["UniversityId"]);
-                GetGroupDetails(universityId, groupId);
+                Response.Write(RouteData.Values["GroupId"]);
+
+                if (!IsPostBack)
+                {
+                    int groupId = Convert.ToInt32(RouteData.Values["GroupId"]);
+                    int universityId = Convert.ToInt32(Session["UniversityId"]);
+                    GetGroupDetails(universityId, groupId);
+                }
+
             }
         }
 
@@ -38,24 +43,36 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 txtExplanation.Value = i.GroupExplanation;
                 ddlNumberOfMembers.Value = i.NumberOfGroupMembers.ToString();
                 txtMeetingLocation.Value = i.GroupMeetingLocation;
-                mDate.Value = i.GroupMeetingDate.ToShortDateString();
+                mDate.Value = i.GroupMeetingDate.ToString("yyyy-MM-dd");
                 mTime.Value = i.GroupMeetingTime.ToString();
             }
         }
 
         protected void btnUpdate_OnServerClick(object sender, EventArgs e)
         {
-            int groupId = Convert.ToInt32(Request.QueryString["groupId"]);
+            int groupId = Convert.ToInt32(RouteData.Values["GroupId"]);
             int universityId = Convert.ToInt32(Session["UniversityId"]);
             int creatorId = Convert.ToInt32(Session["StudentId"]);
             string groupName = txtGroupName.Value;
             string subject = txtGroupSubject.Value;
             string explanation = txtExplanation.Value;
-            string groupImagePath = GetImagePath(fileGroupImage.Value);
+            string groupImagePath = fileGroupImage.Value;//GetImagePath(fileGroupImage.Value);
             int numberOfMembers = Convert.ToInt32(ddlNumberOfMembers.Value);
             string meetingDate = mDate.Value;
             string meetingTime = mTime.Value;
             string meetingLocation = txtMeetingLocation.Value;
+            if (groupImagePath != String.Empty)
+            {
+                groupImagePath = GetImagePath(fileGroupImage.Value);
+            }
+            else
+            {
+                var list = _groupManager.GetGroupDetails(universityId, groupId);
+                foreach (var i in list)
+                {
+                    groupImagePath = i.GroupImagePath;
+                }
+            }
             _groupManager.Update(new Group()
             {
                 GroupId = groupId,
@@ -69,12 +86,12 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 MeetingTime = TimeSpan.Parse(meetingTime),
                 MeetingLocation = meetingLocation
             });
-            GetGroupDetails(universityId,groupId);
+            GetGroupDetails(universityId, groupId);
         }
 
         protected void btnDeleteGroup_OnServerClick(object sender, EventArgs e)
         {
-            int groupId = Convert.ToInt32(Request.QueryString["groupId"]);
+            int groupId = Convert.ToInt32(RouteData.Values["GroupId"]);
             _groupManager.Delete(groupId);
             Response.Redirect("MyGroups.aspx");
         }
@@ -82,7 +99,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
         {
             var fileName = "";
             var path = "";
-            var rootPath = "assets/img/";
+            var rootPath = "/ImproveEnglishProject/assets/img/";
             string[] elements;
             string[] paths = new string[4];
             if (fileGroupImage.PostedFile != null)
@@ -92,11 +109,10 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
                 for (int i = 0; i < elements.Length; i++)
                 {
-
                     var extension = Path.GetExtension(elements[i]);
                     if (extension == ".jpg" || extension == ".png")
                     {
-                        var folder = Server.MapPath("assets/img/");
+                        var folder = Server.MapPath(rootPath);
                         var randomFileName = Path.GetRandomFileName();
                         fileName = Path.ChangeExtension(randomFileName, ".jpg");
                         path = Path.Combine(folder, fileName);
@@ -116,7 +132,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                         }
 
                     }
-
                 }
 
             }

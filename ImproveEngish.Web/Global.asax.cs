@@ -28,6 +28,7 @@ namespace ImproveEngish.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            RouteAdd(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -58,6 +59,13 @@ namespace ImproveEngish.Web
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+
+        void RouteAdd(RouteCollection route)
+        {
+            route.MapPageRoute("MyGroupDetail", "MyGroupDetail/{GroupId}", "~/ImproveEnglishProject/MyGroupDetail.aspx");
+            route.MapPageRoute("GroupMeetingDetail", "GroupMeetingDetail/{GroupId}", "~/ImproveEnglishProject/GroupMeetingDetail.aspx");
+            route.MapPageRoute("SingleMeetingDetail", "SingleMeetingDetail/{StudentId}", "~/ImproveEnglishProject/SingleMeetingDetail.aspx");
         }
     }
 }
