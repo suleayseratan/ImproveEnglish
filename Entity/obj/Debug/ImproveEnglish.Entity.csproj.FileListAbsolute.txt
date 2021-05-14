@@ -10,3 +10,9 @@ H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.cspr
 H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\ImproveEnglish.Entity.csproj.CoreCompileInputs.cache
 H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\Entity.dll
 H:\My-Github-Projects\ImproveEnglish\Entity\obj\Debug\Entity.pdb
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\obj\Debug\ImproveEnglish.Entity.csprojAssemblyReference.cache
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\obj\Debug\ImproveEnglish.Entity.csproj.CoreCompileInputs.cache
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\obj\Debug\Entity.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\obj\Debug\Entity.pdb
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\bin\Debug\Entity.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\Entity\bin\Debug\Entity.pdb

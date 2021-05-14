@@ -21,9 +21,9 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    
-    <link href="assets/css/login.css"/>
-    
+
+    <link href="assets/css/login.css" />
+
 </head>
 
 <body>
@@ -87,15 +87,16 @@
                             </div>
                             <div class="form-group mt-3">
                                 <div class="form-check form-check-inline">
-                                    <input runat="server" type="checkbox" class="form-check-input" id="rememberMe"/>
+                                    <input runat="server" type="checkbox" class="form-check-input" id="rememberMe" />
                                     <label class="form-check-label ms-4 " for="rememberMe">
                                         Remember me
+                                   
                                     </label>
                                 </div>
                                 <a href="ForgotPassword.aspx" style="margin-left: 35%;"><strong><i>Forgot password?</i></strong></a>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto mt-3 mb-4">
-                                <button runat="server" id="btnSignIn" class="btn btn-primary" type="button" onserverclick="btnSignIn_OnServerClick">Sign in</button>
+                                <button runat="server" id="btnSignIn" class="btn btn-primary" type="button" onserverclick="btnSignIn_OnServerClick" onclick="">Sign in</button>
                             </div>
                             <a href="CreateAccount.aspx" style="margin-left: 35%; margin-top: 10%;"><strong><i>Create An Account</i></strong></a>
                             <div runat="server" id="divMessage" class="alert alert-danger mt-4" style="margin-left: 35%;" visible="False" role="alert">
@@ -108,7 +109,41 @@
         </section>
     </div>
 </body>
+<script src="/ImproveEnglishProject/assets/js/myscript.js"></script>
 
+<script src="../Scripts/jquery-3.4.1.js"></script>
+<script src="../Scripts/jquery.signalR-2.2.2.js"></script>
+<script src="/signalr/hubs"></script>
+
+<script type="text/javascript">
+    $(function () {
+
+        // Declare a proxy to reference the hub. 
+        var chatHub = $.connection.chatHub;
+
+        // Start Hub
+        $.connection.hub.start().done(function () {
+            registerEvents(chatHub);
+        });
+
+    });
+    function registerEvents(chatHub) {
+
+        $("#btnSignIn").click(function () {
+
+            var email = $("#txtEmail").val();
+            if (email.length > 0) {
+                chatHub.server.connect(email);
+            }
+            else {
+                alert("Please enter email");
+            }
+
+        });
+
+    }
+
+</script>
 </html>
 
-<script src="assets/js/myscript.js"></script>
+

@@ -65,6 +65,7 @@
     <Compile Include="Abstract\IMenuService.cs" />
     <Compile Include="Abstract\IMessageService.cs" />
     <Compile Include="Abstract\INationalityService.cs" />
+    <Compile Include="Abstract\IRelationshipService.cs" />
     <Compile Include="Abstract\ISentGroupMessageService.cs" />
     <Compile Include="Abstract\ISentMessageService.cs" />
     <Compile Include="Abstract\IStudentService.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Concrete\MenuManager.cs" />
     <Compile Include="Concrete\MessageManager.cs" />
     <Compile Include="Concrete\NationalityManager.cs" />
+    <Compile Include="Concrete\RelationshipManager.cs" />
     <Compile Include="Concrete\SentGroupMessageManager.cs" />
     <Compile Include="Concrete\SentMessageManager.cs" />
     <Compile Include="Concrete\StudentManager.cs" />

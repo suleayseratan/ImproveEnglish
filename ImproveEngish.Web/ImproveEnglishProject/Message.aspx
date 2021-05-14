@@ -1,295 +1,338 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="Message.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.Message" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="assets/css/message.css">
+    <link rel="stylesheet" href="/ImproveEnglishProject/assets/css/message.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-    <main id="main">
-
-        <div id="frame">
-            <div id="sidepanel">
-                <div id="profile">
-                    <div class="wrap">
-                        <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
-                        <p>Mike Ross</p>
-                        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
-                        <div id="status-options">
-                            <ul>
-                                <li id="status-online" class="active"><span class="status-circle"></span>
-                                    <p>Online</p>
-                                </li>
-                                <li id="status-away"><span class="status-circle"></span>
-                                    <p>Away</p>
-                                </li>
-                                <li id="status-busy"><span class="status-circle"></span>
-                                    <p>Busy</p>
-                                </li>
-                                <li id="status-offline"><span class="status-circle"></span>
-                                    <p>Offline</p>
-                                </li>
+    <main id="main" style="margin-top: 10%;">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card chat-app">
+                        <div id="plist" class="people-list">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                                    <input hidden type="text" id="txtFromStudentId" value="<%=Session["StudentId"] %>" />
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search...">
+                            </div>
+                            <ul class="list-unstyled chat-list mt-2 mb-0">
+                                <asp:Repeater runat="server" ID="rptRelationship">
+                                    <ItemTemplate>
+                                        <li id="liAvatar<%#Eval("StudentId") %>" class="clearfix" onclick="getValue(this.id)">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                            <div class="about">
+                                                <div class="name" id="listName<%#Eval("StudentId") %>"><%#Eval("NameSurname") %></div>
+                                                <input hidden="" type="text" id="studentId" value="<%#Eval("StudentId") %>" />
+                                            </div>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                             </ul>
                         </div>
-                        <div id="expanded">
-                            <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
-                            <input name="twitter" type="text" value="mikeross" />
-                            <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
-                            <input name="twitter" type="text" value="ross81" />
-                            <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
-                            <input name="twitter" type="text" value="mike.ross" />
+                        <div class="chat">
+                            <div class="chat-header clearfix">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                        </a>
+                                        <div class="chat-about">
+                                            <div class="m-b-0" id="chatName"></div>
+                                            <small>Last seen: 2 hours ago</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 hidden-sm text-right">
+                                        <a href="javascript:void(0);" class="btn btn-outline-secondary"><i class="fa fa-camera"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-image"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-outline-info"><i class="fa fa-cogs"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-history">
+                                <ul class="m-b-0" id="messageContent">
+                                </ul>
+                            </div>
+                            <div class="chat-message clearfix">
+                                <div class="input-group mb-0">
+                                    <input type="button" class="input-group-prepend" id="btnSendMessage">
+                                        <span class="input-group-text"><i class="fa fa-send"></i></span>
+                                    </input>
+                                    <input type="text" id="txtMessage" class="form-control" placeholder="Enter text here...">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div id="search">
-                    <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-                    <input type="text" placeholder="Search contacts..." />
-                </div>
-                <div id="contacts">
-                    <ul>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status online"></span>
-                                <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Louis Litt</p>
-                                    <p class="preview">You just got LITT up, Mike.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact active">
-                            <div class="wrap">
-                                <span class="contact-status busy"></span>
-                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Harvey Specter</p>
-                                    <p class="preview">
-                                        Wrong. You take the gun, or you pull out a bigger one. Or, you
-                                        call their bluff. Or,
-                                        you do any one of a hundred and forty six other things.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status away"></span>
-                                <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Rachel Zane</p>
-                                    <p class="preview">
-                                        I was thinking that we could have chicken tonight, sounds good?
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status online"></span>
-                                <img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Donna Paulsen</p>
-                                    <p class="preview">Mike, I know everything! I'm Donna..</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status busy"></span>
-                                <img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Jessica Pearson</p>
-                                    <p class="preview">Have you finished the draft on the Hinsenburg deal?</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status"></span>
-                                <img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Harold Gunderson</p>
-                                    <p class="preview">Thanks Mike! :)</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status"></span>
-                                <img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Daniel Hardman</p>
-                                    <p class="preview">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status busy"></span>
-                                <img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Katrina Bennett</p>
-                                    <p class="preview">I've sent you the files for the Garrett trial.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status"></span>
-                                <img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Charles Forstman</p>
-                                    <p class="preview">Mike, this isn't over.</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="contact">
-                            <div class="wrap">
-                                <span class="contact-status"></span>
-                                <img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
-                                <div class="meta">
-                                    <p class="name">Jonathan Sidwell</p>
-                                    <p class="preview"><span>You:</span> That's bullshit. This deal is solid.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="bottom-bar">
-                    <button id="addcontact">
-                        <i class="fa fa-user-plus fa-fw" aria-hidden="true"></i><span>Add
-                            contact</span></button>
-                    <button id="settings">
-                        <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
-                        <span>Settings</span></button>
-                </div>
-            </div>
-            <div class="content">
-                <div class="contact-profile">
-                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                    <p>Harvey Specter</p>
-                    <div class="social-media">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="messages" style="width: 100% !important;">
-                    <ul>
-                        <li class="sent">
-                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-                            <p>
-                                How the hell am I supposed to get a jury to believe you when I am not even sure that I
-                                do?!
-                            </p>
-                        </li>
-                        <li class="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>When you're backed against the wall, break the god damn thing down.</p>
-                        </li>
-                        <li class="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>Excuses don't win championships.</p>
-                        </li>
-                        <li class="sent">
-                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-                            <p>Oh yeah, did Michael Jordan tell you that?</p>
-                        </li>
-                        <li class="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>No, I told him that.</p>
-                        </li>
-                        <li class="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>What are your choices when someone puts a gun to your head?</p>
-                        </li>
-                        <li class="sent">
-                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-                            <p>What are you talking about? You do what they say or they shoot you.</p>
-                        </li>
-                        <li class="replies">
-                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                            <p>
-                                Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you
-                                do any one of a
-                                hundred and forty six other things.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="message-input">
-                    <div class="wrap">
-                        <input type="text" placeholder="Write your message..." />
-                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
     <!-- End #main -->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="js" runat="server">
-     <script
+    <script
         src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script>$(".messages").animate({ scrollTop: $(document).height() }, "fast");
+    <script src="../Scripts/jquery-3.4.1.js"></script>
+    <script src="../Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="/signalr/hubs"></script>
 
-        $("#profile-img").click(function () {
-            $("#status-options").toggleClass("active");
+    <script type="text/javascript">
+        $(function () {
+
+            // Declare a proxy to reference the hub. 
+            var chatHub = $.connection.chatHub;
+
+            // Start Hub
+            $.connection.hub.start().done(function () {
+                registerEvents(chatHub);
+            });
+
+            $("#btnSendMessage").on('click', function () {
+                var fromSudentId = $("#txtFromStudentId").val();
+                var msg = $("#txtMessage").val();
+                if (msg.length > 0) {
+                    var toUserId = $('#studentId').val();
+                    chatHub.server.sendPrivateMessage(fromSudentId, toUserId, msg);
+                    $("#txtMessage").val('');
+                    var div = ' <li class="clearfix">' +
+                        '<div class="message-data text-right">' +
+                        '<span class="message-data-time">' + Date.now() + '</span>' +
+                        '<img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">' +
+                        '</div>' +
+                        '<div class="message other-message float-right">' + msg + '</div>' +
+                        '</div>' +
+                        '</li>';
+                    $("#messageContent").append(div);
+                }
+            });
+
         });
+        function registerEvents(chatHub) {
 
-        $(".expand-button").click(function () {
-            $("#profile").toggleClass("expanded");
-            $("#contacts").toggleClass("expanded");
-        });
+            //$("#btnStartChat").click(function () {
 
-        $("#status-options ul li").click(function () {
-            $("#profile-img").removeClass();
-            $("#status-online").removeClass("active");
-            $("#status-away").removeClass("active");
-            $("#status-busy").removeClass("active");
-            $("#status-offline").removeClass("active");
-            $(this).addClass("active");
+            //    var name = $("#txtNickName").val();
+            //    if (name.length > 0) {
+            //        chatHub.server.connect(name);
+            //    }
+            //    else {
+            //        alert("Please enter name");
+            //    }
 
-            if ($("#status-online").hasClass("active")) {
-                $("#profile-img").addClass("online");
-            } else if ($("#status-away").hasClass("active")) {
-                $("#profile-img").addClass("away");
-            } else if ($("#status-busy").hasClass("active")) {
-                $("#profile-img").addClass("busy");
-            } else if ($("#status-offline").hasClass("active")) {
-                $("#profile-img").addClass("offline");
-            } else {
-                $("#profile-img").removeClass();
-            };
+            //});
 
-            $("#status-options").removeClass("active");
-        });
 
-        function newMessage() {
-            message = $(".message-input input").val();
-            if ($.trim(message) == '') {
-                return false;
+            //$('#btnSendMsg').click(function () {
+
+            //    var msg = $("#txtMessage").val();
+            //    if (msg.length > 0) {
+
+            //        var userName = $('#hdUserName').val();
+            //        chatHub.server.sendMessageToAll(userName, msg);
+            //        $("#txtMessage").val('');
+            //    }
+            //});
+
+
+            //$("#txtNickName").keypress(function (e) {
+            //    if (e.which == 13) {
+            //        $("#btnStartChat").click();
+            //    }
+            //});
+
+            //$("#txtMessage").keypress(function (e) {
+            //    if (e.which == 13) {
+            //        $('#btnSendMsg').click();
+            //    }
+            //});
+
+            
+
+
+
+        }
+        function registerClientMethods(chatHub) {
+
+            // Calls when user successfully logged in
+            chatHub.client.onConnected = function (id, userName, allUsers, messages) {
+
+                $('#hdId').val(id);
+                $('#hdUserName').val(userName);
+                $('#spanUser').html(userName);
+
+                // Add All Users
+                for (i = 0; i < allUsers.length; i++) {
+
+                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName);
+                }
+
+                // Add Existing Messages
+                for (i = 0; i < messages.length; i++) {
+
+                    AddMessage(messages[i].UserName, messages[i].Message);
+                }
+
+
             }
-            $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
-            $('.message-input input').val(null);
-            $('.contact.active .preview').html('<span>You: </span>' + message);
-            $(".messages").animate({ scrollTop: $(document).height() }, "fast");
-        };
 
-        $('.submit').click(function () {
-            newMessage();
-        });
+            // On New User Connected
+            chatHub.client.onNewUserConnected = function (id, name) {
 
-        $(window).on('keydown', function (e) {
-            if (e.which == 13) {
-                newMessage();
-                return false;
+                AddUser(chatHub, id, name);
             }
-        });
-//# sourceURL=pen.js
+
+
+            // On User Disconnected
+            chatHub.client.onUserDisconnected = function (id, userName) {
+
+                $('#' + id).remove();
+
+                var ctrId = 'private_' + id;
+                $('#' + ctrId).remove();
+
+
+                var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+                $(disc).hide();
+                $('#divusers').prepend(disc);
+                $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+            }
+
+            chatHub.client.messageReceived = function (userName, message) {
+
+                AddMessage(userName, message);
+            }
+
+
+            //chatHub.client.sendPrivateMessage = function (, fromUserName, message) {
+
+            //    var ctrId = 'private_' + windowId;
+
+
+            //    if ($('#' + ctrId).length == 0) {
+
+            //        createPrivateChatWindow(chatHub, windowId, ctrId, fromUserName);
+
+            //    }
+
+            //    $('#' + ctrId).find('#divMessage').append('<div class="message"><span class="userName">' + fromUserName + '</span>: ' + message + '</div>');
+
+            //    // set scrollbar
+            //    var height = $('#' + ctrId).find('#divMessage')[0].scrollHeight;
+            //    $('#' + ctrId).find('#divMessage').scrollTop(height);
+
+
+            //}
+
+        }
+        function AddUser(chatHub, id, name) {
+
+            var userId = $('#hdId').val();
+
+            var code = "";
+
+            if (userId == id) {
+
+                code = $('<div class="loginUser">' + name + "</div>");
+
+            }
+            else {
+
+                code = $('<a id="' + id + '" class="user" >' + name + '<a>');
+
+                $(code).dblclick(function () {
+
+                    var id = $(this).attr('id');
+
+                    if (userId != id)
+                        OpenPrivateChatWindow(chatHub, id, name);
+
+                });
+            }
+
+            $("#divusers").append(code);
+
+        }
+        function AddMessage(userName, message) {
+            $('#divChatWindow').append('<div class="message"><span class="userName">' + userName + '</span>: ' + message + '</div>');
+
+            var height = $('#divChatWindow')[0].scrollHeight;
+            $('#divChatWindow').scrollTop(height);
+        }
+        function createPrivateChatWindow(chatHub, userId, ctrId, userName) {
+
+            // DELETE BUTTON IMAGE
+            //$div.find('#imgDelete').click(function () {
+            //    $('#' + ctrId).remove();
+            //});
+
+            // Send Button event
+            //$("#btnSendMessage").click(function () {
+
+            //    $textBox = $div.find("#txtMessage");
+            //    var msg = $textBox.val();
+            //    if (msg.length > 0) {
+
+            //        chatHub.server.sendPrivateMessage(userId, msg);
+            //        $textBox.val('');
+            //    }
+            //});
+
+            // Text Box event
+            //$div.find("#txtMessage").keypress(function (e) {
+            //    if (e.which == 13) {
+            //        $div.find("#btnSendMessage").click();
+            //    }
+            //});
+            //var sendMessage = function () {
+            //    alert("Im working");
+            //}
+
+
+            AddDivToContainer($div);
+
+        }
+
+        function AddDivToContainer($div) {
+            $('#divContainer').prepend($div);
+
+            $div.draggable({
+
+                handle: ".header",
+                stop: function () {
+
+                }
+            });
+        }
+
+        var getValue = function (liId) {
+            var liChildNode = document.getElementById(liId).childNodes;
+            $('#chatName').empty();
+            for (let child of liChildNode) {
+                if (child.nodeName.toUpperCase() == 'DIV') {
+                    for (let i of child.childNodes) {
+                        if (typeof i.value != 'undefined')
+                            console.log(i.value.toString().trim());//ID
+                        if (typeof i.innerText != 'undefined') {
+                            console.log(i.innerHTML);
+                            let name = i.innerHTML;
+                            $('#chatName').append(name);  //i.innerText; //Div
+                            /*$('#chatName').append(name);*/
+                        }
+
+
+                    }
+                }
+                //alert(child.nodeName);
+            }
+        }
+
     </script>
 
 </asp:Content>

@@ -90,6 +90,7 @@ namespace ImproveEnglish.Business.Concrete
                     if (email == i.Eposta && md5Password == i.Password)
                     {
                         check = true;
+                        break;
                     }
                     else
                     {

@@ -26,3 +26,17 @@ H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\Improve
 H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CopyComplete
 H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.dll
 H:\My-Github-Projects\ImproveEnglish\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.pdb
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll.config
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\ImproveEnglish.DataAccess.pdb
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\Entity.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\Entity.pdb
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csprojAssemblyReference.cache
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.csproj.CopyComplete
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.dll
+C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEnglish-main\ImproveEnglish.DataAccess\obj\Debug\ImproveEnglish.DataAccess.pdb
