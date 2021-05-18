@@ -22,7 +22,6 @@ namespace Entity.Model
         public Guid ActivationCode { get; set; }
         public string ProfileImagePath { get; set; }
         public bool EmailVeryFied { get; set; }
-        public string ConnectionId { get; set; }
 
     }
 }

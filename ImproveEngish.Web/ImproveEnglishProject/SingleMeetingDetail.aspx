@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="SingleMeetingDetail.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.SingleMeetingDetail" %>
+<%@ Import Namespace="Microsoft.Ajax.Utilities" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .btn-send-message {
@@ -26,7 +28,7 @@
                         <ItemTemplate>
                             <div class="col-lg-4">
                                 <img style="width: 550px; height: 250px;" src="<%#Eval("ProfileImagePath") %>" class="img-fluid" alt="">
-                                <button runat="server" type="button" id="btnSendMessage" class="btn btn-primary btn-send-message" OnServerClick="btnSendMessage_OnServerClick">Send A Message</button>
+                                <button class="btn btn-primary btn-send-message">Send A Message</button>
                             </div>
                             <div class="col-lg-8">
 

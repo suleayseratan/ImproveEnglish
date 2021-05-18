@@ -22,8 +22,6 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
         public DbSet<Student> Students { get; set; }
         public DbSet<StudentSchedule> StudentSchedules { get; set; }
         public DbSet<University> Universities { get; set; }
-        public DbSet<Relationship> Relationships { get; set; }
-
 
     }
 }

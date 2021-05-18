@@ -58,7 +58,6 @@
     <Compile Include="Abstract\IMenuRepository.cs" />
     <Compile Include="Abstract\IMessageRepository.cs" />
     <Compile Include="Abstract\INationalityRepository.cs" />
-    <Compile Include="Abstract\IRelationshipRepository.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\ISentGroupMessageRepository.cs" />
     <Compile Include="Abstract\ISentMessageRepository.cs" />
@@ -72,7 +71,6 @@
     <Compile Include="Concrete\Ef\EfMenuRepository.cs" />
     <Compile Include="Concrete\Ef\EfMessageRepository.cs" />
     <Compile Include="Concrete\Ef\EfNationalityRepository.cs" />
-    <Compile Include="Concrete\Ef\EfRelationshipRepository.cs" />
     <Compile Include="Concrete\Ef\EfSentGroupMessageRepository.cs" />
     <Compile Include="Concrete\Ef\EfSentMessageRepository.cs" />
     <Compile Include="Concrete\Ef\EfStudentRepository.cs" />

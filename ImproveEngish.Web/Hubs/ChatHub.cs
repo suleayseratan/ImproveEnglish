@@ -2,81 +2,81 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
-using Entity;
-using ImproveEngish.Web.SingleRClasses;
-using ImproveEnglish.Business.Concrete;
-using ImproveEnglish.DataAccess.Concrete.Ef;
+using ImproveEngish.Web.SignalRClasses;
 
 namespace ImproveEngish.Web.Hubs
 {
     public class ChatHub : Hub
     {
-        static List<Student> ConnectedStudent = new List<Student>();
-        static List<Message> CurrentMessage = new List<Message>();
-        StudentManager _studentManager = new StudentManager(new EfStudentRepository());
-        SentMessageManager _sentMessageManager = new SentMessageManager(new EfSentMessageRepository());
+        static List<Users> ConnectedUsers = new List<Users>();
+        static List<Messages> CurrentMessage = new List<Messages>();
         
-        public void Send(string name, string message)
+        public void Connect(string userName)
         {
-            Clients.All.broadcastMessage(name,message);
-        }
+            var id = Context.ConnectionId;
 
-        public void Connect(string email)
-        {
-            var connectionId = Context.ConnectionId;
-            var student = _studentManager.GetByEmail(email);
-
-            foreach (var s in student)
+            if (ConnectedUsers.Count(x => x.ConnectionId == id) == 0)
             {
-                if (s.ConnectionId == null)
-                {
-                    _studentManager.Update(new Student()
-                    {
-                        StudentId = s.StudentId,
-                        FkNationalityId = s.FkNationalityId,
-                        FkUniversityId = s.FkUniversityId,
-                        FkDepartmentId = s.FkDepartmentId,
-                        NameSurname = s.NameSurname,
-                        Gender = s.Gender,
-                        Password = s.Password,
-                        Eposta = s.Eposta,
-                        ProfileImagePath = s.ProfileImagePath,
-                        EmailVeryFied = s.EmailVeryFied,
-                        ActivationCode = s.ActivationCode,
-                        ConnectionId = connectionId,
-                    });
 
-                    // send to caller
-                    Clients.Caller.onConnected(connectionId, s.NameSurname,ConnectedStudent , CurrentMessage);
+                string UserImg = "ImproveEnglishProject/assets/img/avataaars.png";
+                string logintime = DateTime.Now.ToString();
+                ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime });
+                // send to caller
+                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
 
-                    // send to all except caller client
-                    Clients.AllExcept(connectionId).onNewUserConnected(connectionId, s.NameSurname);
-
-                }
+                // send to all except caller client
+                Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
             }
         }
-        public void SendPrivateMessage(string fromUserId,string toUserId, string message)
+        public void SendMessageToAll(string userName, string message, string time)
         {
-            var toUser = _studentManager.GetStudentById(Convert.ToInt32(toUserId)).FirstOrDefault();
-            var fromUser = _studentManager.GetStudentById(Convert.ToInt32(fromUserId)).FirstOrDefault();
+            string UserImg = "ImproveEnglishProject/assets/img/avataaars.png";
+            // store last 100 messages in cache
+            AddMessageinCache(userName, message, time, UserImg);
+
+            // Broad cast message
+            Clients.All.messageReceived(userName, message, time, UserImg);
+        }
+        private void AddMessageinCache(string userName, string message, string time, string UserImg)
+        {
+            CurrentMessage.Add(new Messages { UserName = userName, Message = message, Time = time, UserImage = UserImg });
+
+            if (CurrentMessage.Count > 100)
+                CurrentMessage.RemoveAt(0);
+
+        }
+        public override System.Threading.Tasks.Task OnDisconnected(bool stopCalled)
+        {
+            var item = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
+            if (item != null)
+            {
+                ConnectedUsers.Remove(item);
+
+                var id = Context.ConnectionId;
+                Clients.All.onUserDisconnected(id, item.UserName);
+
+            }
+            return base.OnDisconnected(stopCalled);
+        }
+
+        public void SendPrivateMessage(string toUserId, string message)
+        {
+
+            string fromUserId = Context.ConnectionId;
+
+            var toUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == toUserId);
+            var fromUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == fromUserId);
 
             if (toUser != null && fromUser != null)
             {
-                _sentMessageManager.Add(new SentMessage()
-                {
-                    FkFromToUserId = Convert.ToInt32(fromUserId),
-                    FkSentToUserId = Convert.ToInt32(toUserId),
-                    MessageContent = message,
-                    SentDateTime = DateTime.Now
-                });
-
+                string CurrentDateTime = DateTime.Now.ToString();
+                string UserImg = "ImproveEnglishProject/assets/img/avataaars.png";
                 // send to 
-                Clients.Client(toUser.ConnectionId).sendPrivateMessage(fromUser.ConnectionId, fromUser.NameSurname, message);
+                Clients.Client(toUserId).sendPrivateMessage(fromUserId, fromUser.UserName, message, UserImg, CurrentDateTime);
 
                 // send to caller user
-                Clients.Caller.sendPrivateMessage(toUser.ConnectionId, fromUser.NameSurname, message);
+                Clients.Caller.sendPrivateMessage(toUserId, fromUser.UserName, message, UserImg, CurrentDateTime);
             }
 
         }
