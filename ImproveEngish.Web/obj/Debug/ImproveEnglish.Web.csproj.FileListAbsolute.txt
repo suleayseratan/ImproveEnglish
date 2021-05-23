@@ -295,3 +295,14 @@ C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEngish.Web\obj\Deb
 C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEngish.Web\obj\Debug\ImproveEnglish.Web.csproj.CopyComplete
 C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEngish.Web\obj\Debug\ImproveEngish.Web.dll
 C:\Users\sulea\OneDrive\Masaüstü\ImproveEnglish-main\ImproveEngish.Web\obj\Debug\ImproveEngish.Web.pdb
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.Security.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Owin.dll
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\My-Github-Projects\ImproveEnglish\ImproveEngish.Web\bin\Microsoft.Owin.Security.xml

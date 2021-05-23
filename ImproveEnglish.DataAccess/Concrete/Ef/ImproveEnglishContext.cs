@@ -17,8 +17,8 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Nationality> Nationalities { get; set; }
-        public DbSet<SentGroupMessage> SentGroupMessages { get; set; }
-        public DbSet<SentMessage> SentMessages { get; set; }
+        public DbSet<SentGroupNotifiation> SentGroupNotifiations { get; set; }
+        public DbSet<SentNotification> SentNotifications { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<StudentSchedule> StudentSchedules { get; set; }
         public DbSet<University> Universities { get; set; }

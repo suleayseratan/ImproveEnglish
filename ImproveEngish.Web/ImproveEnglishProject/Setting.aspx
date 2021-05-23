@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" ClientIDMode="Static" Language="C#" MasterPageFile="~/ImproveEnglishProject/Page.Master" AutoEventWireup="true" CodeBehind="Setting.aspx.cs" Inherits="ImproveEngish.Web.ImproveEnglishProject.Setting" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="assets/css/settings.css" rel="stylesheet">
-    <link href="assets/css/ajax.select2.min.css" rel="stylesheet" />
-    <script src="assets/js/ajax.select2.min.js"></script>
+    <link href="/ImproveEnglishProject/assets/css/settings.css" rel="stylesheet">
+    <link href="/ImproveEnglishProject/assets/css/ajax.select2.min.css" rel="stylesheet" />
+    <script src="/ImproveEnglishProject/assets/js/ajax.select2.min.js"></script>
     <style>
         /* The message box is shown when the user clicks on the password field */
         #myMessage {
@@ -91,7 +91,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="tab-content p-4 p-md-5"id="v-pills-tabContent">
+                <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
                         <h3 class="mb-4">Account Settings</h3>
                         <div class="row">

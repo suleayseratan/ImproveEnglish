@@ -161,6 +161,8 @@
     <Content Include="ImproveEnglishProject\assets\css\fontawesome.min.css" />
     <Content Include="ImproveEnglishProject\assets\css\login.css" />
     <Content Include="ImproveEnglishProject\assets\css\message.css" />
+    <Content Include="ImproveEnglishProject\assets\css\notification-detail.css" />
+    <Content Include="ImproveEnglishProject\assets\css\notification.css" />
     <Content Include="ImproveEnglishProject\assets\css\regular.css" />
     <Content Include="ImproveEnglishProject\assets\css\regular.min.css" />
     <Content Include="ImproveEnglishProject\assets\css\responsive.bootstrap4.min.css" />
@@ -280,6 +282,8 @@
     <Content Include="ImproveEnglishProject\Message.aspx" />
     <Content Include="ImproveEnglishProject\MyGroupDetail.aspx" />
     <Content Include="ImproveEnglishProject\MyGroups.aspx" />
+    <Content Include="ImproveEnglishProject\NotificationDetails.aspx" />
+    <Content Include="ImproveEnglishProject\Notifications.aspx" />
     <Content Include="ImproveEnglishProject\Setting.aspx" />
     <Content Include="ImproveEnglishProject\SingleMeeting.aspx" />
     <Content Include="ImproveEnglishProject\SingleMeetingDetail.aspx" />
@@ -425,6 +429,20 @@
     </Compile>
     <Compile Include="ImproveEnglishProject\MyGroups.aspx.designer.cs">
       <DependentUpon>MyGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\NotificationDetails.aspx.cs">
+      <DependentUpon>NotificationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\NotificationDetails.aspx.designer.cs">
+      <DependentUpon>NotificationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImproveEnglishProject\Page.Master.cs">
       <DependentUpon>Page.Master</DependentUpon>

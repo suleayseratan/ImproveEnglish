@@ -28,5 +28,6 @@ namespace Entity
         public string ProfileImagePath { get; set; }
         public bool EmailVeryFied { get; set; }
         public Guid ActivationCode { get; set; }
+        public string ConnectionId { get; set; }
     }
 }

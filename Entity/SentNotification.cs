@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class SentMessage
+    public class SentNotification
     {
         [Key]
-        public int SentMessageId { get; set; }
+        public int SentNotificationId { get; set; }
         public int FkFromToUserId { get; set; }
         [ForeignKey("FkFromToUserId")]
         public virtual Student Student { get; set; }
@@ -19,8 +19,6 @@ namespace Entity
         [ForeignKey("FkSentToUserId")]
         public virtual Student Student2 { get; set; }
         public int FkMessageId { get; set; }
-        [ForeignKey("FkMessageId")]
-        public virtual Message Message { get; set; }
 
     }
 }

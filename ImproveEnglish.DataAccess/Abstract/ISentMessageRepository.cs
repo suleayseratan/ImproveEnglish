@@ -7,7 +7,7 @@ using Entity;
 
 namespace ImproveEnglish.DataAccess.Abstract
 {
-    public interface ISentMessageRepository:IRepository<SentMessage>
+    public interface ISentMessageRepository:IRepository<SentNotification>
     {
     }
 }

@@ -3,7 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Entity;
 using ImproveEngish.Web.SignalRClasses;
+using ImproveEnglish.Business.Concrete;
+using ImproveEnglish.DataAccess.Concrete.Ef;
 
 namespace ImproveEngish.Web.Hubs
 {
@@ -11,22 +14,48 @@ namespace ImproveEngish.Web.Hubs
     {
         static List<Users> ConnectedUsers = new List<Users>();
         static List<Messages> CurrentMessage = new List<Messages>();
-        
-        public void Connect(string userName)
+        StudentManager _studentManager = new StudentManager(new EfStudentRepository());
+        public void Connect(string email)
         {
-            var id = Context.ConnectionId;
+            var connectionId = Context.ConnectionId;
+            var student = _studentManager.GetByEmail(email).FirstOrDefault();
+            string logintime = DateTime.Now.ToString();
 
-            if (ConnectedUsers.Count(x => x.ConnectionId == id) == 0)
+
+            if (!String.IsNullOrEmpty(student.ConnectionId))
             {
-
-                string UserImg = "ImproveEnglishProject/assets/img/avataaars.png";
-                string logintime = DateTime.Now.ToString();
-                ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime });
+                ConnectedUsers.Add(new Users { Id = student.StudentId, ConnectionId = student.ConnectionId, UserName = student.NameSurname, UserImage = student.ProfileImagePath, LoginTime = logintime });
                 // send to caller
-                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
+                Clients.Caller.onConnected(student.StudentId, student.NameSurname, ConnectedUsers, CurrentMessage);
 
                 // send to all except caller client
-                Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
+                Clients.AllExcept(student.ConnectionId).onNewUserConnected(student.StudentId,student.ConnectionId, student.NameSurname, student.ProfileImagePath, logintime);
+            }
+            else if (String.IsNullOrEmpty(student.ConnectionId))
+            {
+
+                _studentManager.Update(new Student()
+                {
+                    StudentId = student.StudentId,
+                    FkNationalityId = student.FkNationalityId,
+                    FkUniversityId = student.FkUniversityId,
+                    FkDepartmentId = student.FkDepartmentId,
+                    NameSurname = student.NameSurname,
+                    Gender = student.Gender,
+                    Password = student.Password,
+                    Eposta = student.Eposta,
+                    ProfileImagePath = student.ProfileImagePath,
+                    EmailVeryFied = student.EmailVeryFied,
+                    ActivationCode = student.ActivationCode,
+                    ConnectionId = connectionId,
+                });
+
+                ConnectedUsers.Add(new Users {Id = student.StudentId, ConnectionId = connectionId, UserName = student.NameSurname, UserImage = student.ProfileImagePath, LoginTime = logintime });
+                // send to caller
+                Clients.Caller.onConnected(connectionId, student.NameSurname, ConnectedUsers, CurrentMessage);
+
+                // send to all except caller client
+                Clients.AllExcept(connectionId).onNewUserConnected(student.StudentId, connectionId, student.NameSurname, student.ProfileImagePath, logintime);
             }
         }
         public void SendMessageToAll(string userName, string message, string time)
@@ -60,23 +89,25 @@ namespace ImproveEngish.Web.Hubs
             return base.OnDisconnected(stopCalled);
         }
 
-        public void SendPrivateMessage(string toUserId, string message)
+        public void SendPrivateMessage(string email, string toUserConnectionId, string message)
         {
 
-            string fromUserId = Context.ConnectionId;
+            string fromUserConnectionId = _studentManager.GetByEmail(email).FirstOrDefault().ConnectionId;
+            //int toUserId = _studentManager.GetAll().FirstOrDefault(x => x.ConnectionId == toUserConnectionId).StudentId;
 
-            var toUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == toUserId);
-            var fromUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == fromUserId);
+
+            var toUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == toUserConnectionId);
+            var fromUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == fromUserConnectionId);
 
             if (toUser != null && fromUser != null)
             {
                 string CurrentDateTime = DateTime.Now.ToString();
                 string UserImg = "ImproveEnglishProject/assets/img/avataaars.png";
                 // send to 
-                Clients.Client(toUserId).sendPrivateMessage(fromUserId, fromUser.UserName, message, UserImg, CurrentDateTime);
+                Clients.Client(toUserConnectionId).sendPrivateMessage(fromUserConnectionId, fromUser.UserName, message, UserImg, CurrentDateTime);
 
                 // send to caller user
-                Clients.Caller.sendPrivateMessage(toUserId, fromUser.UserName, message, UserImg, CurrentDateTime);
+                Clients.Caller.sendPrivateMessage(toUser.Id,toUserConnectionId, fromUser.UserName, message, UserImg, CurrentDateTime);
             }
 
         }

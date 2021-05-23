@@ -43,6 +43,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                         Session["NameSurname"] = i.NameSurname;
                         Session["ImagePath"] = i.ProfileImagePath;
                         Session["NationalityId"] = i.FkNationalityId;
+                        Session["Email"] = i.Eposta;
                     }
 
                     Response.Redirect("Default.aspx");

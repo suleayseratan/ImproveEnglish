@@ -35,31 +35,6 @@
             </div>
 
             <div id="tabContent" class="tab-content">
-                <div class="tab-pane message-body active" id="inbox-message-1">
-                    <div class="message-top">
-                        <a class="btn btn btn-success new-message"><i class="fa fa-envelope"></i>New Message </a>
-
-                        <div class="new-message-wrapper">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Send message to...">
-                                <a class="btn btn-danger close-new-message" href="#"><i class="fa fa-times"></i></a>
-                            </div>
-
-                            <div class="chat-footer new-message-textarea">
-                                <textarea class="send-message-text"></textarea>
-                                <label class="upload-file">
-                                    <input type="file" required="">
-                                    <i class="fa fa-paperclip"></i>
-                                </label>
-                                <button type="button" class="send-message-button btn-info"><i class="fa fa-send"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="message-chat">
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -102,10 +77,10 @@
         //}
 
         function registerEvents(chatHub) {
-            var name = '<%= this.UserName %>';
+            var email = '<%= this.Email %>';
             
-            if (name.length > 0) {
-                chatHub.server.connect(name);
+            if (email.length > 0) {
+                chatHub.server.connect(email);
             }
         }
 
@@ -122,7 +97,7 @@
                 // Add All Users
                 for (i = 0; i < allUsers.length; i++) {
 
-                    AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+                    AddUser(chatHub, allUsers[i].StudentId, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
                 }
 
                 // Add Existing Messages
@@ -132,8 +107,8 @@
             }
 
             // On New User Connected
-            chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
-                AddUser(chatHub, id, name, UserImage, loginDate);
+            chatHub.client.onNewUserConnected = function (id,connectionId, name, UserImage, loginDate) {
+                AddUser(chatHub, id, connectionId, name, UserImage, loginDate);
             }
 
             chatHub.client.messageReceived = function (userName, message, time, userimg) {
@@ -152,12 +127,12 @@
             }
 
 
-            chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message, userimg, CurrentDateTime) {
+            chatHub.client.sendPrivateMessage = function (id,windowId, fromUserName, message, userimg, CurrentDateTime) {
 
-                var ctrId = 'inbox-message-' + windowId;
+                var ctrId = 'inbox-message-' + id;
                 if ($('#' + ctrId).length == 0) {
 
-                    OpenPrivateChatBox(chatHub, windowId, ctrId, fromUserName, userimg);
+                    OpenPrivateChatBox(chatHub,id, windowId, ctrId, fromUserName, userimg);
                 }
 
                 var CurrUser = $('#hdUserName').val();
@@ -196,7 +171,9 @@
             }
 
         }
-        function OpenPrivateChatBox(chatHub, userId, ctrId, userName) {
+        function OpenPrivateChatBox(chatHub,userId, userConnectionId, ctrId, userName,userimg) {
+
+            var email = '<%=this.Email%>';
 
             var PWClass = $('#PWCount').val();
 
@@ -243,12 +220,14 @@
 
             // Send Button event in Private Chat
             $div.find("#btnSendMessage").click(function () {
-
+                
                 $textBox = $div.find("#txtPrivateMessage");
-
+                
                 var msg = $textBox.val();
+                alert(msg);
+
                 if (msg.length > 0) {
-                    chatHub.server.sendPrivateMessage(userId, msg);
+                    chatHub.server.sendPrivateMessage(email,userId, msg);
                     $textBox.val('');
                 }
             });
@@ -270,7 +249,7 @@
             return localdate;
         }
 
-        function AddUser(chatHub, id, name, UserImage, date) {
+        function AddUser(chatHub, id,connectionId, name, UserImage, date) {
 
             var userId = $('#hdId').val();
 
@@ -289,16 +268,18 @@
                     '</div>' +
                     '</li>');
 
-                var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
-                $(code).click(function () {
-                    var id = $(UserLink).attr('id');
+                //var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
+                //$(code).click(function () {
+                //    var id = $(UserLink).attr('id');
 
-                    if (userId != id) {
-                        var ctrId = 'inbox-message-' + id;
-                        OpenPrivateChatBox(chatHub, id, ctrId, name);
-                    }
+                //    if (userId != id) {
+                //        var ctrId = 'inbox-message-' + id;
+                //        OpenPrivateChatBox(chatHub, id, ctrId, name);
+                //    }
 
-                });
+                //});
+
+                OpenPrivateChatBox(chatHub, id, connectionId, ctrId, name,UserImage);
             }
 
             $("#divUsers").append(code);

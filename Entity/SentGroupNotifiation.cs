@@ -8,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class SentGroupMessage
+    public class SentGroupNotifiation
     {
         [Key]
-        public int SentMessageId { get; set; }
+        public int SentNotificationId { get; set; }
         public int FkFromToUserId { get; set; }
         [ForeignKey("FkFromToUserId")]
         public virtual Student Student { get; set; }
         public int FkSentToGroupId { get; set; }
         [ForeignKey("FkSentToGroupId")]
         public virtual Student Student2 { get; set; }
-        public int FkMessageId { get; set; }
-        [ForeignKey("FkMessageId")]
-        public virtual Message Message { get; set; }
+        public string MessageContext { get; set; }
+        public DateTime SentDateTime { get; set; }
     }
 }

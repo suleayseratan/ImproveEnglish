@@ -8,7 +8,7 @@ using ImproveEnglish.DataAccess.Abstract;
 
 namespace ImproveEnglish.DataAccess.Concrete.Ef
 {
-    public class EfSentMessageRepository:EfGenericRepository<SentMessage,ImproveEnglishContext>, ISentMessageRepository
+    public class EfSentMessageRepository:EfGenericRepository<SentNotification,ImproveEnglishContext>, ISentMessageRepository
     {
     }
 }
