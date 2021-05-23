@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entity;
+using Entity.Model;
 
 namespace ImproveEnglish.DataAccess.Abstract
 {
-    public interface ISentMessageRepository:IRepository<SentNotification>
+    public interface ISentNotificationRepository:IRepository<SentNotification>
     {
+        List<SingleNotification> GetSingleNotifications(int studentId);
     }
 }

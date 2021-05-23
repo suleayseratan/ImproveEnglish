@@ -59,8 +59,8 @@
     <Compile Include="Abstract\IMessageRepository.cs" />
     <Compile Include="Abstract\INationalityRepository.cs" />
     <Compile Include="Abstract\IRepository.cs" />
-    <Compile Include="Abstract\ISentGroupMessageRepository.cs" />
-    <Compile Include="Abstract\ISentMessageRepository.cs" />
+    <Compile Include="Abstract\ISentGroupNotificationRepository.cs" />
+    <Compile Include="Abstract\ISentNotificationRepository.cs" />
     <Compile Include="Abstract\IStudentRepository.cs" />
     <Compile Include="Abstract\IUniversityRepository.cs" />
     <Compile Include="Concrete\Ef\EfDepartmentOfUniversityRepository.cs" />
@@ -71,8 +71,8 @@
     <Compile Include="Concrete\Ef\EfMenuRepository.cs" />
     <Compile Include="Concrete\Ef\EfMessageRepository.cs" />
     <Compile Include="Concrete\Ef\EfNationalityRepository.cs" />
-    <Compile Include="Concrete\Ef\EfSentGroupMessageRepository.cs" />
-    <Compile Include="Concrete\Ef\EfSentMessageRepository.cs" />
+    <Compile Include="Concrete\Ef\EfSentGroupNotificationRepository.cs" />
+    <Compile Include="Concrete\Ef\EfSentNotificationRepository.cs" />
     <Compile Include="Concrete\Ef\EfStudentRepository.cs" />
     <Compile Include="Concrete\Ef\EfStudentScheduleRepository.cs" />
     <Compile Include="Concrete\Ef\EfUniversityRepository.cs" />

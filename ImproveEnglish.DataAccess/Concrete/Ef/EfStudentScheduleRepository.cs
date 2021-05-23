@@ -28,7 +28,6 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
                     .SqlQuery<StudentScheduleModel>("StudentSchedule @UniversityId,@MeetingDate,@StartTime,@EndTime", prmUniversityId,prmMeetingDate,prmStartTime,prmEndTime).ToList();
                 return list;
             }
-
         }
 
         public List<StudentScheduleModel> GetStudentSchedule(int studentId)

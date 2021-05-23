@@ -65,8 +65,8 @@
     <Compile Include="Abstract\IMenuService.cs" />
     <Compile Include="Abstract\IMessageService.cs" />
     <Compile Include="Abstract\INationalityService.cs" />
-    <Compile Include="Abstract\ISentGroupMessageService.cs" />
-    <Compile Include="Abstract\ISentMessageService.cs" />
+    <Compile Include="Abstract\ISentGroupNotificationService.cs" />
+    <Compile Include="Abstract\ISentNotificationService.cs" />
     <Compile Include="Abstract\IStudentService.cs" />
     <Compile Include="Abstract\IStudentSheduleService.cs" />
     <Compile Include="Abstract\IUniversityService.cs" />
@@ -77,8 +77,8 @@
     <Compile Include="Concrete\MenuManager.cs" />
     <Compile Include="Concrete\MessageManager.cs" />
     <Compile Include="Concrete\NationalityManager.cs" />
-    <Compile Include="Concrete\SentGroupMessageManager.cs" />
-    <Compile Include="Concrete\SentMessageManager.cs" />
+    <Compile Include="Concrete\SentGroupNotificationManager.cs" />
+    <Compile Include="Concrete\SentNotificationManager.cs" />
     <Compile Include="Concrete\StudentManager.cs" />
     <Compile Include="Concrete\StudentScheduleManager.cs" />
     <Compile Include="Concrete\UniversityManager.cs" />

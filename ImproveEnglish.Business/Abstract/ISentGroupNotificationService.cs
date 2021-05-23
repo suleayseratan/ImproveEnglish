@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ImproveEnglish.Business.Abstract
 {
-    public interface ISentGroupMessageService
+    public interface ISentGroupNotificationService
     {
     }
 }

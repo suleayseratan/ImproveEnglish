@@ -28,7 +28,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 GetUniversities();
                 GetDepartment(universityId);
             }
-
         }
 
         private void GetUniversities()

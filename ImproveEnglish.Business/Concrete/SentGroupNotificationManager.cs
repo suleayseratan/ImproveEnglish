@@ -7,7 +7,7 @@ using ImproveEnglish.Business.Abstract;
 
 namespace ImproveEnglish.Business.Concrete
 {
-    public class SentMessageManager:ISentMessageService
+    public class SentGroupNotificationManager:ISentGroupNotificationService
     {
     }
 }
