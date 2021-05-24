@@ -65,7 +65,7 @@ namespace ImproveEngish.Web
         {
             route.MapPageRoute("MyGroupDetail", "MyGroupDetail/{GroupId}", "~/ImproveEnglishProject/MyGroupDetail.aspx");
             route.MapPageRoute("GroupMeetingDetail", "GroupMeetingDetail/{GroupId}", "~/ImproveEnglishProject/GroupMeetingDetail.aspx");
-            route.MapPageRoute("SingleMeetingDetail", "SingleMeetingDetail/{StudentId}", "~/ImproveEnglishProject/SingleMeetingDetail.aspx");
+            route.MapPageRoute("SingleMeetingDetail", "SingleMeetingDetail/{StudentId}/{ScheduleId}", "~/ImproveEnglishProject/SingleMeetingDetail.aspx");
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entity;
 using Entity.Model;
 using ImproveEnglish.Business.Abstract;
 using ImproveEnglish.DataAccess.Abstract;
@@ -21,6 +22,11 @@ namespace ImproveEnglish.Business.Concrete
         {
             var list = _sentNotificationRepository.GetSingleNotifications(studentId);
             return list;
+        }
+
+        public void Add(SentNotification sentNotification)
+        {
+            _sentNotificationRepository.Add(sentNotification);
         }
     }
 }

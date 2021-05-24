@@ -68,7 +68,7 @@
                                         <img style="width: 350px; height: 250px;" src="<%#Eval("ProfileImagePath")%>" alt="...">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title"><a href="/SingleMeetingDetail/<%#Eval("StudentId") %>"><%#Eval("NameSurname")%></a></h5>
+                                        <h5 class="card-title"><a href="/SingleMeetingDetail/<%#Eval("StudentId") %>/<%#Eval("ScheduleId") %>"><%#Eval("NameSurname")%></a></h5>
                                         <p class="text-center">
                                             <strong>Free Date :</strong> <%#Eval("MeetingDate","{0:MM/dd/yyyy}")%>
                                             <br />

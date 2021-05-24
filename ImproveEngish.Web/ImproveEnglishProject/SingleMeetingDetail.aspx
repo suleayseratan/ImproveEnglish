@@ -28,10 +28,9 @@
                         <ItemTemplate>
                             <div class="col-lg-4">
                                 <img style="width: 550px; height: 250px;" src="<%#Eval("ProfileImagePath") %>" class="img-fluid" alt="">
-                                <button class="btn btn-primary btn-send-message">Send A Message</button>
+                                <button runat="server" ID="btnSendRequest" class="btn btn-primary btn-send-message" OnServerClick="btnSendRequest_OnServerClick">Send Request To</button>
                             </div>
                             <div class="col-lg-8">
-
                                 <div class="course-info d-flex justify-content-between align-items-center">
                                     <h5>Name Surname</h5>
                                     <p><a href="#"><%#Eval("NameSurname") %></a></p>

@@ -18,7 +18,11 @@ namespace Entity
         public int FkSentToUserId { get; set; }
         [ForeignKey("FkSentToUserId")]
         public virtual Student Student2 { get; set; }
-        public int FkMessageId { get; set; }
-
+        public int FkScheduleId { get; set; }
+        [ForeignKey("FkScheduleId")]
+        public virtual StudentSchedule StudentSchedule { get; set; }
+        public string MessageContent { get; set; }
+        public DateTime SentDateTime { get; set; }
+        public bool IsRead { get; set; }
     }
 }
