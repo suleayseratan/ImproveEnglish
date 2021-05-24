@@ -28,5 +28,18 @@ namespace ImproveEnglish.Business.Concrete
         {
             _sentNotificationRepository.Add(sentNotification);
         }
+
+        public List<SingleNotification> GetNotificationDetail(int studentId, int notificationId)
+        {
+            var notification = _sentNotificationRepository.GetById(notificationId);
+            if (notification != null)
+            {
+                var list = _sentNotificationRepository.GetSingleNotifications(studentId)
+                    .Where(p => p.SentNotificationId == notificationId).ToList();
+                return list;
+            }
+
+            return null;
+        }
     }
 }

@@ -10,7 +10,8 @@ namespace Entity.Model
     {
         public int SentNotificationId { get; set; }
         public int FromStudentId { get; set; }
-        public string FromNAmeSurname { get; set; }
+        public string FromNameSurname { get; set; }
+        public string FromStudentImage { get; set; }    
         public int ToStudentId { get; set; }
         public string ToNameSurname { get; set; }
         public string MessageContent { get; set; }

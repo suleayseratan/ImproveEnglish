@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 
@@ -27,5 +28,6 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             rptSingleNotification.DataSource = list;
             rptSingleNotification.DataBind();
         }
+
     }
 }

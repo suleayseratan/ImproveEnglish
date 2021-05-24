@@ -293,7 +293,9 @@
                                     <asp:Repeater runat="server" ID="rptSingleNotification">
                                         <ItemTemplate>
                                             <li class="message">
-                                                <a href="#">
+                                                <a href="/SingleNotificationDetail/<%#Eval("SentNotificationId") %>">
+                                                    <div hidden>
+                                                    </div>
                                                     <div class="actions">
                                                         <span class="action"><i class="fa fa-square-o"></i></span>
                                                         <span class="action"><i class="fa fa-star-o"></i></span>
@@ -301,14 +303,13 @@
                                                     <div class="header">
                                                         <span class="from"><%#Eval("FromNameSurname") %></span>
                                                         <span class="date">
-                                                            <div class="dayofmonth"><%#Eval("SentDateTime")%></div>
-                                                            <span class="fa fa-paper-clip"></span></span>
+                                                            <span class="fa fa-paper-clip"></span><%#Eval("SentDateTime")%></span>
                                                     </div>
                                                     <div class="title">
                                                         <%#Eval("MessageContent") %>
                                                     </div>
                                                     <div class="description">
-                                                       
+                                                        
                                                     </div>
                                                 </a>
                                             </li>

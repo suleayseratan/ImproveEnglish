@@ -55,6 +55,7 @@
     <Compile Include="Model\StudentScheduleModel.cs" />
     <Compile Include="Nationality.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relationship.cs" />
     <Compile Include="SentGroupNotifiation.cs" />
     <Compile Include="SentNotification.cs" />
     <Compile Include="Student.cs" />

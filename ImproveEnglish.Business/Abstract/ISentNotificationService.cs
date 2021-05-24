@@ -12,5 +12,6 @@ namespace ImproveEnglish.Business.Abstract
     {
         List<SingleNotification> GetAll(int studentId);
         void Add(SentNotification sentNotification);
+        List<SingleNotification> GetNotificationDetail(int studentId, int notificationId);
     }
 }
