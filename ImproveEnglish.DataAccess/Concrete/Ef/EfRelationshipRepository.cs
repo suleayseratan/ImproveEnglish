@@ -8,7 +8,7 @@ using ImproveEnglish.DataAccess.Abstract;
 
 namespace ImproveEnglish.DataAccess.Concrete.Ef
 {
-    public class EfRelationshipRepository : EfGenericRepository<Relationship, ImproveEnglishContext>, IRelatonshipRepository
+    public class EfRelationshipRepository:EfGenericRepository<Relationship,ImproveEnglishContext>, IRelatonshipRepository
     {
 
     }

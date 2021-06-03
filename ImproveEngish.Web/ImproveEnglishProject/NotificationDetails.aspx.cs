@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entity;
 using ImproveEnglish.Business.Concrete;
 using ImproveEnglish.DataAccess.Concrete.Ef;
 using RelationshipManager = System.Data.Entity.Core.Objects.DataClasses.RelationshipManager;
@@ -14,7 +15,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
     public partial class NotificationDetails : System.Web.UI.Page
     {
         private SentNotificationManager _sentNotificationManager = new SentNotificationManager(new EfSentNotificationRepository());
-        RelationshipManager _relationshipManager = new RelationshipManager(new EfRelationshipRepository());
+        //private RelationshipManager _relationshipManager = new RelationshipManager(new EfStudentRepository());
+        StudentScheduleManager _studentScheduleManager = new StudentScheduleManager(new EfStudentScheduleRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
             if (RouteData.Values["NotificationId"] != null || Convert.ToInt32(RouteData.Values["NotificationId"]) != 0)
