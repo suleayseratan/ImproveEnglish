@@ -7,7 +7,7 @@ using Entity;
 
 namespace ImproveEnglish.DataAccess.Abstract
 {
-    public interface ISentGroupNotificationRepository:IRepository<SentGroupNotifiation>
+    public interface ISentGroupNotificationRepository:IRepository<SentGroupNotification>
     {
     }
 }

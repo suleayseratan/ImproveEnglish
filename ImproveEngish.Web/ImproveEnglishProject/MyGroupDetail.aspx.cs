@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Entity;
 using ImproveEnglish.Business.Concrete;
@@ -14,6 +15,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
     public partial class MyGroupDetail : System.Web.UI.Page
     {
         GroupManager _groupManager = new GroupManager(new EfGroupRepository());
+        SentGroupNotificationManager _groupNotificationManager = new SentGroupNotificationManager(new EfSentGroupNotificationRepository());
         protected void Page_Load(object sender, EventArgs e)
         {
             if (RouteData.Values["GroupId"] != null || Convert.ToInt32(RouteData.Values["GroupId"]) != 0)
@@ -136,6 +138,24 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
             }
             return paths[0];
+        }
+
+        protected void btnSendMesssage_OnServerClick(object sender, EventArgs e)
+        {
+            string message = "";
+            foreach (RepeaterItem item in rptGroupDetail.Items)
+            {
+                HtmlTextArea box = (HtmlTextArea)item.FindControl("txtMessage");
+                message = box.Value;
+            }
+
+            _groupNotificationManager.Add(new SentGroupNotification()
+            {
+                FkFromToUserId = Convert.ToInt32(Session["StudentId"]),
+                FkSentToGroupId = Convert.ToInt32(RouteData.Values["GroupId"]),
+                Context = message,
+                SentDateTime = DateTime.Now
+            });
         }
     }
 }

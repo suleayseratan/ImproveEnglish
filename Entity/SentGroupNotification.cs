@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class SentGroupNotifiation
+    public class SentGroupNotification
     {
         [Key]
         public int SentNotificationId { get; set; }
@@ -18,7 +18,7 @@ namespace Entity
         public int FkSentToGroupId { get; set; }
         [ForeignKey("FkSentToGroupId")]
         public virtual Student Student2 { get; set; }
-        public string MessageContext { get; set; }
+        public string Context { get; set; }
         public DateTime SentDateTime { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace ImproveEnglish.Business.Concrete
 {
     public class DepartmentManager:IDepartmentService
     {
+        // Dependency injection 
         private IDepartmentRepository _departmentRepository;
 
         public DepartmentManager(IDepartmentRepository departmentRepository)

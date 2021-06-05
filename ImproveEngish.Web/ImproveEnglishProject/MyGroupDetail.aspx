@@ -35,6 +35,12 @@
                                         <h3><%#Eval("GroupName") %></h3>
                                         <p>
                                             <%#Eval("GroupExplanation") %>
+                                            
+                                            <div>
+                                                Send meeting notes or ling to group members
+                                                <textarea runat="server" ID="txtMessage"  class="form-control mt-2 mb-3" EnableViewState="True" rows="3"></textarea>
+                                                <button runat="server" type="button" id="btnSendMesssage" class="btn btn-success btn-block" OnServerClick="btnSendMesssage_OnServerClick">Send Message</button>
+                                            </div>
                                         </p>
                                     </div>
                                     <div class="col-lg-7">
