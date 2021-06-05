@@ -26,6 +26,7 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 {
                     int studentId = Convert.ToInt32(Session["StudentId"]);
                     int notificationId = Convert.ToInt32(RouteData.Values["NotificationId"]);
+                    int fromStudentId = Convert.ToInt32(RouteData.Values["FromStudentId"]);
                     GetNotificationDetail(studentId, notificationId);
                 }
             }
@@ -40,7 +41,17 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         protected void btnAccept_OnServerClick(object sender, EventArgs e)
         {
-            
+            _sentNotificationManager.Add(new SentNotification()
+            {
+                FkFromToUserId = Convert.ToInt32(Session["StudentId"]),
+                FkSentToUserId = Convert.ToInt32(RouteData.Values["FromStudentId"]),
+                FkScheduleId = Convert.ToInt32(RouteData.Values["ScheduleId"]),
+                MessageContent = "Accepted single meeting",
+                SentDateTime = DateTime.Now,
+                IsRead = false
+            });
+
+
         }
 
         protected void btnDeny_OnServerClick(object sender, EventArgs e)

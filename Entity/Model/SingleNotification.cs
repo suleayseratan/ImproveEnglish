@@ -10,6 +10,7 @@ namespace Entity.Model
     {
         public int SentNotificationId { get; set; }
         public int FromStudentId { get; set; }
+        public int ScheduleId { get; set; }
         public string FromNameSurname { get; set; }
         public string FromStudentImage { get; set; }    
         public int ToStudentId { get; set; }

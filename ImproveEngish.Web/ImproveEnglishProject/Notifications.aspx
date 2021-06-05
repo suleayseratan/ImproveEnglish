@@ -293,7 +293,7 @@
                                     <asp:Repeater runat="server" ID="rptSingleNotification">
                                         <ItemTemplate>
                                             <li class="message">
-                                                <a href="/SingleNotificationDetail/<%#Eval("SentNotificationId") %>">
+                                                <a href="/SingleNotificationDetail/<%#Eval("SentNotificationId") %>/<%#Eval("FromStudentId") %>/<%#Eval("ScheduleId") %>">
                                                     <div hidden>
                                                     </div>
                                                     <div class="actions">
