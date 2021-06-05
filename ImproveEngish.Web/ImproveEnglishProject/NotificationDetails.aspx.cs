@@ -48,7 +48,8 @@ namespace ImproveEngish.Web.ImproveEnglishProject
                 FkScheduleId = Convert.ToInt32(RouteData.Values["ScheduleId"]),
                 MessageContent = "Accepted single meeting",
                 SentDateTime = DateTime.Now,
-                IsRead = false
+                IsRead = false,
+                IsFeedback = true
             });
 
 

@@ -74,7 +74,7 @@
                       <p>
                           <%#Eval("MessageContent") %>
                       </p>
-                      <div <%#Eval("IsFeedback").Equals(true)?"hidden":"false" %> >
+                      <div <%#Eval("IsFeedback").Equals(true)?"hidden":"" %> >
                           <button type="button" runat="server" id="btnAccept" class="btn btn-outline-success btn-sm" onserverclick="btnAccept_OnServerClick">Accept</button>
                           <button type="button" runat="server" id="btnDeny" class="btn btn-outline-danger btn-sm px-3" onserverclick="btnDeny_OnServerClick">Deny</button>
                       </div>
