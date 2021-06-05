@@ -24,5 +24,6 @@ namespace Entity
         public string MessageContent { get; set; }
         public DateTime SentDateTime { get; set; }
         public bool IsRead { get; set; }
+        public bool IsFeedback { get; set; }
     }
 }

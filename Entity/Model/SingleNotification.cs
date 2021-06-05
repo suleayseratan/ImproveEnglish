@@ -17,5 +17,6 @@ namespace Entity.Model
         public string ToNameSurname { get; set; }
         public string MessageContent { get; set; }
         public DateTime SentDateTime { get; set; }
+        public bool IsFeedback { get; set; }
     }
 }
