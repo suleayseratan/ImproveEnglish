@@ -309,7 +309,6 @@
                                                         <%#Eval("MessageContent") %>
                                                     </div>
                                                     <div class="description">
-                                                        
                                                     </div>
                                                 </a>
                                             </li>
@@ -370,43 +369,29 @@
                                     </div>
                                 </div>
                                 <ul class="messages">
-                                    <li class="message unread">
-                                        <a href="/ImproveEnglishProject/NotificationDetails.aspx">
-                                            <div class="actions">
-                                                <span class="action"><i class="fa fa-square-o"></i></span>
-                                                <span class="action"><i class="fa fa-star-o"></i></span>
-                                            </div>
-                                            <div class="header">
-                                                <span class="from">Lukasz Holeczek 2</span>
-                                                <span class="date">
-                                                    <span class="fa fa-paper-clip"></span>Today, 3:47 PM</span>
-                                            </div>
-                                            <div class="title">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            </div>
-                                            <div class="description">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="message">
-                                        <a href="#">
-                                            <div class="actions">
-                                                <span class="action"><i class="fa fa-square-o"></i></span>
-                                                <span class="action"><i class="fa fa-star-o"></i></span>
-                                            </div>
-                                            <div class="header">
-                                                <span class="from">Lukasz Holeczek</span>
-                                                <span class="date">Today, 3:47 PM</span>
-                                            </div>
-                                            <div class="title">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                            </div>
-                                            <div class="description">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                            </div>
-                                        </a>
-                                    </li>
+                                    <asp:Repeater runat="server" ID="rptGroupNotification">
+                                        <ItemTemplate>
+                                            <li class="message">
+                                                <a href="/GroupNotificationDetail/<%#Eval("SentNotificationId") %>">
+                                                    <div class="actions">
+                                                        <span class="action"><i class="fa fa-square-o"></i></span>
+                                                        <span class="action"><i class="fa fa-star-o"></i></span>
+                                                    </div>
+                                                    <div class="header">
+                                                        <span class="from"><%#Eval("FromStudentName") %></span>
+                                                        <span class="date">
+                                                            <span class="fa fa-paper-clip"></span><%#Eval("NotificationSentDateTime") %></span>
+                                                    </div>
+                                                    <div class="title">
+                                                        <%#Eval("GroupName") %>
+                                                    </div>
+                                                    <div class="description">
+                                                        <%#Eval("NotificationContext") %>
+                                                       </div>
+                                                </a>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
                                 </ul>
                             </div>
                             <div class="inbox tab-pane fade" id="trash" role="tabpanel" aria-labelledby="trash-tab">

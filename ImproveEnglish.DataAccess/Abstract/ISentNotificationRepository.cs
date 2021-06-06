@@ -10,6 +10,6 @@ namespace ImproveEnglish.DataAccess.Abstract
 {
     public interface ISentNotificationRepository:IRepository<SentNotification>
     {
-        List<SingleNotification> GetSingleNotifications(int studentId);
+        List<SingleNotificationModel> GetSingleNotifications(int studentId);
     }
 }

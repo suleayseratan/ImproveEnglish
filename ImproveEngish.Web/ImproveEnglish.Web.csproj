@@ -278,6 +278,7 @@
     <Content Include="ImproveEnglishProject\FreeTimes.aspx" />
     <Content Include="ImproveEnglishProject\GroupMeeting.aspx" />
     <Content Include="ImproveEnglishProject\GroupMeetingDetail.aspx" />
+    <Content Include="ImproveEnglishProject\GroupNotificationDetail.aspx" />
     <Content Include="ImproveEnglishProject\Login.aspx" />
     <Content Include="ImproveEnglishProject\Message.aspx" />
     <Content Include="ImproveEnglishProject\MyGroupDetail.aspx" />
@@ -401,6 +402,13 @@
     </Compile>
     <Compile Include="ImproveEnglishProject\GroupMeetingDetail.aspx.designer.cs">
       <DependentUpon>GroupMeetingDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\GroupNotificationDetail.aspx.cs">
+      <DependentUpon>GroupNotificationDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImproveEnglishProject\GroupNotificationDetail.aspx.designer.cs">
+      <DependentUpon>GroupNotificationDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImproveEnglishProject\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

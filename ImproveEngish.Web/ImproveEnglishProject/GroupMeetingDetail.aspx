@@ -24,7 +24,7 @@
                                 <img src="<%#Eval("GroupImagePath") %>" class="img-fluid" alt="">
                                 <h3><%#Eval("GroupName") %></h3>
                                 <p>
-                                  <%#Eval("GroupExplanation") %>
+                                    <%#Eval("GroupExplanation") %>
                                 </p>
                             </div>
                             <div class="col-lg-4">
@@ -50,7 +50,11 @@
                                 </div>
 
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <button class="btn btn-primary w-100">Join</button>
+                                    <button runat="server" type="button" id="btnJoinGroup" class="btn btn-primary w-100" onserverclick="btnJoinGroup_OnServerClick">Join</button>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div runat="server" id="divMessage" class="alert alert-danger mt-4 w-100 text-center" visible="False" role="alert">
+                                    </div>
                                 </div>
                             </div>
                         </div>

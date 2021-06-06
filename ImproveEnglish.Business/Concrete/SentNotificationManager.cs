@@ -18,7 +18,7 @@ namespace ImproveEnglish.Business.Concrete
         {
             this._sentNotificationRepository = sentNotificationRepository;
         }
-        public List<SingleNotification> GetAll(int studentId)
+        public List<SingleNotificationModel> GetAll(int studentId)
         {
             var list = _sentNotificationRepository.GetSingleNotifications(studentId);
             return list;
@@ -29,7 +29,7 @@ namespace ImproveEnglish.Business.Concrete
             _sentNotificationRepository.Add(sentNotification);
         }
 
-        public List<SingleNotification> GetNotificationDetail(int studentId, int notificationId)
+        public List<SingleNotificationModel> GetNotificationDetail(int studentId, int notificationId)
         {
             var notification = _sentNotificationRepository.GetById(notificationId);
             if (notification != null)

@@ -57,7 +57,16 @@ namespace ImproveEngish.Web.ImproveEnglishProject
 
         protected void btnDeny_OnServerClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            _sentNotificationManager.Add(new SentNotification()
+            {
+                FkFromToUserId = Convert.ToInt32(Session["StudentId"]),
+                FkSentToUserId = Convert.ToInt32(RouteData.Values["FromStudentId"]),
+                FkScheduleId = Convert.ToInt32(RouteData.Values["ScheduleId"]),
+                MessageContent = "Denied single meeting",
+                SentDateTime = DateTime.Now,
+                IsRead = false,
+                IsFeedback = true
+            });
         }
     }
 }

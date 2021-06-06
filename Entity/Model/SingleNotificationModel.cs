@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity.Model
 {
-    public class SingleNotification
+    public class SingleNotificationModel
     {
         public int SentNotificationId { get; set; }
         public int FromStudentId { get; set; }

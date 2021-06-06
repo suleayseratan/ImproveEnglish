@@ -10,8 +10,8 @@ namespace ImproveEnglish.Business.Abstract
 {
     public interface ISentNotificationService
     {
-        List<SingleNotification> GetAll(int studentId);
+        List<SingleNotificationModel> GetAll(int studentId);
         void Add(SentNotification sentNotification);
-        List<SingleNotification> GetNotificationDetail(int studentId, int notificationId);
+        List<SingleNotificationModel> GetNotificationDetail(int studentId, int notificationId);
     }
 }
