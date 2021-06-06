@@ -204,7 +204,10 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             mail.Subject = "Account Activation";
             string body = "Hello " + nameSurname + ", ";
             body += "<br/><br/> Please click the following link to activate your account";
-            body += "<br/> <a href = '" + Request.Url.AbsoluteUri.Replace("ImproveEnglishProject/CreateAccount", "ImproveEnglishProject/ActivationPage.aspx?ActivationCode=" + activationCode + "&&StudentId=" + studentId) + "'> Click here to activate your account.</a>";
+            body += "<br/> <a href = '" + Request.Url.AbsoluteUri
+                .Replace("ImproveEnglishProject/CreateAccount", "ImproveEnglishProject/ActivationPage.aspx?ActivationCode="
+                                                                + activationCode + "&&StudentId=" + studentId) + "'> " +
+                    "Click here to activate your account.</a>";
             body += "<br/><br/>Thanks";
             mail.Body = body;
             SmtpServer.Port = 587;

@@ -26,7 +26,8 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
         {
             using (ImproveEnglishContext context =new ImproveEnglishContext())
             {
-                var list = context.Database.SqlQuery<StudentDetailModel>("Select * From V_StudentDetails").Where(p=>p.StudentId == studentId).ToList();
+                var list = context.Database.SqlQuery<StudentDetailModel>("Select * From V_StudentDetails")
+                    .Where(p=>p.StudentId == studentId).ToList();
                 return list;
             }
         }

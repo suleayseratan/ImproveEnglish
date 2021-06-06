@@ -52,7 +52,10 @@ namespace ImproveEngish.Web.ImproveEnglishProject
             mail.Subject = "Forgot Your Password";
             string body = "Hello " + nameSurname + ", ";
             body += "<br/><br/> Please click the following link to change your password";
-            body += "<br/> <a href = '" + Request.Url.AbsoluteUri.Replace("ImproveEnglishProject/ForgotPassword", "ImproveEnglishProject/ChangePassword.aspx?ActivationCode=" + activationCode + "&&StudentId=" + studentId) + "'> Click here to activate your account.</a>";
+            body += "<br/> <a href = '" + Request.Url.AbsoluteUri
+                .Replace("ImproveEnglishProject/ForgotPassword", "ImproveEnglishProject/ChangePassword.aspx?ActivationCode=" 
+                                                                 + activationCode + "&&StudentId=" + studentId) + "'> " +
+                    "Click here to activate your account.</a>";
             body += "<br/><br/>Thanks";
             mail.Body = body;
             SmtpServer.Port = 587;

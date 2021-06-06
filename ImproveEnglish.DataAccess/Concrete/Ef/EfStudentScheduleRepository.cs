@@ -25,7 +25,8 @@ namespace ImproveEnglish.DataAccess.Concrete.Ef
                 SqlParameter prmStartTime = new SqlParameter("@StartTime", sTime);
                 SqlParameter prmEndTime = new SqlParameter("@EndTime", eTime);
                 var list = context.Database
-                    .SqlQuery<StudentScheduleModel>("StudentSchedule @UniversityId,@MeetingDate,@StartTime,@EndTime", prmUniversityId,prmMeetingDate,prmStartTime,prmEndTime).ToList();
+                    .SqlQuery<StudentScheduleModel>("StudentSchedule @UniversityId,@MeetingDate,@StartTime,@EndTime", 
+                        prmUniversityId,prmMeetingDate,prmStartTime,prmEndTime).ToList();
                 return list;
             }
         }
